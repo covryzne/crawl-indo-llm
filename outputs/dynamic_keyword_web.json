@@ -1,0 +1,1229 @@
+[
+  {
+    "title": "",
+    "url": "https://bgn.go.id/",
+    "source_domain": "government",
+    "page_type": "document",
+    "date": null,
+    "text": "",
+    "attachments": [
+      {
+        "url": "https://jdih.kemenkum.go.id/common/dokumen/2024perpres083.pdf",
+        "kind": "pdf",
+        "text": "Perpres No. 83 Tahun 2024"
+      },
+      {
+        "url": "https://www.facebook.com/profile.php?id=61571105639452",
+        "kind": "attachment",
+        "text": "Facebook"
+      }
+    ],
+    "candidate_links": [
+      {
+        "url": "https://bgn.go.id/news",
+        "priority": "high_priority",
+        "text": "Halaman Utama"
+      },
+      {
+        "url": "https://bgn.go.id/news/artikel/",
+        "priority": "high_priority",
+        "text": "Artikel"
+      },
+      {
+        "url": "https://bgn.go.id/news/berita/",
+        "priority": "high_priority",
+        "text": "Berita"
+      },
+      {
+        "url": "https://bgn.go.id/news/berita/bgn-bpom-teken-pks-perkuat-pengawasan-pangan-program-mbg-lewat-skema-swakelola",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); BGN–BPOM Teken PKS Perkuat Pengawasan Pangan Program MBG Lewat Skema Swakelola BGN • 6 Mei 2026"
+      },
+      {
+        "url": "https://bgn.go.id/news/berita/harga-telur-di-magetan-anjlok-waka-bgn-instruksikan-sppg-di-jatim-optimalkan-menu-telur-untuk-stabilkan-harga",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); Harga Telur di Magetan Anjlok, Waka BGN Instruksikan SPPG di Jatim Optimalkan Menu Telur untuk Stabilkan Harga BGN • 8 Mei 2026"
+      },
+      {
+        "url": "https://bgn.go.id/news/berita/program-mbg-disebut-berkontribusi-pada-kesehatan-serta-memacu-semangat-belajar-siswa-di-makassar",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); Program MBG Disebut Berkontribusi pada Kesehatan serta Memacu Semangat Belajar Siswa di Makassar BGN • 6 Mei 2026"
+      },
+      {
+        "url": "https://bgn.go.id/news/foto/",
+        "priority": "high_priority",
+        "text": "Foto"
+      },
+      {
+        "url": "https://bgn.go.id/news/foto/kepala-bgn-hadiri-u25-leaders-forum-ptnbh",
+        "priority": "high_priority",
+        "text": "Kepala BGN Hadiri U25 Leaders Forum PTNBH"
+      },
+      {
+        "url": "https://bgn.go.id/news/foto/kepala-bgn-kunjungi-polbangtan",
+        "priority": "high_priority",
+        "text": "Kepala BGN Kunjungi Polbangtan"
+      },
+      {
+        "url": "https://bgn.go.id/news/foto/swakelola-bgn-bersama-bpom",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); Swakelola BGN bersama BPOM BGN • 7 Mei 2026"
+      },
+      {
+        "url": "https://bgn.go.id/news/infografis/",
+        "priority": "high_priority",
+        "text": "Infografis"
+      },
+      {
+        "url": "https://bgn.go.id/news/investigasi/",
+        "priority": "high_priority",
+        "text": "Investigasi"
+      },
+      {
+        "url": "https://bgn.go.id/news/klarifikasi-hoaks/",
+        "priority": "high_priority",
+        "text": "Klarifikasi Hoaks"
+      },
+      {
+        "url": "https://bgn.go.id/news/pengumuman/",
+        "priority": "high_priority",
+        "text": "Pengumuman"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/",
+        "priority": "high_priority",
+        "text": "Siaran Pers"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/6-juta-liter-minyak-jelantah-dari-program-mbg-berpotensi-jadi-energi-hijau-nasional",
+        "priority": "high_priority",
+        "text": "6 Juta Liter Minyak Jelantah dari Program MBG Berpotensi Jadi Energi Hijau Nasional"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/bgn-dorong-peran-strategis-bpd-dalam-pengawasan-dan-penguatan-ekosistem-program-makan-bergizi-gratis-di-desa",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); BGN Dorong Peran Strategis BPD dalam Pengawasan dan Penguatan Ekosistem Program Makan Bergizi Gratis di Desa BGN • 7 Mei 2026"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/bgn-tegaskan-tidak-ada-batas-usia-maksimum-untuk-relawan-mbg",
+        "priority": "high_priority",
+        "text": "BGN Tegaskan Tidak Ada Batas Usia Maksimum untuk Relawan MBG"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/bgn-tekankan-peran-komunikasi-publik-dalam-keberhasilan-program-mbg",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); BGN Tekankan Peran Komunikasi Publik dalam Keberhasilan Program MBG BGN • 8 Mei 2026"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/bgn-wajibkan-seluruh-sppg-tambah-penerima-manfaat-3b-dalam-dua-minggu",
+        "priority": "high_priority",
+        "text": "BGN Wajibkan Seluruh SPPG Tambah Penerima Manfaat 3B dalam Dua Minggu"
+      }
+    ],
+    "crawl_metadata": {
+      "status": "ok",
+      "attachments_found": 2,
+      "candidate_links_found": 20
+    }
+  },
+  {
+    "title": "",
+    "url": "https://bgn.go.id/operasional-sppg",
+    "source_domain": "government",
+    "page_type": "document",
+    "date": null,
+    "text": "",
+    "attachments": [
+      {
+        "url": "https://www.facebook.com/profile.php?id=61571105639452",
+        "kind": "attachment",
+        "text": "Facebook"
+      }
+    ],
+    "candidate_links": [
+      {
+        "url": "https://bgn.go.id/news",
+        "priority": "high_priority",
+        "text": "Halaman Utama"
+      },
+      {
+        "url": "https://bgn.go.id/news/artikel/",
+        "priority": "high_priority",
+        "text": "Artikel"
+      },
+      {
+        "url": "https://bgn.go.id/news/berita/",
+        "priority": "high_priority",
+        "text": "Berita"
+      },
+      {
+        "url": "https://bgn.go.id/news/foto/",
+        "priority": "high_priority",
+        "text": "Foto"
+      },
+      {
+        "url": "https://bgn.go.id/news/infografis/",
+        "priority": "high_priority",
+        "text": "Infografis"
+      },
+      {
+        "url": "https://bgn.go.id/news/investigasi/",
+        "priority": "high_priority",
+        "text": "Investigasi"
+      },
+      {
+        "url": "https://bgn.go.id/news/klarifikasi-hoaks/",
+        "priority": "high_priority",
+        "text": "Klarifikasi Hoaks"
+      },
+      {
+        "url": "https://bgn.go.id/news/pengumuman/",
+        "priority": "high_priority",
+        "text": "Pengumuman"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/",
+        "priority": "high_priority",
+        "text": "Siaran Pers"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-dialur",
+        "priority": "high_priority",
+        "text": "DEPUTI DIALUR"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-prokerma",
+        "priority": "high_priority",
+        "text": "DEPUTI PROKERMA"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-sistakol",
+        "priority": "high_priority",
+        "text": "DEPUTI SISTAKOL"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-tauwas",
+        "priority": "high_priority",
+        "text": "DEPUTI TAUWAS"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-inspektorat-utama",
+        "priority": "high_priority",
+        "text": "INSPEKTORAT UTAMA"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-kepala-badan-gizi-nasional",
+        "priority": "high_priority",
+        "text": "KEPALA BADAN GIZI NASIONAL"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-sekretariat-utama",
+        "priority": "high_priority",
+        "text": "SEKRETARIAT UTAMA"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-wakil-kepala-badan-gizi-nasional",
+        "priority": "high_priority",
+        "text": "WAKIL KEPALA BADAN GIZI NASIONAL"
+      },
+      {
+        "url": "https://bgn.go.id/news/video/",
+        "priority": "high_priority",
+        "text": "Video"
+      },
+      {
+        "url": "https://bgn.go.id/",
+        "priority": "normal",
+        "text": null
+      },
+      {
+        "url": "https://bgn.go.id/coming-soon",
+        "priority": "normal",
+        "text": "X"
+      }
+    ],
+    "crawl_metadata": {
+      "status": "ok",
+      "attachments_found": 1,
+      "candidate_links_found": 20
+    }
+  },
+  {
+    "title": "",
+    "url": "https://bgn.go.id/team",
+    "source_domain": "government",
+    "page_type": "document",
+    "date": null,
+    "text": "",
+    "attachments": [
+      {
+        "url": "https://www.facebook.com/profile.php?id=61571105639452",
+        "kind": "attachment",
+        "text": "Facebook"
+      }
+    ],
+    "candidate_links": [
+      {
+        "url": "https://bgn.go.id/news",
+        "priority": "high_priority",
+        "text": "Halaman Utama"
+      },
+      {
+        "url": "https://bgn.go.id/news/artikel/",
+        "priority": "high_priority",
+        "text": "Artikel"
+      },
+      {
+        "url": "https://bgn.go.id/news/berita/",
+        "priority": "high_priority",
+        "text": "Berita"
+      },
+      {
+        "url": "https://bgn.go.id/news/foto/",
+        "priority": "high_priority",
+        "text": "Foto"
+      },
+      {
+        "url": "https://bgn.go.id/news/infografis/",
+        "priority": "high_priority",
+        "text": "Infografis"
+      },
+      {
+        "url": "https://bgn.go.id/news/investigasi/",
+        "priority": "high_priority",
+        "text": "Investigasi"
+      },
+      {
+        "url": "https://bgn.go.id/news/klarifikasi-hoaks/",
+        "priority": "high_priority",
+        "text": "Klarifikasi Hoaks"
+      },
+      {
+        "url": "https://bgn.go.id/news/pengumuman/",
+        "priority": "high_priority",
+        "text": "Pengumuman"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/",
+        "priority": "high_priority",
+        "text": "Siaran Pers"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-dialur",
+        "priority": "high_priority",
+        "text": "DEPUTI DIALUR"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-prokerma",
+        "priority": "high_priority",
+        "text": "DEPUTI PROKERMA"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-sistakol",
+        "priority": "high_priority",
+        "text": "DEPUTI SISTAKOL"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-tauwas",
+        "priority": "high_priority",
+        "text": "DEPUTI TAUWAS"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-inspektorat-utama",
+        "priority": "high_priority",
+        "text": "INSPEKTORAT UTAMA"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-kepala-badan-gizi-nasional",
+        "priority": "high_priority",
+        "text": "KEPALA BADAN GIZI NASIONAL"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-sekretariat-utama",
+        "priority": "high_priority",
+        "text": "SEKRETARIAT UTAMA"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-wakil-kepala-badan-gizi-nasional",
+        "priority": "high_priority",
+        "text": "WAKIL KEPALA BADAN GIZI NASIONAL"
+      },
+      {
+        "url": "https://bgn.go.id/news/video/",
+        "priority": "high_priority",
+        "text": "Video"
+      },
+      {
+        "url": "https://bgn.go.id/",
+        "priority": "normal",
+        "text": null
+      },
+      {
+        "url": "https://bgn.go.id/coming-soon",
+        "priority": "normal",
+        "text": "X"
+      }
+    ],
+    "crawl_metadata": {
+      "status": "ok",
+      "attachments_found": 1,
+      "candidate_links_found": 20
+    }
+  },
+  {
+    "title": "",
+    "url": "https://www.bgn.go.id/news/siaran-pers/bgn-tegaskan-tidak-ada-batas-usia-maksimum-untuk-relawan-mbg",
+    "source_domain": "government",
+    "page_type": "document",
+    "date": null,
+    "text": "",
+    "attachments": [
+      {
+        "url": "https://www.facebook.com/profile.php?id=61571105639452",
+        "kind": "attachment",
+        "text": "Facebook"
+      }
+    ],
+    "candidate_links": [
+      {
+        "url": "https://www.bgn.go.id/news",
+        "priority": "high_priority",
+        "text": "Halaman Utama"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/artikel/",
+        "priority": "high_priority",
+        "text": "Artikel"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/berita/",
+        "priority": "high_priority",
+        "text": "Berita"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/foto/",
+        "priority": "high_priority",
+        "text": "Foto"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/infografis/",
+        "priority": "high_priority",
+        "text": "Infografis"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/investigasi/",
+        "priority": "high_priority",
+        "text": "Investigasi"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/klarifikasi-hoaks/",
+        "priority": "high_priority",
+        "text": "Klarifikasi Hoaks"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/",
+        "priority": "high_priority",
+        "text": "Pengumuman"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/",
+        "priority": "high_priority",
+        "text": "Siaran Pers"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/Doc. Biro Hukum dan Humas BGN",
+        "priority": "high_priority",
+        "text": "Doc. Biro Hukum dan Humas BGN"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/siaran-pers-deputi-dialur",
+        "priority": "high_priority",
+        "text": "DEPUTI DIALUR"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/siaran-pers-deputi-prokerma",
+        "priority": "high_priority",
+        "text": "DEPUTI PROKERMA"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/siaran-pers-deputi-sistakol",
+        "priority": "high_priority",
+        "text": "DEPUTI SISTAKOL"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/siaran-pers-deputi-tauwas",
+        "priority": "high_priority",
+        "text": "DEPUTI TAUWAS"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/siaran-pers-inspektorat-utama",
+        "priority": "high_priority",
+        "text": "INSPEKTORAT UTAMA"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/siaran-pers-kepala-badan-gizi-nasional",
+        "priority": "high_priority",
+        "text": "KEPALA BADAN GIZI NASIONAL"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/siaran-pers-kepala-badan-gizi-nasional/",
+        "priority": "high_priority",
+        "text": "Siaran Pers Kepala Badan Gizi Nasional"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/siaran-pers-sekretariat-utama",
+        "priority": "high_priority",
+        "text": "SEKRETARIAT UTAMA"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/siaran-pers-wakil-kepala-badan-gizi-nasional",
+        "priority": "high_priority",
+        "text": "WAKIL KEPALA BADAN GIZI NASIONAL"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/video/",
+        "priority": "high_priority",
+        "text": "Video"
+      }
+    ],
+    "crawl_metadata": {
+      "status": "ok",
+      "attachments_found": 1,
+      "candidate_links_found": 20
+    }
+  },
+  {
+    "title": "",
+    "url": "https://www.bgn.go.id/news/pengumuman/",
+    "source_domain": "government",
+    "page_type": "document",
+    "date": null,
+    "text": "",
+    "attachments": [
+      {
+        "url": "https://www.facebook.com/profile.php?id=61571105639452",
+        "kind": "attachment",
+        "text": "Facebook"
+      }
+    ],
+    "candidate_links": [
+      {
+        "url": "https://www.bgn.go.id/news",
+        "priority": "high_priority",
+        "text": "Halaman Utama"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/artikel/",
+        "priority": "high_priority",
+        "text": "Artikel"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/berita/",
+        "priority": "high_priority",
+        "text": "Berita"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/foto/",
+        "priority": "high_priority",
+        "text": "Foto"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/infografis/",
+        "priority": "high_priority",
+        "text": "Infografis"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/investigasi/",
+        "priority": "high_priority",
+        "text": "Investigasi"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/klarifikasi-hoaks/",
+        "priority": "high_priority",
+        "text": "Klarifikasi Hoaks"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/bgn-imbau-masyarakat-waspadai-akun-loker-tidak-resmi",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); BGN Imbau Masyarakat Waspadai Akun Loker Tidak Resmi BGN Pengumuman • 6 Januari 2026"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/hasil-akhir-seleksi-pengadaan-pegawai-pemerintah-dengan-perjanjian-kerja-pppk-tingkat-instansi-tahap-ii-badan-gizi-nasional",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); Hasil Akhir Seleksi Pengadaan Pegawai Pemerintah dengan Perjanjian Kerja (PPPK) Tingkat Instansi Tahap II Badan Gizi Nasional BGN Pengumuman • 12 Januari 2026"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/pembatalan-status-kelulusan-dari-memenuhi-syarat-ms-menjadi-tidak-memenuhi-syarat-tms-hasil-seleksi-administrasi-pada-seleksi-pengadaan-pegawai-pemerintah-dengan-perjanjian-kerja-pppk-tingkat-instansi-tahap-ii-badan-gizi-nasional-tahun-anggaran-2025",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); Pembatalan Status Kelulusan Dari Memenuhi Syarat (MS)  Menjadi Tidak Memenuhi Syarat (TMS) Hasil Seleksi Administrasi Pada Seleksi Pengadaan Pegawai Pemerintah Dengan Perjanjian Kerja (PPPK) Tingkat Instansi Tahap II Badan Gizi Nasional Tahun Anggaran 2025 BGN Pengumuman • 15 Desember 2025"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/pengadaan-jasa-lainnya-tenaga-ahli-dan-tenaga-pendukung-pada-biro-manajemen-kinerja-sekretariat-utama-tahun-anggaran-2026",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); PENGADAAN JASA LAINNYA TENAGA AHLI DAN TENAGA PENDUKUNG PADA BIRO MANAJEMEN KINERJA – SEKRETARIAT UTAMA TAHUN ANGGARAN 2026 BGN Pengumuman • 29 April 2026"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/pengadaan-jasa-lainnya-tenaga-pendukung-pada-direktorat-penyediaan-dan-penyaluran-wilayah-iii",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); PENGADAAN JASA LAINNYA TENAGA PENDUKUNG PADA  DIREKTORAT PENYEDIAAN DAN PENYALURAN WILAYAH III BGN Pengumuman • 24 Januari 2026"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/pengadaan-jasa-lainnya-tenaga-pendukung-pada-direktorat-promosi-dan-edukasi-gizi",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); PENGADAAN JASA LAINNYA TENAGA PENDUKUNG PADA DIREKTORAT PROMOSI DAN EDUKASI GIZI BGN Pengumuman • 16 Maret 2026"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/pengadaan-jasa-lainnya-tenaga-pendukung-pada-inspektorat-utama-badan-gizi-nasional",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); PENGADAAN JASA LAINNYA TENAGA PENDUKUNG PADA INSPEKTORAT UTAMA BADAN GIZI NASIONAL BGN Pengumuman • 2 Februari 2026"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/pengadaan-jasa-tenaga-pendukung-substansi-perorangan-lainnya-pada-biro-sumber-daya-manusia-dan-organisasi-di-badan-gizi-nasional",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); Pengadaan Jasa Tenaga Pendukung Substansi Perorangan Lainnya Pada Biro Sumber Daya Manusia Dan Organisasi di Badan GIzi Nasional BGN Pengumuman • 2 Februari 2026"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/pengumuman-pengadaan-jasa-lainnya-perorangan-tenaga-pendukung-cso-pada-pusat-data-dan-sistem-informasi-badan-gizi-nasional-ta-2026-ii",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); PENGUMUMAN PENGADAAN JASA LAINNYA PERORANGAN TENAGA PENDUKUNG CSO PADA PUSAT DATA DAN SISTEM INFORMASI BADAN GIZI NASIONAL TA 2026 (ii) BGN Pengumuman • 2 Januari 2026"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/pengumuman-pengadaan-jasa-lainnya-perorangan-tenaga-pendukung-pada-pusat-data-dan-sistem-informasi-badan-gizi-nasional-ta-2026-i",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); PENGUMUMAN PENGADAAN JASA LAINNYA PERORANGAN TENAGA PENDUKUNG PADA PUSAT DATA DAN SISTEM INFORMASI BADAN GIZI NASIONAL TA 2026 (i) BGN Pengumuman • 2 Januari 2026"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/pengumuman-pengadaan-jasa-lainnya-tenaga-pendukung-pada-deputi-bidang-promosi-dan-kerja-sama",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); Pengumuman Pengadaan Jasa Lainnya Tenaga Pendukung Pada Deputi Bidang Promosi dan Kerja Sama BGN Pengumuman • 9 Maret 2026"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/pengumuman/penyesuaian-jadwal-tahapan-pelaksanaan-seleksi-pengadaan-pppk-tingkat-instansi-tahap-ii-badan-gizi-nasional-tahun-anggaran-2025",
+        "priority": "high_priority",
+        "text": "(() => {\n    const container = document.currentScript?.previousElementSibling;\n    const img = container?.querySelector('.lazy-img');\n    const skeleton = container?.querySelector('.skeleton');\n\n    if (img?.complete && skeleton) {\n      img.classList.add('opacity-100');\n      skeleton.remove();\n    }\n  })(); Penyesuaian Jadwal Tahapan Pelaksanaan Seleksi Pengadaan PPPK Tingkat Instansi Tahap II Badan Gizi Nasional Tahun Anggaran 2025 BGN Pengumuman • 4 Januari 2026"
+      },
+      {
+        "url": "https://www.bgn.go.id/news/siaran-pers/",
+        "priority": "high_priority",
+        "text": "Siaran Pers"
+      }
+    ],
+    "crawl_metadata": {
+      "status": "ok",
+      "attachments_found": 1,
+      "candidate_links_found": 20
+    }
+  },
+  {
+    "title": "",
+    "url": "https://bgn.go.id/juknis",
+    "source_domain": "government",
+    "page_type": "document",
+    "date": null,
+    "text": "",
+    "attachments": [
+      {
+        "url": "https://www.facebook.com/profile.php?id=61571105639452",
+        "kind": "attachment",
+        "text": "Facebook"
+      }
+    ],
+    "candidate_links": [
+      {
+        "url": "https://bgn.go.id/news",
+        "priority": "high_priority",
+        "text": "Halaman Utama"
+      },
+      {
+        "url": "https://bgn.go.id/news/artikel/",
+        "priority": "high_priority",
+        "text": "Artikel"
+      },
+      {
+        "url": "https://bgn.go.id/news/berita/",
+        "priority": "high_priority",
+        "text": "Berita"
+      },
+      {
+        "url": "https://bgn.go.id/news/foto/",
+        "priority": "high_priority",
+        "text": "Foto"
+      },
+      {
+        "url": "https://bgn.go.id/news/infografis/",
+        "priority": "high_priority",
+        "text": "Infografis"
+      },
+      {
+        "url": "https://bgn.go.id/news/investigasi/",
+        "priority": "high_priority",
+        "text": "Investigasi"
+      },
+      {
+        "url": "https://bgn.go.id/news/klarifikasi-hoaks/",
+        "priority": "high_priority",
+        "text": "Klarifikasi Hoaks"
+      },
+      {
+        "url": "https://bgn.go.id/news/pengumuman/",
+        "priority": "high_priority",
+        "text": "Pengumuman"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/",
+        "priority": "high_priority",
+        "text": "Siaran Pers"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-dialur",
+        "priority": "high_priority",
+        "text": "DEPUTI DIALUR"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-prokerma",
+        "priority": "high_priority",
+        "text": "DEPUTI PROKERMA"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-sistakol",
+        "priority": "high_priority",
+        "text": "DEPUTI SISTAKOL"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-deputi-tauwas",
+        "priority": "high_priority",
+        "text": "DEPUTI TAUWAS"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-inspektorat-utama",
+        "priority": "high_priority",
+        "text": "INSPEKTORAT UTAMA"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-kepala-badan-gizi-nasional",
+        "priority": "high_priority",
+        "text": "KEPALA BADAN GIZI NASIONAL"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-sekretariat-utama",
+        "priority": "high_priority",
+        "text": "SEKRETARIAT UTAMA"
+      },
+      {
+        "url": "https://bgn.go.id/news/siaran-pers/siaran-pers-wakil-kepala-badan-gizi-nasional",
+        "priority": "high_priority",
+        "text": "WAKIL KEPALA BADAN GIZI NASIONAL"
+      },
+      {
+        "url": "https://bgn.go.id/news/video/",
+        "priority": "high_priority",
+        "text": "Video"
+      },
+      {
+        "url": "https://bgn.go.id/",
+        "priority": "normal",
+        "text": null
+      },
+      {
+        "url": "https://bgn.go.id/coming-soon",
+        "priority": "normal",
+        "text": "X"
+      }
+    ],
+    "crawl_metadata": {
+      "status": "ok",
+      "attachments_found": 1,
+      "candidate_links_found": 20
+    }
+  },
+  {
+    "title": "",
+    "url": "https://www.bbc.com/indonesia/articles/cd6p46ypwn4o",
+    "source_domain": "news",
+    "page_type": "document",
+    "date": null,
+    "text": "",
+    "attachments": [
+      {
+        "url": "https://gerindra.id/wp-content/uploads/2024/10/33.-Asta-Cita-Visi-Misi-Prabowo-Gibran.pdf",
+        "kind": "pdf",
+        "text": "Asta Cita Asta Cita, eksternal"
+      },
+      {
+        "url": "https://media.kemenkeu.go.id/getmedia/c4cc1854-96f4-42f4-95b8-94cf49a46f10/Informasi-APBN-Tahun-Anggaran-2025.pdf?ext=.pdf",
+        "kind": "pdf",
+        "text": "laporan laporan, eksternal"
+      },
+      {
+        "url": "https://media.kemenkeu.go.id/getmedia/45ae6945-559d-4012-807e-bb818cc2bf3a/Buku-III-Himpunan-RKA-KL.pdf?ext=.pdf",
+        "kind": "pdf",
+        "text": "nyaris empat kali lipat nyaris empat kali lipat, eksternal"
+      },
+      {
+        "url": "https://ti.or.id/wp-content/uploads/2025/06/Risiko-Korupsi-Dibalik-Hidangan-Makan-Bergizi-Gratis_web.pdf",
+        "kind": "pdf",
+        "text": "Riset Transparency International Indonesia Riset Transparency International Indonesia, eksternal"
+      },
+      {
+        "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+        "kind": "pdf",
+        "text": "Riset yang disusun Indonesia Corruption Watch Riset yang disusun Indonesia Corruption Watch, eksternal"
+      }
+    ],
+    "candidate_links": [
+      {
+        "url": "https://www.bbc.com/indonesia",
+        "priority": "high_priority",
+        "text": "BBC News, Indonesia"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/institutional-49283175",
+        "priority": "high_priority",
+        "text": "Alasan Anda dapat mempercayai BBC News"
+      },
+      {
+        "url": "https://www.bbc.com/ws/languages",
+        "priority": "high_priority",
+        "text": "BBC News World Service"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c0e7331wxjxo",
+        "priority": "normal",
+        "text": "Iran punya persediaan uranium yang diperkaya – Tetapi apakah bisa menciptakan senjata nuklir?"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c0lx1ppj51ro",
+        "priority": "normal",
+        "text": "Satu tahun MBG: Relawan kerja tanpa kontrak, UMKM minim terlibat"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c0q8zv5e0dzo",
+        "priority": "normal",
+        "text": "Menu MBG bahan mentah jadi sorotan, pengawasan dipertanyakan – 'BGN seharusnya menjalankan fungsi kontrol'"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c0rj9k29gqgo",
+        "priority": "normal",
+        "text": "Gelombang demo MBG di berbagai daerah – Dari kasus-kasus keracunan hingga protes menu tak sesuai"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c1w2p8jvzgdo",
+        "priority": "normal",
+        "text": "Mantan kepala polisi Filipina yang pimpin perang narkoba era Duterte kabur dari penangkapan Mahkamah Pidana Internasional"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c4g094w7nj1o",
+        "priority": "normal",
+        "text": "Kepala BGN dilaporkan ke KPK soal dugaan korupsi sertifikasi halal MBG, apa yang diketahui sejauh ini?"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c4g257y1pr9o",
+        "priority": "normal",
+        "text": "2.721 SPPG sempat ditutup sementara - 'Sertifikasi jangan hanya pemenuhan administrasi saja'"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c4g442xz9wno",
+        "priority": "normal",
+        "text": "Puluhan ribu pegawai SPPG akan diangkat jadi ASN, bagaimana nasib guru honorer yang tak punya kepastian kerja? – 'Melukai rasa keadilan'"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c5y8dz3deyzo",
+        "priority": "normal",
+        "text": "'Saya lebih memilih bersembunyi seumur hidup di AS daripada kembali ke Somalia'"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c5y8jyg2eyqo",
+        "priority": "normal",
+        "text": "Kampus diminta 'terlibat aktif' bangun dapur MBG, bagi-bagi proyek?"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c62dgvdm9l0o",
+        "priority": "normal",
+        "text": null
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c75x11ev10po",
+        "priority": "normal",
+        "text": "Ratusan pelajar dan santri di Jawa Tengah keracunan, 'kapok dan trauma' dengan MBG"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c78e1ljernko",
+        "priority": "normal",
+        "text": "Paket MBG liburan sekolah dianggap tidak sehat karena ada makanan UPF – 'Di negeri yang kaya pangan, ini menyiksa namanya'"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c87qp18xwj4o",
+        "priority": "normal",
+        "text": null
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/c8jx8e70ny2o",
+        "priority": "normal",
+        "text": "Mengapa liputan media tentang MBG disebut sering berujung swasensor? – 'Ketika sensor dilakukan oleh media sendiri justru mengerikan'"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/ce3219dkq15o",
+        "priority": "normal",
+        "text": "Program Makan Bergizi Gratis Prabowo – Rp10.000 dapat menu apa di Medan hingga Papua dan bagaimana kandungan gizinya?"
+      },
+      {
+        "url": "https://www.bbc.com/indonesia/articles/ce8p08zk41go",
+        "priority": "normal",
+        "text": "Kepolisian didesak ungkap aktor utama jaringan judol Hayam Wuruk yang libatkan ratusan WNA – 'Dunia digital selalu tinggalkan jejak'"
+      }
+    ],
+    "crawl_metadata": {
+      "status": "ok",
+      "attachments_found": 5,
+      "candidate_links_found": 20
+    }
+  },
+  {
+    "title": "",
+    "url": "https://www.antaranews.com/berita/5563769/bgn-ambil-langkah-hentikan-sementara-240-dapur-mbg-bermasalah",
+    "source_domain": "government",
+    "page_type": "news",
+    "date": null,
+    "text": "",
+    "attachments": [],
+    "candidate_links": [
+      {
+        "url": "https://en.antaranews.com",
+        "priority": "high_priority",
+        "text": "English ANTARA News English"
+      },
+      {
+        "url": "https://korporat.antaranews.com",
+        "priority": "high_priority",
+        "text": "Korporat korporat.antaranews.com"
+      },
+      {
+        "url": "https://ppid.antaranews.com",
+        "priority": "high_priority",
+        "text": "PPID ppid.antaranews.com"
+      },
+      {
+        "url": "https://www.antaranews.com/",
+        "priority": "high_priority",
+        "text": "ANTARA News"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5137285/kasus-mbg-bgn-buka-peluang-pidanakan-pengelola-dapur-bermasalah",
+        "priority": "high_priority",
+        "text": "Kasus MBG, BGN buka peluang pidanakan pengelola dapur bermasalah Kasus MBG, BGN buka peluang pidanakan pengelola dapur bermasalah"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5140449/dpr-penutupan-sementara-sppg-bermasalah-langkah-tepat-atasi-keracunan",
+        "priority": "high_priority",
+        "text": "DPR: Penutupan sementara SPPG bermasalah langkah tepat atasi keracunan DPR: Penutupan sementara SPPG bermasalah langkah tepat atasi keracunan"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5275745/hukum-menikah-siri-tanpa-sepengetahuan-istri-pertama-sah?utm_source=antaranews&utm_medium=desktop&utm_campaign=evergreen_news",
+        "priority": "high_priority",
+        "text": "Hukum menikah siri tanpa sepengetahuan istri pertama, sah?"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5298673/jadwal-libur-sekolah-semester-ganjil-2025-2026-di-seluruh-provinsi?utm_source=antaranews&utm_medium=desktop&utm_campaign=evergreen_news",
+        "priority": "high_priority",
+        "text": "Jadwal libur sekolah semester ganjil 2025/2026 di seluruh provinsi"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5298676/urutan-film-avatar-untuk-memahami-jalan-cerita-jelang-fire-and-ash?utm_source=antaranews&utm_medium=desktop&utm_campaign=evergreen_news",
+        "priority": "high_priority",
+        "text": "Urutan film Avatar untuk memahami jalan cerita jelang \"Fire and Ash\""
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5310346/apa-itu-puasa-rajab-ini-pengertian-jadwal-dan-kalender-rajab-1447-h?utm_source=antaranews&utm_medium=desktop&utm_campaign=evergreen_news",
+        "priority": "high_priority",
+        "text": "Apa itu puasa Rajab? Ini pengertian, jadwal dan kalender Rajab 1447 H"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5315554/apa-itu-playing-victim-ini-ciri-ciri-penyebab-cara-menghadapinya?utm_source=antaranews&utm_medium=desktop&utm_campaign=evergreen_news",
+        "priority": "high_priority",
+        "text": "Apa itu \"playing victim\"? Ini ciri-ciri, penyebab & cara menghadapinya"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5328283/25-ucapan-islami-selamat-tahun-baru-2026-penuh-doa-dan-bermakna?utm_source=antaranews&utm_medium=desktop&utm_campaign=evergreen_news",
+        "priority": "high_priority",
+        "text": "25 ucapan Islami \"Selamat Tahun Baru 2026\", penuh doa dan bermakna"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5339685/ini-film-doraemon-yang-masih-bisa-di-tonton-lewat-netflix?utm_source=antaranews&utm_medium=desktop&utm_campaign=evergreen_news",
+        "priority": "high_priority",
+        "text": "Ini film \"Doraemon\" yang masih bisa di tonton lewat Netflix"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5350665/kapan-isra-miraj-2026-ini-jadwal-dan-makna-perayaannya?utm_source=antaranews&utm_medium=desktop&utm_campaign=evergreen_news",
+        "priority": "high_priority",
+        "text": "Kapan Isra Mi'raj 2026? Ini jadwal dan makna perayaannya"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5353477/sinopsis-buku-broken-strings-karya-aurelie-moeremans?utm_source=antaranews&utm_medium=desktop&utm_campaign=evergreen_news",
+        "priority": "high_priority",
+        "text": "Sinopsis buku \"Broken Strings\" karya Aurelie Moeremans"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5530064/satgas-mbg-temukan-45-sppg-bermasalah-di-pamekasan",
+        "priority": "high_priority",
+        "text": "Satgas MBG temukan 45 SPPG bermasalah di Pamekasan Satgas MBG temukan 45 SPPG bermasalah di Pamekasan"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5563257/bgn-salurkan-4618-porsi-mbg-untuk-warga-terdampak-banjirdi-sultra?utm_source=antaranews&utm_medium=desktop&utm_campaign=related_news",
+        "priority": "high_priority",
+        "text": "BGN Salurkan 4.618 Porsi MBG untuk warga terdampak banjir di Sultra"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5563287/bandara-soetta-kembali-terapkan-standar-kesehatan-pejalan-luar-negeri?utm_source=antaranews&utm_medium=desktop&utm_campaign=popular_right",
+        "priority": "high_priority",
+        "text": "Bandara Soetta kembali terapkan standar kesehatan pejalan luar negeri"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5563300/kepala-bgn-prioritaskan-motor-untuk-distribusi-mbg-di-pedesaan?utm_source=antaranews&utm_medium=desktop&utm_campaign=related_news",
+        "priority": "high_priority",
+        "text": "Kepala BGN prioritaskan motor untuk distribusi MBG di pedesaan"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/5563495/kemenag-tegaskan-pentingnya-sinkronisasi-data-dengan-bgn-soal-mbg?utm_source=antaranews&utm_medium=desktop&utm_campaign=related_news",
+        "priority": "high_priority",
+        "text": "Kemenag tegaskan pentingnya sinkronisasi data dengan BGN soal MBG"
+      }
+    ],
+    "crawl_metadata": {
+      "status": "ok",
+      "attachments_found": 0,
+      "candidate_links_found": 20
+    }
+  },
+  {
+    "title": "",
+    "url": "https://www.metrotvnews.com/read/b3JC58Yj-kepala-bgn-siswa-bisa-usulkan-menu-mbg",
+    "source_domain": "government",
+    "page_type": "news",
+    "date": null,
+    "text": "",
+    "attachments": [],
+    "candidate_links": [
+      {
+        "url": "https://www.metrotvnews.com/news-stream",
+        "priority": "high_priority",
+        "text": "News Stream"
+      },
+      {
+        "url": "https://www.metrotvnews.com/program/headline-news",
+        "priority": "high_priority",
+        "text": "Headline News"
+      },
+      {
+        "url": "https://career.metrotvnews.com",
+        "priority": "normal",
+        "text": "career"
+      },
+      {
+        "url": "https://www.metrotvnews.com",
+        "priority": "normal",
+        "text": "home"
+      },
+      {
+        "url": "https://www.metrotvnews.com/",
+        "priority": "normal",
+        "text": null
+      },
+      {
+        "url": "https://www.metrotvnews.com/about",
+        "priority": "normal",
+        "text": "about"
+      },
+      {
+        "url": "https://www.metrotvnews.com/anchor",
+        "priority": "normal",
+        "text": "anchor"
+      },
+      {
+        "url": "https://www.metrotvnews.com/channel/ekonomi",
+        "priority": "normal",
+        "text": "Ekonomi"
+      },
+      {
+        "url": "https://www.metrotvnews.com/channel/internasional",
+        "priority": "normal",
+        "text": "Internasional"
+      },
+      {
+        "url": "https://www.metrotvnews.com/channel/mtvn-corner",
+        "priority": "normal",
+        "text": "MTVN Corner"
+      },
+      {
+        "url": "https://www.metrotvnews.com/channel/nasional",
+        "priority": "normal",
+        "text": "Nasional"
+      },
+      {
+        "url": "https://www.metrotvnews.com/cn",
+        "priority": "normal",
+        "text": "Xinwen"
+      },
+      {
+        "url": "https://www.metrotvnews.com/contact",
+        "priority": "normal",
+        "text": "contact us"
+      },
+      {
+        "url": "https://www.metrotvnews.com/haji",
+        "priority": "normal",
+        "text": "Haji"
+      },
+      {
+        "url": "https://www.metrotvnews.com/index",
+        "priority": "normal",
+        "text": "Load More"
+      },
+      {
+        "url": "https://www.metrotvnews.com/live",
+        "priority": "normal",
+        "text": "Metro TV"
+      },
+      {
+        "url": "https://www.metrotvnews.com/live-bn",
+        "priority": "normal",
+        "text": "BN Channel"
+      },
+      {
+        "url": "https://www.metrotvnews.com/mtvn-lens",
+        "priority": "normal",
+        "text": "MTVN Lens"
+      },
+      {
+        "url": "https://www.metrotvnews.com/pedoman",
+        "priority": "normal",
+        "text": "cyber media guidelines"
+      },
+      {
+        "url": "https://www.metrotvnews.com/privacy",
+        "priority": "normal",
+        "text": "privacy policy"
+      }
+    ],
+    "crawl_metadata": {
+      "status": "ok",
+      "attachments_found": 0,
+      "candidate_links_found": 20
+    }
+  },
+  {
+    "title": "",
+    "url": "https://www.kompas.tv/nasional/668310/bgn-instruksikan-sppg-tambah-penerima-manfaat-3b-dalam-2-minggu-kalau-masih-sedikit-bakal-suspend",
+    "source_domain": "government",
+    "page_type": "government",
+    "date": null,
+    "text": "",
+    "attachments": [],
+    "candidate_links": [
+      {
+        "url": "https://www.kompas.tv/ekonomi/668159/rekrutmen-bflp-specialist-2026-wave-2-bri-resmi-dibuka-simak-syarat-dan-posisi-tersedia?medium=newstrending&so=5",
+        "priority": "high_priority",
+        "text": "Rekrutmen BFLP Specialist 2026 Wave 2 BRI Resmi Dibuka, Simak Syarat dan Posisi Tersedia"
+      },
+      {
+        "url": "https://www.kompas.tv/info-publik/668206/prakiraan-cuaca-bmkg-besok-selasa-12-mei-2026-8-wilayah-siaga-hujan-lebat-mana-saja?medium=newstrending&so=3",
+        "priority": "high_priority",
+        "text": "Prakiraan Cuaca BMKG Besok Selasa 12 Mei 2026: 8 Wilayah Siaga Hujan Lebat, Mana Saja?"
+      },
+      {
+        "url": "https://www.kompas.tv/info-publik/668273/bmkg-waspada-hujan-lebat-di-tengah-suhu-terik-masa-pancaroba?medium=newstrending&so=2",
+        "priority": "high_priority",
+        "text": "BMKG: Waspada Hujan Lebat di Tengah Suhu Terik Masa Pancaroba"
+      },
+      {
+        "url": "https://www.kompas.tv/nasional/668293/bmkg-waspada-8-wilayah-hujan-lebat-sangat-lebat-selasa-hari-ini-segera-cek-daerahmu?medium=newstrending&so=1",
+        "priority": "high_priority",
+        "text": "BMKG: Waspada 8 Wilayah Hujan Lebat-Sangat Lebat Selasa Hari Ini, Segera Cek Daerahmu"
+      },
+      {
+        "url": "https://www.kompas.tv/news",
+        "priority": "high_priority",
+        "text": "NEWS"
+      },
+      {
+        "url": "https://www.kompas.tv/regional/668173/polda-metro-jawab-roy-suryo-minta-kasusnya-disetop-soal-ijazah-jokowi-singgung-rismon-eggy-sudjana?medium=newstrending&so=4",
+        "priority": "high_priority",
+        "text": "Polda Metro Jawab Roy Suryo Minta Kasusnya Disetop soal Ijazah Jokowi, Singgung Rismon-Eggy Sudjana"
+      },
+      {
+        "url": "https://www.kompas.tv/regional/668265/jadi-sorotan-aksi-emak-emak-di-makassar-angkut-motor-dengan-motor-berita-utama",
+        "priority": "high_priority",
+        "text": "Jadi Sorotan! Aksi Emak-Emak di Makassar Angkut Motor Dengan Motor | BERITA UTAMA"
+      },
+      {
+        "url": "https://account.kompas.tv/login/a29tcGFzdHY=/aHR0cHM6Ly93d3cua29tcGFzLnR2L25hc2lvbmFsLzY2ODMxMC9iZ24taW5zdHJ1a3Npa2FuLXNwcGctdGFtYmFoLXBlbmVyaW1hLW1hbmZhYXQtM2ItZGFsYW0tMi1taW5nZ3Uta2FsYXUtbWFzaWgtc2VkaWtpdC1iYWthbC1zdXNwZW5k",
+        "priority": "normal",
+        "text": "LANJUTKAN"
+      },
+      {
+        "url": "https://account.kompas.tv/register/a29tcGFzdHY=",
+        "priority": "normal",
+        "text": "REGISTER |"
+      },
+      {
+        "url": "https://lestari.kompas.tv/",
+        "priority": "normal",
+        "text": "lestari"
+      },
+      {
+        "url": "https://microsite.kompas.tv/stage-u/",
+        "priority": "normal",
+        "text": "stage-u"
+      },
+      {
+        "url": "https://www.kompas.tv/",
+        "priority": "normal",
+        "text": "BATAL"
+      },
+      {
+        "url": "https://www.kompas.tv/about-us",
+        "priority": "normal",
+        "text": "About Us"
+      },
+      {
+        "url": "https://www.kompas.tv/anchors",
+        "priority": "normal",
+        "text": "presenters"
+      },
+      {
+        "url": "https://www.kompas.tv/career",
+        "priority": "normal",
+        "text": "Career"
+      },
+      {
+        "url": "https://www.kompas.tv/contact-us",
+        "priority": "normal",
+        "text": "Contact Us"
+      },
+      {
+        "url": "https://www.kompas.tv/cyber-media-guidelines",
+        "priority": "normal",
+        "text": "Cyber Media Guidelines"
+      },
+      {
+        "url": "https://www.kompas.tv/editor/gading-persada",
+        "priority": "normal",
+        "text": "Gading Persada"
+      },
+      {
+        "url": "https://www.kompas.tv/ekonomi",
+        "priority": "normal",
+        "text": "ekonomi"
+      },
+      {
+        "url": "https://www.kompas.tv/ekonomi/667895/bgn-sebut-dana-mbg-mengalir-rp1-t-per-hari-ke-sppg-di-seluruh-indonesia",
+        "priority": "normal",
+        "text": "BGN Sebut Dana MBG Mengalir Rp1 T per Hari ke SPPG di Seluruh Indonesia"
+      }
+    ],
+    "crawl_metadata": {
+      "status": "ok",
+      "attachments_found": 0,
+      "candidate_links_found": 20
+    }
+  }
+]
