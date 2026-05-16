@@ -1,281 +1,58 @@
+# pipelines/keyword_pipeline.py
+
 import asyncio
-import json
+import hashlib
 import logging
-import os
 import random
-import socket
-import ssl
+import re
 import sys
-import time
+from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.error import URLError
 from urllib.parse import parse_qs, quote_plus, unquote, urlparse
 from urllib.request import Request, urlopen
 
-from bs4 import BeautifulSoup
-from crawl4ai import AsyncWebCrawler, BrowserConfig, CacheMode, CrawlerRunConfig
-from crawl4ai.extraction_strategy import JsonCssExtractionStrategy
+from crawl4ai import AsyncWebCrawler, CacheMode, CrawlerRunConfig
 
-from config.government_config import GENERAL_SITES_CONFIG
-from extractor.link_discovery import discover_internal_links
-from extractor.page_router import classify_page_type, classify_source_domain
-from extractor.pdf_discovery import discover_attachment_candidates_from_html
-from extractor.structured_extractor import parse_crawl4ai_json
-from storage.json_storage import save_json
-from storage.output_formatter import (
-    build_debug_payload,
-    build_final_payload,
-    current_utc_timestamp,
+from config.browser_config import REALISTIC_HEADERS
+from config.government_config import OUTPUT_DIR
+from config.keyword_config import (
+    GOOGLE_SEARCH_BASE,
+    SEARCH_MAX_PAGES,
+    SEARCH_MAX_RETRIES,
+    SEARCH_PAGE_SIZE,
+    SEARCH_PRE_REQUEST_DELAY_MAX,
+    SEARCH_PRE_REQUEST_DELAY_MIN,
+    SEARCH_RETRY_BASE_DELAY,
+    get_keyword_browser_config,
 )
+from extractor.page_router import classify_page_type  # <--- IMPORT BARU
+from extractor.pdf_discovery import extract_pdf_urls_from_html
+from storage.json_storage import save_json
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
 
 logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+    level=logging.INFO,
+    format=("%(asctime)s - " "%(levelname)s - " "%(message)s"),
 )
+
 logger = logging.getLogger(__name__)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-OUTPUT_DIR = BASE_DIR / "outputs"
-SEARCH_USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
-)
-_DUCKDUCKGO_TEMPLATES = (
-    "https://html.duckduckgo.com/html/?q={query}",
-    "https://lite.duckduckgo.com/lite/?q={query}",
-    "https://duckduckgo.com/html/?q={query}",
-)
 
-_GOOGLE_TEMPLATES = (
-    "https://www.google.com/search?q={query}",
-    "https://www.google.com/search?q={query}+site:go.id",
-)
-
-# Default to Google templates; override with USE_GOOGLE_SEARCH=0 to force DuckDuckGo
-if os.getenv("USE_GOOGLE_SEARCH", "1") == "1":
-    SEARCH_URL_TEMPLATES = _GOOGLE_TEMPLATES
-    logger.warning(
-        "Defaulting to Google HTML search templates. This may trigger CAPTCHA or blocking."
-    )
-else:
-    SEARCH_URL_TEMPLATES = _DUCKDUCKGO_TEMPLATES
-
-REALISTIC_HEADERS = {
-    "User-Agent": SEARCH_USER_AGENT,
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
-    "DNT": "1",
-    "Connection": "keep-alive",
-    "Upgrade-Insecure-Requests": "1",
-    "Sec-Fetch-Dest": "document",
-    "Sec-Fetch-Mode": "navigate",
-    "Sec-Fetch-Site": "none",
-    "Sec-Fetch-User": "?1",
-    "sec-ch-ua": '"Google Chrome";v="135", "Chromium";v="135", "Not:A-Brand";v="8"',
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": '"Windows"',
-}
+# Set zona waktu ke WIB (GMT+7)
+WIB = timezone(timedelta(hours=7))
 
 
-def _is_captcha_page(html: str) -> bool:
-    """Detect captcha pages from search results."""
-    if not html:
-        return False
-    lower = html.lower()
-    signals = [
-        "recaptcha",
-        "captcha",
-        "not a robot",
-        "unusual traffic",
-        "automated queries",
-        "g-recaptcha",
-        "detected unusual traffic",
-        "please verify",
-    ]
-    return any(sig in lower for sig in signals)
-
-
-def _resolve_doh_ipv4(hostname):
-    """Resolve hostname to IPv4 via DoH (DNS over HTTPS) to bypass DNS interception."""
-    doh_endpoints = [
-        f"https://cloudflare-dns.com/dns-query?name={hostname}&type=A",
-        f"https://dns.google/resolve?name={hostname}&type=A",
-        f"https://dns.quad9.net:5053/dns-query?name={hostname}&type=A",
-    ]
-
-    for endpoint in doh_endpoints:
-        try:
-            req = Request(
-                endpoint,
-                headers={
-                    "accept": "application/dns-json",
-                    "User-Agent": SEARCH_USER_AGENT,
-                },
-            )
-            with urlopen(req, timeout=8) as response:
-                dns_data = json.loads(response.read().decode())
-            ipv4 = next(
-                ans["data"] for ans in dns_data.get("Answer", []) if ans["type"] == 1
-            )
-            logger.info("DoH resolved %s to %s via %s", hostname, ipv4, endpoint)
-            return ipv4
-        except Exception as e:
-            logger.debug("DoH failed for %s on %s: %s", hostname, endpoint, e)
-    return None
-
-
-def generate_search_urls(keyword: str):
-    encoded = quote_plus(keyword)
-
-    return [
-        f"https://www.google.com/search?q={encoded}",
-        f"https://www.google.com/search?q={encoded}+site:go.id",
-    ]
-
-
-def extract_google_result_links(html: str):
-    soup = BeautifulSoup(html, "html.parser")
-
-    discovered = []
-
-    for a in soup.find_all("a", href=True):
-        href = a["href"]
-
-        # Case 1: Google redirect links like /url?q=<target>&...
-        if "/url?q=" in href:
-            try:
-                clean = href.split("/url?q=")[1].split("&")[0]
-                clean = unquote(clean)
-                parsed = urlparse(clean)
-                if parsed.scheme in ("http", "https"):
-                    discovered.append(clean)
-                    continue
-            except Exception:
-                pass
-
-        # Case 2: Links that include url= param (older patterns)
-        if "url=" in href and ("/url?" in href or "&url=" in href):
-            try:
-                # split on 'url=' and take first param value
-                clean = href.split("url=")[1].split("&")[0]
-                clean = unquote(clean)
-                parsed = urlparse(clean)
-                if parsed.scheme in ("http", "https"):
-                    discovered.append(clean)
-                    continue
-            except Exception:
-                pass
-
-        # Case 3: Direct absolute links in href (some SERP renderings)
-        if href.startswith("http://") or href.startswith("https://"):
-            parsed = urlparse(href)
-            # skip internal google links
-            if parsed.netloc and "google" in parsed.netloc:
-                continue
-            discovered.append(href)
-
-    # dedupe while preserving order
-    return list(dict.fromkeys(discovered))
-
-
-def _keyword_tokens(keyword):
-    return [token for token in keyword.lower().split() if len(token) >= 3]
-
-
-def _build_local_seed_catalog():
-    catalog = []
-    for site_name, site_conf in GENERAL_SITES_CONFIG.items():
-        links_conf = site_conf.get("links", {})
-        url_template = links_conf.get("url_template")
-        if not url_template:
-            continue
-
-        base_url = url_template.replace("{page}", "1")
-        base_url = base_url.replace("?page=1", "")
-        base_url = base_url.replace("&page=1", "")
-        catalog.append(
-            {
-                "name": site_name,
-                "url": base_url,
-            }
-        )
-
-    catalog.extend(
-        [
-            {"name": "PERATURAN", "url": "https://peraturan.go.id/"},
-            {"name": "KOMDIGI", "url": "https://www.komdigi.go.id/"},
-            {"name": "INDONESIA", "url": "https://www.indonesia.go.id/"},
-        ]
-    )
-
-    deduped = []
-    seen = set()
-    for item in catalog:
-        url = item["url"]
-        if url in seen:
-            continue
-        seen.add(url)
-        deduped.append(item)
-    return deduped
-
-
-LOCAL_SEED_CATALOG = _build_local_seed_catalog()
-
-
-def _discover_seed_urls_local(keyword, max_results=10, require_go_id=False):
-    tokens = _keyword_tokens(keyword)
-    seeds = []
-    seen = set()
-
-    for item in LOCAL_SEED_CATALOG:
-        url = item["url"]
-        name = item["name"].lower()
-        haystack = f"{name} {url.lower()}"
-
-        parsed = urlparse(url)
-        if require_go_id and "go.id" not in parsed.netloc.lower():
-            continue
-
-        if tokens and not any(token in haystack for token in tokens):
-            continue
-
-        if url in seen:
-            continue
-
-        seen.add(url)
-        seeds.append(url)
-        if len(seeds) >= max_results:
-            break
-
-    if seeds:
-        return seeds
-
-    for item in LOCAL_SEED_CATALOG:
-        url = item["url"]
-        parsed = urlparse(url)
-        if require_go_id and "go.id" not in parsed.netloc.lower():
-            continue
-        if url in seen:
-            continue
-        seen.add(url)
-        seeds.append(url)
-        if len(seeds) >= max_results:
-            break
-
-    return seeds
-
-
-class _SearchResultCollector(HTMLParser):
+class _GoogleLinkCollector(HTMLParser):
     def __init__(self):
         super().__init__()
         self.links = []
-        self._in_anchor = False
         self._current_href = None
+        self._current_text_parts = []
 
     def handle_starttag(self, tag, attrs):
         if tag.lower() != "a":
@@ -286,407 +63,590 @@ class _SearchResultCollector(HTMLParser):
         if not href:
             return
 
-        self._in_anchor = True
         self._current_href = href
-
-    def handle_endtag(self, tag):
-        if tag.lower() == "a":
-            self._in_anchor = False
-            self._current_href = None
+        self._current_text_parts = []
 
     def handle_data(self, data):
-        if self._in_anchor and self._current_href:
-            self.links.append(self._current_href)
+        if self._current_href is not None:
+            self._current_text_parts.append(data)
+
+    def handle_endtag(self, tag):
+        if tag.lower() != "a" or self._current_href is None:
+            return
+
+        text = " ".join(
+            part.strip() for part in self._current_text_parts if part.strip()
+        )
+        self.links.append({"href": self._current_href, "text": text})
+        self._current_href = None
+        self._current_text_parts = []
 
 
-def _resolve_search_result_url(raw_url):
-    if not raw_url:
+class _PageTextCollector(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.parts = []
+        self._skip_depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() in {"script", "style", "noscript"}:
+            self._skip_depth += 1
+
+    def handle_endtag(self, tag):
+        if tag.lower() in {"script", "style", "noscript"} and self._skip_depth > 0:
+            self._skip_depth -= 1
+
+    def handle_data(self, data):
+        if self._skip_depth == 0:
+            text = " ".join(str(data).split())
+            if text:
+                self.parts.append(text)
+
+
+def _normalize_whitespace(value):
+    if value is None:
+        return ""
+    return " ".join(str(value).split())
+
+
+def _slugify(value):
+    slug = re.sub(r"[^a-zA-Z0-9]+", "_", (value or "").strip().lower())
+    slug = slug.strip("_")
+    return slug or "keyword"
+
+
+def _source_from_url(url):
+    host = urlparse(url).netloc.lower().replace("www.", "")
+    if not host:
+        return "KEYWORD"
+
+    parts = host.split(".")
+    if len(parts) >= 3 and parts[-2:] == ["go", "id"]:
+        return parts[0].upper()
+
+    return parts[0].upper()
+
+
+def _is_go_id_url(url):
+    host = urlparse(url).netloc.lower().replace("www.", "")
+    return host.endswith(".go.id") or host == "go.id"
+
+
+def _is_google_domain(url):
+    host = urlparse(url).netloc.lower()
+    return (
+        "google." in host
+        or host.endswith("google.com")
+        or host.endswith("google.co.id")
+    )
+
+
+def _extract_target_url(href):
+    if not href:
         return None
 
-    parsed = urlparse(raw_url)
+    cleaned = str(href).strip()
+    if not cleaned:
+        return None
 
-    if parsed.path.startswith("/l/") and parsed.query:
-        query_params = parse_qs(parsed.query)
-        uddg = query_params.get("uddg")
-        if uddg:
-            return unquote(uddg[0])
+    lowered = cleaned.lower()
+    if lowered.startswith(("javascript:", "mailto:", "tel:", "#")):
+        return None
 
-    if parsed.scheme in {"http", "https"}:
-        return raw_url
+    parsed = urlparse(cleaned)
+    if parsed.netloc and _is_google_domain(cleaned) and parsed.path.startswith("/url"):
+        query = parse_qs(parsed.query)
+        for key in ("q", "url", "u"):
+            if query.get(key):
+                target = unquote(query[key][0]).strip()
+                if target.startswith("http"):
+                    return target
+        return None
+
+    if cleaned.startswith("/url?"):
+        query = parse_qs(urlparse(cleaned).query)
+        for key in ("q", "url", "u"):
+            if query.get(key):
+                target = unquote(query[key][0]).strip()
+                if target.startswith("http"):
+                    return target
+        return None
+
+    if cleaned.startswith("http://") or cleaned.startswith("https://"):
+        return cleaned
 
     return None
 
 
-async def discover_seed_urls_by_keyword(
-    crawler,
-    keyword: str,
-    only_go_id: bool = False,
-):
-    logger.info("Keyword discovery: %s", keyword)
-
-    search_urls = generate_search_urls(keyword)
-
-    discovered = []
-
-    for search_url in search_urls:
-        logger.info("Searching: %s", search_url)
-
-        try:
-            result = await crawler.arun(url=search_url)
-
-            if not result.success:
-                logger.warning(
-                    "Failed search crawl: %s",
-                    result.error_message,
-                )
-                continue
-
-            html = getattr(result, "html", "") or ""
-
-            links = extract_google_result_links(html)
-
-            logger.info("Discovered %s raw links", len(links))
-
-            for link in links:
-                if only_go_id and ".go.id" not in link:
-                    continue
-
-                discovered.append(link)
-
-        except Exception as exc:
-            logger.error("Keyword discovery error: %s", exc)
-
-    unique = list(dict.fromkeys(discovered))
-
-    logger.info("Final discovered URLs: %s", len(unique))
-
+def _dedupe_urls(urls):
+    seen = set()
+    unique = []
+    for url in urls:
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        unique.append(url)
     return unique
 
 
-def _slugify(url):
-    parsed = urlparse(url)
-    path = (parsed.path or "/").strip("/").replace("/", "_")
-    path = path or "root"
-    host = parsed.netloc.replace(":", "_").replace(".", "_")
-    return f"{host}__{path}"[:180]
+def _build_search_url(keyword, start=0, require_go_id=False):
+    query = keyword.strip()
+    if require_go_id:
+        query = f"{query} site:go.id"
+
+    return (
+        f"{GOOGLE_SEARCH_BASE}?q={quote_plus(query)}"
+        f"&num={SEARCH_PAGE_SIZE}&hl=id&gl=id&start={start}"
+    )
 
 
-def _build_pdf_queue_items(result):
-    queue_items = []
-    source_page = result.get("url")
-    source_domain = result.get("source_domain")
-    page_type = result.get("page_type")
-
-    for attachment in result.get("attachments", []):
-        pdf_url = attachment.get("url")
-        if not pdf_url:
-            continue
-
-        queue_items.append(
-            {
-                "pdf_url": pdf_url,
-                "source_page": source_page,
-                "source_domain": source_domain,
-                "page_type": page_type,
-                "priority": (
-                    "high_priority"
-                    if attachment.get("kind") == "pdf"
-                    else "medium_priority"
-                ),
-                "link_text": attachment.get("text"),
-            }
-        )
-
-    return queue_items
+def _build_browser_config(headless=None):
+    effective_headless = False if headless is None else headless
+    return get_keyword_browser_config(headless=effective_headless)
 
 
-async def crawl_url(url, max_links=20):
-    """Crawl one URL and emit normalized discovery JSON."""
-    browser_config = BrowserConfig(headless=True, verbose=False)
+def _fetch_google_html(search_url):
+    request = Request(search_url, headers=REALISTIC_HEADERS)
+    with urlopen(request, timeout=20) as response:
+        return response.read().decode("utf-8", errors="ignore")
 
-    schema = {
-        "name": "Dynamic Page",
-        "baseSelector": "body",
-        "fields": [
-            {"name": "title", "selector": "title", "type": "text"},
-            {"name": "text", "selector": "body", "type": "text"},
-        ],
-    }
+
+async def _fetch_google_html_with_browser(search_url, headless=None):
+    browser_config = _build_browser_config(headless=headless)
+
+    run_config = CrawlerRunConfig(
+        cache_mode=CacheMode.BYPASS,
+        simulate_user=True,
+        magic=True,
+        delay_before_return_html=random.uniform(5, 12),
+        page_timeout=90000,
+        scan_full_page=True,
+        remove_overlay_elements=True,
+    )
 
     async with AsyncWebCrawler(config=browser_config) as crawler:
-        run_config = CrawlerRunConfig(
-            extraction_strategy=JsonCssExtractionStrategy(schema),
-            cache_mode=CacheMode.BYPASS,
-            wait_for_timeout=30000,
+        sleep_time = random.uniform(10, 25)
+        logger.info(
+            f"Stealth delay: tidur dulu {sleep_time:.1f} detik sebelum hit Google..."
         )
+        await asyncio.sleep(sleep_time)
 
-        result = await crawler.arun(url=url, config=run_config)
+        result = await crawler.arun(url=search_url, config=run_config)
         if not result.success:
-            return {
-                "url": url,
-                "source_domain": classify_source_domain(url),
-                "page_type": "other",
-                "attachments": [],
-                "candidate_links": [],
-                "crawl_metadata": {
-                    "status": "error",
-                    "error_message": result.error_message,
-                },
-            }
+            raise RuntimeError(result.error_message or "Google search fetch failed")
+        return result.html or ""
 
-        parsed = parse_crawl4ai_json(result.extracted_content)
-        extracted = parsed[0] if parsed else {}
-        html = getattr(result, "html", "") or ""
-        candidate_links = discover_internal_links(
-            html, base_url=url, current_url=url, max_links=max_links
+
+def _looks_blocked(html):
+    if not html:
+        return True
+
+    lower = html.lower()
+
+    signals = [
+        "recaptcha",
+        "captcha",
+        "not a robot",
+        "unusual traffic",
+        "automated queries",
+        "/sorry/index",
+        "g-recaptcha",
+        "detected unusual traffic",
+    ]
+
+    return any(signal in lower for signal in signals)
+
+
+async def _get_google_search_html(search_url, headless=None):
+    try:
+        html = await _fetch_google_html_with_browser(search_url, headless=headless)
+        if html and not _looks_blocked(html):
+            return html
+        logger.warning("Google browser fetch looks blocked, switching to requests mode")
+    except Exception as exc:
+        logger.warning(
+            "Google browser fetch failed, switching to requests mode: %s", exc
         )
-        attachments = discover_attachment_candidates_from_html(html, base_url=url)
-        page_type = classify_page_type(
-            url,
-            title=extracted.get("title", ""),
-            text=extracted.get("text", ""),
-            attachments=attachments,
-            candidate_links=candidate_links,
-        )
-
-        return {
-            "title": extracted.get("title", ""),
-            "url": url,
-            "source_domain": classify_source_domain(url),
-            "page_type": page_type,
-            "date": extracted.get("date"),
-            "text": extracted.get("text", ""),
-            "attachments": attachments,
-            "candidate_links": candidate_links,
-            "crawl_metadata": {
-                "status": "ok",
-                "attachments_found": len(attachments),
-                "candidate_links_found": len(candidate_links),
-            },
-        }
-
-
-async def crawl_urls(urls, max_links=20):
-    """Crawl multiple seed URLs and emit normalized web + PDF queue data."""
-    web_results = []
-    pdf_queue = []
-
-    for url in urls:
-        result = await crawl_url(url, max_links=max_links)
-        web_results.append(result)
-        pdf_queue.extend(_build_pdf_queue_items(result))
-
-    return web_results, pdf_queue
-
-
-async def run_async(
-    url,
-    output_name=None,
-    max_links=20,
-    output_prefix=None,
-    seed_discovery=None,
-    keyword=None,
-):
-    """Run a dynamic crawl and save normalized web output plus PDF queue."""
-    urls = [url] if isinstance(url, str) else list(url)
-    web_results, pdf_queue = await crawl_urls(urls, max_links=max_links)
-
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-    if output_name:
-        web_output_path = OUTPUT_DIR / output_name
-    else:
-        web_output_path = OUTPUT_DIR / f"keyword_web_{_slugify(urls[0])}.json"
-
-    pdf_output_path = OUTPUT_DIR / f"keyword_pdf_queue_{_slugify(urls[0])}.json"
-
-    save_json(web_output_path, web_results if len(web_results) > 1 else web_results[0])
-    save_json(pdf_output_path, pdf_queue)
-
-    logger.info("Saved keyword web output to %s", web_output_path)
-    logger.info("Saved keyword PDF queue to %s", pdf_output_path)
-
-    # Build combined per-seed grouped output (Option B) for internal use.
-    prefix = output_prefix
-    if not prefix:
-        # derive prefix from output_name if possible
-        if output_name and output_name.endswith(".json"):
-            prefix = Path(output_name).stem.replace("_web", "")
-        else:
-            prefix = f"keyword_{_slugify(urls[0])}"
-
-    combined_output_path = OUTPUT_DIR / f"combined_keyword_{prefix}.json"
-
-    seeds = []
-    seed_map = {}
-    for idx, res in enumerate(web_results, start=1):
-        seed_id = f"seed-{idx}"
-        seed_obj = {
-            "id": seed_id,
-            "url": res.get("url"),
-            "title": res.get("title"),
-            "text": res.get("text"),
-            "source_domain": res.get("source_domain"),
-            "page_type": res.get("page_type"),
-            "attachments": res.get("attachments", []),
-            "candidate_links": res.get("candidate_links", []),
-            "crawl_metadata": res.get("crawl_metadata", {}),
-        }
-        seeds.append(seed_obj)
-        seed_map[res.get("url")] = seed_id
-
-    pdf_index = []
-    for item in pdf_queue:
-        pdf_url = item.get("pdf_url")
-        source_page = item.get("source_page")
-        seed_id = seed_map.get(source_page)
-        pdf_index.append(
-            {
-                "pdf_url": pdf_url,
-                "seed_id": seed_id,
-                "priority": item.get("priority"),
-                "link_text": item.get("link_text"),
-            }
-        )
-
-    raw_combined = {
-        "keyword": None,
-        "seed_discovery": seed_discovery or {},
-        "generated_at": current_utc_timestamp(),
-        "stats": {
-            "seeds": len(seeds),
-            "web_results": len(web_results),
-            "pdf_index_count": len(pdf_index),
-        },
-        "seeds": seeds,
-        "pdf_index": pdf_index,
-    }
-
-    final_payload = build_final_payload(
-        keyword=keyword,
-        generated_at=raw_combined["generated_at"],
-        stats={
-            "pages_crawled": len(web_results),
-            "documents_found": sum(
-                1
-                for item in web_results
-                if item.get("page_type") in {"document", "pdf", "publication"}
-                or item.get("attachments")
-            ),
-            "attachments_found": sum(
-                len(item.get("attachments", [])) for item in web_results
-            ),
-        },
-        results=web_results,
-    )
-
-    save_json(combined_output_path, final_payload)
-
-    debug_output_path = None
-    if os.getenv("SAVE_KEYWORD_DEBUG_OUTPUT", "1") == "1":
-        debug_output_path = OUTPUT_DIR / f"debug_keyword_{prefix}.json"
-        save_json(debug_output_path, build_debug_payload(raw_combined))
-        logger.info("Saved debug keyword output to %s", debug_output_path)
-
-    logger.info("Saved combined keyword output to %s", combined_output_path)
-
-    return {
-        "web_output_path": str(web_output_path),
-        "pdf_queue_path": str(pdf_output_path),
-        "combined_output_path": str(combined_output_path),
-        "debug_output_path": str(debug_output_path) if debug_output_path else None,
-        "web_results": web_results,
-        "pdf_queue": pdf_queue,
-        "combined": final_payload,
-        "debug_payload": raw_combined,
-    }
-
-
-async def run_keyword_async(
-    keyword,
-    max_seed_results=10,
-    max_links=20,
-    output_prefix="keyword",
-    require_go_id=False,
-):
-    """Discover seed URLs by keyword, then run dynamic crawl on discovered seeds."""
-    # Use an AsyncWebCrawler instance to perform search-based discovery
-    seed_urls = []
-    discovery_source = "none"
-    discovery_error = None
 
     try:
-        browser_config = BrowserConfig(headless=True, verbose=False)
-        async with AsyncWebCrawler(config=browser_config) as crawler:
-            discovered = await discover_seed_urls_by_keyword(
-                crawler, keyword, only_go_id=require_go_id
-            )
-
-        if discovered:
-            seed_urls = discovered[:max_seed_results]
-            discovery_source = "search"
-        else:
-            discovery_source = "search"
-            discovery_error = "search returned no URLs"
+        html = await asyncio.to_thread(_fetch_google_html, search_url)
+        if html and not _looks_blocked(html):
+            return html
+        logger.warning("Google HTML fetch looks blocked after requests fallback")
     except Exception as exc:
-        logger.warning("Search-based keyword discovery failed: %s", exc)
-        discovery_error = str(exc)
+        logger.warning("Google HTML fetch failed after requests fallback: %s", exc)
 
-    # If search returned nothing, fall back to local seed catalog
-    if not seed_urls:
-        local_fallback = _discover_seed_urls_local(
-            keyword, max_results=max_seed_results, require_go_id=require_go_id
-        )
-        if local_fallback:
-            seed_urls = local_fallback
-            discovery_source = "local_fallback"
-            if discovery_error is None:
-                discovery_error = "search returned no URLs"
+    return ""
 
-    if not seed_urls:
-        return {
-            "keyword": keyword,
-            "seed_urls": [],
-            "seed_discovery_source": discovery_source,
-            "seed_discovery_error": discovery_error,
-            "web_output_path": None,
-            "pdf_queue_path": None,
-            "web_results": [],
-            "pdf_queue": [],
+
+def _extract_google_result_urls(html, require_go_id=False):
+    if not html:
+        return []
+
+    collector = _GoogleLinkCollector()
+    collector.feed(html)
+
+    candidate_urls = []
+    for item in collector.links:
+        target = _extract_target_url(item.get("href"))
+        if not target:
+            continue
+        if _is_google_domain(target):
+            continue
+        if require_go_id and not _is_go_id_url(target):
+            continue
+        candidate_urls.append(target)
+
+    return _dedupe_urls(candidate_urls)
+
+
+async def discover_seed_urls_by_keyword(
+    keyword, max_seed_results=10, require_go_id=False, headless=None
+):
+    keyword = _normalize_whitespace(keyword)
+    if not keyword:
+        return [], {
+            "seed_discovery_source": "google",
+            "seed_discovery_error": "Keyword cannot be empty.",
         }
 
-    output_name = f"{output_prefix}_web.json"
-    result = await run_async(
-        seed_urls,
-        output_name=output_name,
-        max_links=max_links,
-        output_prefix=output_prefix,
-        seed_discovery={"source": discovery_source, "note": discovery_error},
-        keyword=keyword,
+    discovered = []
+    discovery_error = None
+
+    for page_index in range(SEARCH_MAX_PAGES):
+        if len(discovered) >= max_seed_results:
+            break
+
+        search_url = _build_search_url(
+            keyword,
+            start=page_index * SEARCH_PAGE_SIZE,
+            require_go_id=require_go_id,
+        )
+
+        logger.info("Google search page %s => %s", page_index + 1, search_url)
+
+        page_discovered = False
+
+        for attempt in range(1, SEARCH_MAX_RETRIES + 1):
+            try:
+                await asyncio.sleep(
+                    random.uniform(
+                        SEARCH_PRE_REQUEST_DELAY_MIN,
+                        SEARCH_PRE_REQUEST_DELAY_MAX,
+                    )
+                )
+
+                html = await _get_google_search_html(search_url, headless=headless)
+
+                if _looks_blocked(html):
+                    discovery_error = "Google returned a blocked or captcha page."
+                    logger.warning(discovery_error)
+
+                    if attempt < SEARCH_MAX_RETRIES:
+                        wait = SEARCH_RETRY_BASE_DELAY * (
+                            2 ** (attempt - 1)
+                        ) + random.uniform(15, 40)
+                        logger.warning(
+                            "Kena CAPTCHA! Exponential retry nunggu %.1fs", wait
+                        )
+                        await asyncio.sleep(wait)
+                        continue
+
+                    break
+
+                urls = _extract_google_result_urls(html, require_go_id=require_go_id)
+                for url in urls:
+                    if url not in discovered:
+                        discovered.append(url)
+                    if len(discovered) >= max_seed_results:
+                        break
+
+                page_discovered = True
+                break
+
+            except Exception as exc:
+                discovery_error = str(exc)
+                logger.warning("Google discovery error: %s", exc)
+
+                if attempt < SEARCH_MAX_RETRIES:
+                    wait = SEARCH_RETRY_BASE_DELAY * attempt + random.uniform(10, 25)
+                    logger.warning("Retrying Google search in %.1fs", wait)
+                    await asyncio.sleep(wait)
+
+        if page_discovered:
+            await asyncio.sleep(random.uniform(1.5, 3.5))
+
+    return discovered[:max_seed_results], {
+        "seed_discovery_source": "google",
+        "seed_discovery_error": discovery_error,
+    }
+
+
+def _extract_meta_content(html, meta_names):
+    if not html:
+        return ""
+
+    for meta_name in meta_names:
+        pattern = re.compile(
+            r'<meta[^>]+(?:name|property)=["\']%s["\'][^>]+content=["\']([^"\']+)["\']'
+            % re.escape(meta_name),
+            re.IGNORECASE,
+        )
+        match = pattern.search(html)
+        if match:
+            return _normalize_whitespace(match.group(1))
+
+    return ""
+
+
+def _extract_tag_content(html, tag_name):
+    if not html:
+        return ""
+
+    pattern = re.compile(
+        rf"<{tag_name}\b[^>]*>(.*?)</{tag_name}>", re.IGNORECASE | re.DOTALL
     )
-    result["seed_urls"] = seed_urls
-    result["seed_discovery_source"] = discovery_source
-    result["seed_discovery_error"] = discovery_error
-    return result
+    match = pattern.search(html)
+    if not match:
+        return ""
+
+    content = re.sub(r"<[^>]+>", " ", match.group(1))
+    return _normalize_whitespace(content)
 
 
-def run(url, output_name=None, max_links=20):
-    return asyncio.run(run_async(url, output_name=output_name, max_links=max_links))
+def _extract_text_from_html(html):
+    if not html:
+        return ""
+
+    container_patterns = [
+        r"<article\b[^>]*>(.*?)</article>",
+        r"<main\b[^>]*>(.*?)</main>",
+        r"<body\b[^>]*>(.*?)</body>",
+    ]
+
+    source_html = html
+    for pattern in container_patterns:
+        match = re.search(pattern, html, re.IGNORECASE | re.DOTALL)
+        if match:
+            source_html = match.group(1)
+            break
+
+    extractor = _PageTextCollector()
+    extractor.feed(source_html)
+    return _normalize_whitespace(" ".join(extractor.parts))
 
 
-def run_keyword(
+def _extract_page_record(url, html):
+    title = _normalize_whitespace(
+        _extract_meta_content(html, ["og:title", "twitter:title"])
+        or _extract_tag_content(html, "title")
+    )
+
+    if not title:
+        h1_match = re.search(
+            r"<h1\b[^>]*>(.*?)</h1>", html or "", re.IGNORECASE | re.DOTALL
+        )
+        if h1_match:
+            title = _normalize_whitespace(re.sub(r"<[^>]+>", " ", h1_match.group(1)))
+
+    date = _normalize_whitespace(
+        _extract_meta_content(
+            html,
+            [
+                "article:published_time",
+                "datePublished",
+                "pubdate",
+                "publishdate",
+                "DC.date.issued",
+                "date",
+            ],
+        )
+    )
+
+    if not date:
+        time_match = re.search(
+            r"<time\b[^>]*(?:datetime=[\"']([^\"']+)[\"'])?[^>]*>(.*?)</time>",
+            html or "",
+            re.IGNORECASE | re.DOTALL,
+        )
+        if time_match:
+            date = _normalize_whitespace(time_match.group(1) or time_match.group(2))
+
+    text = _extract_text_from_html(html)
+    pdfs = extract_pdf_urls_from_html(html, base_url=url)
+
+    # -- METADATA ENTERPRISE & SCORING INJECTION --
+    crawled_at = datetime.now(WIB).isoformat()
+    word_count = len(text.split()) if text else 0
+
+    # Menentukan klasifikasi tipe halaman pakai router pintar yang baru
+    page_type = classify_page_type(url, title=title, text=text, attachments=pdfs)
+
+    content_hash = hashlib.sha256(text.encode("utf-8")).hexdigest() if text else ""
+    source_name = _source_from_url(url)
+    url_hash = hashlib.md5(url.encode("utf-8")).hexdigest()[:8]
+    document_id = f"{source_name.lower()}-doc-{url_hash}"
+
+    return {
+        "document_id": document_id,
+        "content_hash": content_hash,
+        "page_type": page_type,  # <-- Posisi page_type
+        "title": title,
+        "link": url,
+        "source": source_name,
+        "published_date": date,
+        "text": text,
+        "word_count": word_count,
+        "source_pdf": pdfs if pdfs else None,
+        "crawled_at": crawled_at,
+    }
+
+
+async def crawl_url(url, headless=None):
+    browser_config = _build_browser_config(headless=headless)
+    run_config = CrawlerRunConfig(
+        cache_mode=CacheMode.BYPASS,
+        simulate_user=True,
+        magic=True,
+        delay_before_return_html=random.uniform(3, 6),
+        page_timeout=90000,
+        scan_full_page=True,
+        remove_overlay_elements=True,
+    )
+
+    async with AsyncWebCrawler(config=browser_config) as crawler:
+        await asyncio.sleep(random.uniform(1.0, 2.5))
+        result = await crawler.arun(url=url, config=run_config)
+        if not result.success:
+            raise RuntimeError(result.error_message or f"Failed to crawl {url}")
+        return result.html or ""
+
+
+async def run_by_keyword_async(
     keyword,
     max_seed_results=10,
     max_links=20,
-    output_prefix="keyword",
+    output_prefix="dynamic_keyword",
     require_go_id=False,
+    headless=None,
+):
+    keyword = _normalize_whitespace(keyword)
+    start_time_dt = datetime.now(WIB)
+
+    if not keyword:
+        return {
+            "keyword": keyword,
+            "seed_discovery_source": "google",
+            "seed_discovery_error": "Keyword cannot be empty.",
+            "seed_urls": [],
+            "combined_output_path": None,
+            "results": [],
+            "stats": {"pages_crawled": 0, "documents_found": 0, "attachments_found": 0},
+        }
+
+    seed_urls, discovery_info = await discover_seed_urls_by_keyword(
+        keyword,
+        max_seed_results=max_seed_results,
+        require_go_id=require_go_id,
+        headless=headless,
+    )
+
+    if max_links is not None:
+        seed_urls = seed_urls[:max_links]
+
+    logger.info(
+        "Keyword [%s] discovered %s seed URL(s)",
+        keyword,
+        len(seed_urls),
+    )
+
+    results = []
+    errors = []
+    attachments_found = 0
+    documents_found = 0
+
+    for index, url in enumerate(seed_urls, start=1):
+        logger.info("[%s/%s] Crawling %s", index, len(seed_urls), url)
+
+        try:
+            html = await crawl_url(url, headless=headless)
+            record = _extract_page_record(url, html)
+            results.append(record)
+
+            if record.get("source_pdf"):
+                attachments_found += len(record["source_pdf"])
+                documents_found += 1
+
+            await asyncio.sleep(random.uniform(1.0, 2.0))
+
+        except Exception as exc:
+            logger.warning("Failed to crawl %s: %s", url, exc)
+            errors.append(
+                {"url": url, "error_type": type(exc).__name__, "message": str(exc)}
+            )
+
+    end_time_dt = datetime.now(WIB)
+    duration_seconds = (end_time_dt - start_time_dt).total_seconds()
+    success_rate = f"{(len(results)/len(seed_urls)*100):.1f}%" if seed_urls else "0.0%"
+
+    # BUNGKUS PAYLOAD AKHIR
+    final_payload = {
+        "metadata": {
+            "schema_version": "1.0.0",
+            "job_context": {
+                "job_id": f"crawl-{_slugify(keyword)}-{start_time_dt.strftime('%Y%m%d-%H%M')}",
+                "crawler_name": "indo-llm-engine",
+                "crawler_version": "v1.0.0",
+                "run_mode": "KEYWORD_CRAWL",
+                "target_keyword": keyword,
+            },
+            "execution_metrics": {
+                "started_at": start_time_dt.isoformat(),
+                "completed_at": end_time_dt.isoformat(),
+                "duration_seconds": round(duration_seconds, 2),
+                "total_seed_urls": len(seed_urls),
+                "total_extracted": len(results),
+                "total_failed": len(errors),
+                "success_rate": success_rate,
+            },
+            "errors": errors,
+        },
+        "data": results,
+    }
+
+    output_file = BASE_DIR / OUTPUT_DIR / f"{output_prefix}_{_slugify(keyword)}.json"
+
+    # Save the new enterprise metadata format
+    save_json(output_file, final_payload)
+
+    logger.info("Keyword crawl saved => %s", output_file)
+
+    # Return kombinasi untuk jaga kompatibilitas sama cli_pipeline.py
+    return {
+        "keyword": keyword,
+        "seed_discovery_source": discovery_info.get("seed_discovery_source", "google"),
+        "seed_discovery_error": discovery_info.get("seed_discovery_error"),
+        "seed_urls": seed_urls,
+        "combined_output_path": str(output_file),
+        **final_payload,
+    }
+
+
+def run_by_keyword(
+    keyword,
+    max_seed_results=10,
+    max_links=20,
+    output_prefix="dynamic_keyword",
+    require_go_id=False,
+    headless=None,
 ):
     return asyncio.run(
-        run_keyword_async(
+        run_by_keyword_async(
             keyword,
             max_seed_results=max_seed_results,
             max_links=max_links,
             output_prefix=output_prefix,
             require_go_id=require_go_id,
+            headless=headless,
         )
     )

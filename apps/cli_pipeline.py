@@ -7,7 +7,9 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(ROOT_DIR))
 
 from config.government_config import GOVERNMENT_SITES_CONFIG
+from config.keyword_config import MAX_LINKS_TO_CRAWL, MAX_SEED_RESULTS
 from pipelines.government_pipeline import run as run_government_pipeline
+from pipelines.keyword_pipeline import run_by_keyword
 
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
@@ -21,6 +23,7 @@ if str(ROOT_DIR) not in sys.path:
 def show_main_menu():
     print("\n=== CRAWLER MENU ===")
     print("1. Crawl Government Website")
+    print("2. Keyword Crawl")
     print("0. Exit")
 
 
@@ -65,9 +68,51 @@ def main():
 
                 print(f"\n=== START CRAWLING [{selected_site}] ===\n")
 
-                run_government_pipeline(selected_site)
+                asyncio.run(run_government_pipeline(selected_site))
 
                 print(f"\n=== FINISHED [{selected_site}] ===\n")
+
+            elif choice == 2:
+                keyword = input("\nEnter keyword: ").strip()
+                if not keyword:
+                    print("Keyword cannot be empty.")
+                    continue
+
+                only_go_id = (
+                    input("Only include go.id domains? (y/n): ").strip().lower()
+                )
+                require_go_id = only_go_id == "y"
+
+                print(f"\n=== START KEYWORD CRAWL [{keyword}] ===\n")
+
+                result = run_by_keyword(
+                    keyword,
+                    max_seed_results=MAX_SEED_RESULTS,
+                    max_links=MAX_LINKS_TO_CRAWL,
+                    output_prefix="dynamic_keyword",
+                    require_go_id=require_go_id,
+                )
+
+                if result:
+                    print(
+                        f"Seed discovery source: {result.get('seed_discovery_source')}"
+                    )
+                    if result.get("seed_discovery_error"):
+                        print(
+                            f"Seed discovery note: {result.get('seed_discovery_error')}"
+                        )
+
+                    seed_urls = result.get("seed_urls", [])
+                    print(f"Discovered seed URLs: {len(seed_urls)}")
+                    for url in seed_urls:
+                        print(f"- {url}")
+
+                    if result.get("combined_output_path"):
+                        print(f"Output file: {result.get('combined_output_path')}")
+                else:
+                    print("No results found.")
+
+                print(f"\n=== FINISHED KEYWORD CRAWL [{keyword}] ===\n")
 
             elif choice == 0:
                 print("\nExit crawler.")

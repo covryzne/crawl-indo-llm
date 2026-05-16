@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "schema_version": "1.1.0",
+    "job_context": {
+      "job_id": "crawl-badan_gizi_nasional-20260516-1144",
+      "crawler_name": "indo-llm-engine",
+      "crawler_version": "v2.5.0",
+      "run_mode": "KEYWORD_CRAWL",
+      "target_keyword": "Badan Gizi Nasional"
+    },
+    "execution_metrics": {
+      "started_at": "2026-05-16T11:44:20.209876+07:00",
+      "completed_at": "2026-05-16T11:47:07.640165+07:00",
+      "duration_seconds": 167.43,
+      "total_seed_urls": 10,
+      "total_extracted": 10,
+      "total_failed": 0,
+      "success_rate": "100.0%"
+    },
+    "errors": []
+  },
+  "data": [
+    {
+      "document_id": "bgn-doc-9472078e",
+      "content_hash": "",
+      "page_type": "document",
+      "title": "Badan Gizi Nasional | Layanan Unggulan untuk Masa Depan Sehat Indonesia",
+      "link": "https://bgn.go.id/",
+      "source": "BGN",
+      "published_date": "",
+      "text": "",
+      "word_count": 0,
+      "source_pdf": [
+        "https://jdih.kemenkum.go.id/common/dokumen/2024perpres083.pdf"
+      ],
+      "crawled_at": "2026-05-16T11:45:19.483349+07:00"
+    },
+    {
+      "document_id": "bgn-doc-10d13de0",
+      "content_hash": "3be6a3fb46c3755902ab9e7ef5bff5716df0de5b5378a8f95dcbe03baf8f32dd",
+      "page_type": "government",
+      "title": "SPPG Operasional",
+      "link": "https://www.bgn.go.id/operasional-sppg",
+      "source": "BGN",
+      "published_date": "",
+      "text": "SPPG Operasional Daftar Satuan Pelayanan Pemenuhan Gizi (SPPG) yang telah operasional Berikut daftar unit SPPG yang telah operasional, berdasarkan data per 16 Mei 2026 pukul 10.00 WIB , sebagai bentuk transparansi informasi kepada publik. Total Seluruh SPPG Operasional 28.060 1 JAWA TENGAH KEBUMEN BUAYAN ADIWARNO Jl. Karangbolong,Adiwarno, Kec. Buayan, Kabupaten Kebumen, Jawa Tengah, Rangkah, Buayan, Kab. Kebumen, Jawa Tengah 2 KALIMANTAN SELATAN TANAH LAUT TAMBANG ULANG SUNGAI PINANG Jl. Kebun Karet H. Abidin Rt 002 Rw 001 Desa Sungai Pinang Kec. Tambang Ulang Kab. Tanah Laut 3 KEPULAUAN RIAU KOTA BATAM SAGULUNG TEMBESI Jl Letjen Suprapto, Daerah Mall Top 100 Tembesi (Depan Rusunawa) 4 JAWA TENGAH KEBUMEN PREMBUN TUNGGALROSO Desa Tunggalroso Kecamatan Prembun Kabupaten Kebumen Jawa Tengah 5 JAWA BARAT CIANJUR SUKALUYU SINDANGRAJA Jl. Raya Cibogo Bandung Jonggol sindangraja sukaluyu cianjur Jawa Barat 6 NUSA TENGGARA TIMUR KOTA KUPANG MAULAFA MAULAFA Jln. Fetor feonay, Rt 16/ Rw 06,Kel. Maulafa,Kec. Maulafa,Kota Kupang,NTT 7 SUMATERA UTARA SIMALUNGUN GUNUNG MALIGAS KARANG SARI Jl. Purwo Huta Tiga, Karang Sari, Kec. Gunung Maligas, Kab. Simalungun, Sumatera Utara 8 JAWA BARAT SUKABUMI CIBADAK PAMURUYAN Jl. Pamuruyan Leuweung Datar, Desa Pamuruyan, Kec. Cibadak, Kab. Sukabumi, Jawa Barat 9 SULAWESI TENGGARA MUNA BARAT TIWORO UTARA TONDASI Jl. Poros Tondasi, Desa Tondasi, Kecamatan Tiworo Utara, Kabupaten Muna Barat, Sulawesi Tenggara 10 JAWA TENGAH KOTA SURAKARTA BANJARSARI KADIPIRO Jl. Kerinci No 20, Banjarsari, Kec. Banjarsari, Kota Surakarta, Jawa Tengah",
+      "word_count": 229,
+      "source_pdf": null,
+      "crawled_at": "2026-05-16T11:45:30.869218+07:00"
+    },
+    {
+      "document_id": "bgn-doc-632551cb",
+      "content_hash": "04cb2f0b34789ecd9683195f4cc5f46298411594b8e9b68cbe7cc1f0add68de6",
+      "page_type": "government",
+      "title": "Struktur BGN",
+      "link": "https://www.bgn.go.id/team",
+      "source": "BGN",
+      "published_date": "",
+      "text": "Profil Pejabat BGN Daftar anggota Badan Gizi Nasional untuk melaksanakan program pemenuhan gizi .",
+      "word_count": 14,
+      "source_pdf": null,
+      "crawled_at": "2026-05-16T11:45:43.572185+07:00"
+    },
+    {
+      "document_id": "bgn-doc-c264ac3f",
+      "content_hash": "2a4e9dafc8c048b7d4ffda7955e3eeed53c7de9426bdf1386c05a8934c01c46b",
+      "page_type": "news",
+      "title": "List of News",
+      "link": "https://www.bgn.go.id/news/pengumuman/",
+      "source": "BGN",
+      "published_date": "",
+      "text": "Berita / Pengumuman Serangkaian cerita-cerita terbaru BGN: Pengumuman PENGADAAN JASA LAINNYA TENAGA AHLI DAN TENAGA PENDUKUNG PADA BIRO MANAJEMEN KINERJA – SEKRETARIAT UTAMA TAHUN ANGGARAN 2026 BGN Pengumuman • 29 April 2026 PENGADAAN JASA LAINNYA TENAGA PENDUKUNG PADA DIREKTORAT PROMOSI DAN EDUKASI GIZI BGN Pengumuman • 16 Maret 2026 Pengumuman Pengadaan Jasa Lainnya Tenaga Pendukung Pada Deputi Bidang Promosi dan Kerja Sama BGN Pengumuman • 9 Maret 2026 PENGADAAN JASA LAINNYA TENAGA PENDUKUNG PADA INSPEKTORAT UTAMA BADAN GIZI NASIONAL BGN Pengumuman • 2 Februari 2026 Pengadaan Jasa Tenaga Pendukung Substansi Perorangan Lainnya Pada Biro Sumber Daya Manusia Dan Organisasi di Badan GIzi Nasional BGN Pengumuman • 2 Februari 2026 PENGADAAN JASA LAINNYA TENAGA PENDUKUNG PADA DIREKTORAT PENYEDIAAN DAN PENYALURAN WILAYAH III BGN Pengumuman • 24 Januari 2026 Hasil Akhir Seleksi Pengadaan Pegawai Pemerintah dengan Perjanjian Kerja (PPPK) Tingkat Instansi Tahap II Badan Gizi Nasional BGN Pengumuman • 12 Januari 2026 BGN Imbau Masyarakat Waspadai Akun Loker Tidak Resmi BGN Pengumuman • 6 Januari 2026 Penyesuaian Jadwal Tahapan Pelaksanaan Seleksi Pengadaan PPPK Tingkat Instansi Tahap II Badan Gizi Nasional Tahun Anggaran 2025 BGN Pengumuman • 4 Januari 2026 PENGUMUMAN PENGADAAN JASA LAINNYA PERORANGAN TENAGA PENDUKUNG PADA PUSAT DATA DAN SISTEM INFORMASI BADAN GIZI NASIONAL TA 2026 (i) BGN Pengumuman • 2 Januari 2026 PENGUMUMAN PENGADAAN JASA LAINNYA PERORANGAN TENAGA PENDUKUNG CSO PADA PUSAT DATA DAN SISTEM INFORMASI BADAN GIZI NASIONAL TA 2026 (ii) BGN Pengumuman • 2 Januari 2026 Pembatalan Status Kelulusan Dari Memenuhi Syarat (MS) Menjadi Tidak Memenuhi Syarat (TMS) Hasil Seleksi Administrasi Pada Seleksi Pengadaan Pegawai Pemerintah Dengan Perjanjian Kerja (PPPK) Tingkat Instansi Tahap II Badan Gizi Nasional Tahun Anggaran 2025 BGN Pengumuman • 15 Desember 2025 1 2 3 ... 6",
+      "word_count": 283,
+      "source_pdf": null,
+      "crawled_at": "2026-05-16T11:45:54.477714+07:00"
+    },
+    {
+      "document_id": "bgn-doc-a31f758f",
+      "content_hash": "00167cd9020e0c99ac4da18a8b640ce01a89a338c649b27620dd7a8e367d0ead",
+      "page_type": "news",
+      "title": "Daftar Berita",
+      "link": "https://www.bgn.go.id/news",
+      "source": "BGN",
+      "published_date": "",
+      "text": "Berita Nasional",
+      "word_count": 2,
+      "source_pdf": null,
+      "crawled_at": "2026-05-16T11:46:05.691136+07:00"
+    },
+    {
+      "document_id": "bgn-doc-5aa8f988",
+      "content_hash": "d40f65bc285968a4d459b2a2668520848de57c35bbce53e8c24a96d832769a9b",
+      "page_type": "government",
+      "title": "Badan Gizi Nasional | Fungsi &amp; Tugas",
+      "link": "https://www.bgn.go.id/functions-duties",
+      "source": "BGN",
+      "published_date": "",
+      "text": "Tugas BGN Badan Gizi Nasional mempunyai tugas melaksanakan pemenuhan gizi nasional.",
+      "word_count": 11,
+      "source_pdf": null,
+      "crawled_at": "2026-05-16T11:46:15.955816+07:00"
+    },
+    {
+      "document_id": "instagram-doc-659906fe",
+      "content_hash": "",
+      "page_type": "other",
+      "title": "Badan Gizi Nasional RI (@badangizinasional.ri) • Foto dan video Instagram",
+      "link": "https://www.instagram.com/badangizinasional.ri/?hl=id",
+      "source": "INSTAGRAM",
+      "published_date": "",
+      "text": "",
+      "word_count": 0,
+      "source_pdf": null,
+      "crawled_at": "2026-05-16T11:46:28.276981+07:00"
+    },
+    {
+      "document_id": "babelinsight-doc-94dbb972",
+      "content_hash": "de09a3718cde0e75f3c2f4a99d1bbd1376880e735ba6342b5b07da664734cb8b",
+      "page_type": "other",
+      "title": "Badan Gizi Nasional Tangguhkan 1.738 Satuan Pelayanan Pemenuhan Gizi",
+      "link": "https://www.babelinsight.id/bgn-tangguhkan-satuan-pelayanan-gizi",
+      "source": "BABELINSIGHT",
+      "published_date": "2026-05-13T11:23:16+00:00",
+      "text": "Home Berita Badan Gizi Nasional Tangguhkan 1.738 Satuan Pelayanan Pemenuhan Gizi Badan Gizi Nasional Tangguhkan 1.738 Satuan Pelayanan Pemenuhan Gizi Karina Maharani Published May 13, 2026 - 18:23 Last Update May 13, 2026 - 18:23 Share WhatsApp Ilustrasi Dapur Program Makan Bergizi Gratis (MBG).Foto: Dwi Apriani Smallest Font Largest Font Badan Gizi Nasional (BGN) melakukan penangguhan sementara terhadap operasional 1.738 Satuan Pelayanan Pemenuhan Gizi ( SPPG ) karena dinilai tidak memenuhi standar kelayakan. Kebijakan ini diumumkan di Jakarta pada Rabu, 13 Mei 2026, sebagai langkah penjaminan mutu program Makan Bergizi Gratis (MBG) yang dilansir dari Detik Finance. Hingga data terakhir per 12 Mei 2026, total SPPG yang terdaftar telah mencapai angka 28.390 unit di seluruh Indonesia. Kepala Badan Komunikasi Pemerintah (Bakom), Muhammad Qodari, memberikan rincian terkait ribuan unit yang harus dihentikan sementara kegiatannya tersebut dalam konferensi pers di kantornya. \"Berdasarkan data per 12 Mei 2026, terdapat 1.238 SPPG uang diberhentikan sementara atau suspend karena tidak memenuhi standard,\" ungkap Qodari, Kepala Badan Komunikasi Pemerintah (Bakom). Also Read Badan Gizi Nasional Wajibkan Perlindungan BPJS Ketenagakerjaan Bagi Relawan Langkah evaluasi ini merupakan bagian dari pengawasan ketat pemerintah terhadap aspek keamanan pangan. Dari keseluruhan populasi satuan pelayanan, sebanyak 15.735 unit di antaranya telah berhasil mengantongi Sertifikat Laik Higiene Sanitasi (SLHS). Pemerintah mengakui bahwa mengelola program berskala besar dengan target 82,9 juta jiwa bukan merupakan perkara mudah. Fokus utama saat ini terletak pada pembenahan sistem tata kelola agar pelaksanaan program tetap berada di jalur yang benar. \"Penguatan dilakukan dari hulu ke hilir. Mulai dari perencanaan dan standar menu, seleksi dan pengawasan mitra SPPG, SOP higienitas dan distribusi, mekanisme pelaporan dan penanganan insiden, hingga transparansi serta akuntabilitas pengawasan agar manfaat program benar-benar sampai ke penerima secara aman, layak, dan konsisten,\" terang Qodari, Kepala Badan Komunikasi Pemerintah (Bakom). Also Read KSP Dudung Ingatkan Badan Gizi Nasional Waspadai Investor Makan Gratis Meskipun terdapat kendala pada ribuan SPPG, realisasi penerima manfaat diklaim tetap berjalan signifikan. Data menunjukkan bahwa jangkauan program ini sudah menyentuh lebih dari 61,9 juta warga di berbagai wilayah. \"Berdasarkan data BGN per 12 Mei 2026, jumlah penerima manfaat yang terdata mencapai 61.991.412 atau 71,8% dari total target 82,9 penerima,\" tutur Qodari, Kepala Badan Komunikasi Pemerintah (Bakom). Advertisement Scroll To Continue with Content Disclaimer This article was automatically rewritten by AI based on source: finance.detik.com without altering the facts of the original article. Makan Bergizi Gratis Badan Gizi Nasional SPPG Editors Team Karina Maharani Author Follow What's Your Reaction? 0 Like 0 Dislike 0 Funny 0 Angry 0 Sad 0 Wow",
+      "word_count": 414,
+      "source_pdf": null,
+      "crawled_at": "2026-05-16T11:46:40.909188+07:00"
+    },
+    {
+      "document_id": "mediakompeten-doc-10beaa1c",
+      "content_hash": "d34c74ef026367014b5900369e71b9bf6ad9dd3f73b8a4f13750b90168aaa51c",
+      "page_type": "other",
+      "title": "Badan Gizi Nasional Wajibkan Satuan Pelayanan Miliki Sertifikat Higiene",
+      "link": "https://www.mediakompeten.co.id/bgn-wajibkan-sertifikat-higiene-sppg",
+      "source": "MEDIAKOMPETEN",
+      "published_date": "2026-05-15T12:49:13+00:00",
+      "text": "Home Nasional Badan Gizi Nasional Wajibkan Satuan Pelayanan Miliki Sertifikat Higiene Badan Gizi Nasional Wajibkan Satuan Pelayanan Miliki Sertifikat Higiene Elisa Purnama, S.Sn., M.A. Published May 15, 2026 - 19:49 Last Update May 15, 2026 - 19:49 Share WhatsApp Ilustrasi Satuan Penyelenggara Program Gizi (SPPG) di daerah. (Dok. Kementerian PPN/Bappenas) Smallest Font Largest Font Badan Gizi Nasional (BGN) mewajibkan Satuan Pelayanan Pemenuhan Gizi (SPPG) memiliki Sertifikat Laik Higiene Sanitasi (SLHS) untuk menjamin standar keamanan pangan pada Rabu (13/5/2026). Kebijakan ini bertujuan melindungi penerima manfaat program Makan Bergizi Gratis (MBG) dari risiko kontaminasi pengolahan makanan. Kewajiban kepemilikan dokumen tersebut diatur dalam Peraturan BGN Nomor 4 Tahun 2026 yang dilansir dari Nasional. Pemerintah akan memberikan sanksi tegas berupa penghentian sementara operasional bagi unit layanan yang tidak mematuhi aturan tersebut dalam kurun waktu tiga bulan sejak penetapan. Kepala Biro Hukum dan Humas BGN, Khairul Hidayati menekankan bahwa sertifikasi ini merupakan instrumen validasi proses pengolahan pangan yang disiplin. Penegasan tersebut merujuk pada pentingnya standar kesehatan dalam ekosistem layanan publik gizi nasional. Also Read BGN Wajibkan Penggunaan Telur Lokal dalam Program Makan Bergizi Gratis \"SLHS bukan hanya dokumen formalitas. SLHS adalah bentuk jaminan bahwa proses pengolahan makanan dilakukan dengan standar higiene dan sanitasi yang baik,\" ucap Hida, Kepala Biro Hukum dan Humas BGN. Pihaknya menjelaskan bahwa regulasi ini disusun untuk mendukung keberlanjutan program jangka panjang. Menurutnya, perubahan sudut pandang terhadap fungsi sertifikasi keamanan pangan sangat diperlukan oleh seluruh pengelola unit layanan. \"Justru ini adalah bentuk tanggung jawab kita untuk melindungi penerima manfaat dan menjaga keberlanjutan program. Kita harus mulai mengubah cara pandang terhadap SLHS,\" ucap Hida. Also Read KSP Dudung Abdurachman Temukan Dapur Makan Bergizi Tak Layak di Jakarta Hida menilai kendala di lapangan sering kali bersumber dari kurangnya kedisiplinan dalam menerapkan standar teknis yang sudah tersedia. Hal ini menjadi krusial mengingat volume distribusi makanan dan jumlah unit layanan aktif yang terus bertambah secara signifikan. \"Keamanan pangan dalam program MBG tidak bisa ditawar, mengingat jumlah penerima manfaat dan SPPG aktif terus meningkat setiap hari,\" ujar Hida. Operasional SPPG dipandang memiliki posisi strategis sebagai garda terdepan dalam sistem pemenuhan gizi negara. Kualitas implementasi di tingkat produksi akan menjadi penentu utama kesuksesan program MBG secara keseluruhan di mata publik. Also Read Pemerintah Salurkan Makan Bergizi Gratis kepada 61,9 Juta Penerima \"SPPG bukan hanya sekadar dapur produksi makanan. SPPG adalah bagian dari sistem layanan publik gizi nasional. Di sanalah kualitas program benar-benar diuji,\" kata Hida. Indikator keberhasilan program akan dinilai langsung oleh masyarakat melalui kondisi fisik makanan yang diterima setiap hari. Faktor kebersihan, ketepatan waktu distribusi, hingga jaminan keamanan menjadi poin utama evaluasi standar layanan tersebut. Advertisement Disclaimer This article was automatically rewritten by AI based on source: nasional.kompas.com without altering the facts of the original article. Badan Gizi Nasional Makan Bergizi Gratis Sertifikat Laik Higiene Sanitasi Editors Team Elisa Purnama, S.Sn., M.A. Author Follow What's Your Reaction? 0 Like 0 Dislike 0 Funny 0 Angry 0 Sad 0 Wow",
+      "word_count": 482,
+      "source_pdf": null,
+      "crawled_at": "2026-05-16T11:46:53.151950+07:00"
+    },
+    {
+      "document_id": "mediakompeten-doc-d943321c",
+      "content_hash": "1dc3609d5dc3e8077773ffb7ebba8465a92efb7fb36277d25dc5423d97cd2ab2",
+      "page_type": "other",
+      "title": "BGN Wajibkan Penggunaan Telur Lokal dalam Program Makan Bergizi Gratis",
+      "link": "https://www.mediakompeten.co.id/bgn-wajibkan-telur-lokal-makan-bergizi-gratis",
+      "source": "MEDIAKOMPETEN",
+      "published_date": "2026-05-16T04:31:27+00:00",
+      "text": "Home Nasional BGN Wajibkan Penggunaan Telur Lokal dalam Program Makan Bergizi Gratis BGN Wajibkan Penggunaan Telur Lokal dalam Program Makan Bergizi Gratis Fitria Kusumawati, S.K.M., M.Kes. Published May 16, 2026 - 11:31 Last Update May 16, 2026 - 11:31 Share WhatsApp Smallest Font Largest Font Table of Contents [ Show ] Standar Komposisi Gizi Nasional Seluruh Satuan Pelayanan Pemenuhan Gizi (SPPG) atau dapur Makan Bergizi Gratis (MBG) diinstruksikan untuk menggunakan telur produk lokal. Langkah ini diambil guna mendukung perekonomian masyarakat di sekitar wilayah pelayanan, seperti dilansir dari Nasional. Kepala Badan Gizi Nasional (BGN) Dadan Hindayana menjelaskan bahwa instruksi tersebut sejalan dengan keinginan Presiden Prabowo Subianto yang mewajibkan penggunaan produksi dalam negeri untuk program ini. \"Sesuai keinginan Presiden, telur untuk Program MBG terutama wajib menggunakan produksi lokal,\" kata Dadan dalam keterangan pers BGN, Jumat (15/5/2026). Also Read Badan Gizi Nasional Wajibkan Satuan Pelayanan Miliki Sertifikat Higiene Secara umum, SPPG diperintahkan untuk memprioritaskan pasokan pangan dari peternak serta pelaku usaha setempat. Kebijakan ini tidak hanya terbatas pada komoditas telur demi mendongkrak ekonomi lokal. \"SPPG diminta mengutamakan produk dan produksi lokal,\" ucap Dadan. Dadan menambahkan, jika mitra pelaksana program memiliki koperasi atau jaringan pemasok mandiri, pemenuhan bahan pangan harus tetap menyerap hasil produksi peternak di masing-masing wilayah. Also Read KSP Dudung Abdurachman Temukan Dapur Makan Bergizi Tak Layak di Jakarta Presiden disebut meminta agar telur sebagai sumber protein lebih sering dimasukkan ke dalam daftar menu program pangan tersebut. Standar Komposisi Gizi Nasional Meskipun menetapkan aturan ketat terkait sumber bahan baku, BGN tidak menyeragamkan menu makanan secara nasional. Lembaga ini hanya menetapkan acuan untuk standar komposisi gizi. \"BGN tidak menetapkan menu nasional, tapi membuat standar komposisi gizi. Oleh sebab itu, menempatkan pengawas gizi di setiap SPPG agar bisa membuat menu berbasis potensi sumber daya lokal dan kesukaan masyarakat lokal,\" ucap Dadan. Also Read Pemerintah Salurkan Makan Bergizi Gratis kepada 61,9 Juta Penerima Setiap SPPG kini dilengkapi dengan tenaga ahli gizi yang bertugas mengawasi kualitas makanan. Mereka bertanggung jawab menyusun variasi menu berdasarkan ketersediaan pangan daerah sekaligus memastikan kebutuhan nutrisi penerima manfaat terpenuhi. Advertisement Disclaimer This article was automatically rewritten by AI based on source: nasional.kompas.com without altering the facts of the original article. makan bergizi gratis badan gizi nasional peternak lokal Editors Team Fitria Kusumawati, S.K.M., M.Kes. Author Follow What's Your Reaction? 0 Like 0 Dislike 0 Funny 0 Angry 0 Sad 0 Wow",
+      "word_count": 390,
+      "source_pdf": null,
+      "crawled_at": "2026-05-16T11:47:06.281264+07:00"
+    }
+  ]
+}
