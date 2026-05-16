@@ -1,0 +1,44 @@
+# ==========================================
+# 1. Python & Environment
+# ==========================================
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==========================================
+# 2. Playwright / Browser Profiles
+# ==========================================
+**/playwright_profile_keyword/
+**/extensions_crx_cache/
+**/GraphiteDawnCache/
+**/GrShaderCache/
+**/ShaderCache/
+
+# Blokir file log dan lock bawaan browser agar tidak mengotori git status
+*.log
+*.log.old
+**/LOCK
+**/LOG
+**/LOG.old
+
+# ==========================================
+# 3. Data Outputs / Crawl Results
+# ==========================================
+# Baris di bawah sengaja dikosongkan/dihapus agar semua file .json 
+# dan folder outputs/ tetap di-track oleh Git sesuai kebutuhan lu.
+
+# ==========================================
+# 4. OS & IDE Terkait
+# ==========================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

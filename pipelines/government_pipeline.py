@@ -1,14 +1,21 @@
 # pipelines/government_pipeline.py
 
 import asyncio
+import hashlib
 import logging
 import sys
+from datetime import datetime, timedelta, timezone
+
+WIB = timezone(timedelta(hours=7))
+
 from pathlib import Path
 from urllib.parse import urljoin
 
-from crawl4ai import AsyncWebCrawler, BrowserConfig, CacheMode, CrawlerRunConfig
+from crawl4ai import AsyncWebCrawler, CacheMode, CrawlerRunConfig
 from crawl4ai.extraction_strategy import JsonCssExtractionStrategy
 
+# Import config baru kita di sini
+from config.browser_config import get_browser_config
 from config.government_config import GOVERNMENT_SITES_CONFIG, OUTPUT_DIR, SCRAPER_CONFIG
 from crawler.pagination.js_click_pagination import get_js_click_config, is_last_page
 from crawler.pagination.url_pagination import build_url
@@ -21,34 +28,12 @@ if sys.platform == "win32":
 
 logging.basicConfig(
     level=logging.INFO,
-    format=("%(asctime)s - " "%(levelname)s - " "%(message)s"),
+    format="%(asctime)s - %(levelname)s - %(message)s",
 )
 
 logger = logging.getLogger(__name__)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-SEARCH_USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
-)
-
-REALISTIC_HEADERS = {
-    "User-Agent": SEARCH_USER_AGENT,
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
-    "DNT": "1",
-    "Connection": "keep-alive",
-    "Upgrade-Insecure-Requests": "1",
-    "Sec-Fetch-Dest": "document",
-    "Sec-Fetch-Mode": "navigate",
-    "Sec-Fetch-Site": "none",
-    "Sec-Fetch-User": "?1",
-    "sec-ch-ua": '"Google Chrome";v="135", "Chromium";v="135", "Not:A-Brand";v="8"',
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": '"Windows"',
-}
 
 
 async def crawl_links(site_name):
@@ -56,293 +41,232 @@ async def crawl_links(site_name):
     pagination_config = site_config["pagination"]
     pagination_type = pagination_config["type"]
     links_config = site_config["links"]
-    base_url = links_config["url"]
-    schema = links_config["schema"]
 
-    browser_config = BrowserConfig(
-        headless=True,  # Tetep False dulu biar kelihatan kalau udah sukses
-        verbose=True,
-        headers=REALISTIC_HEADERS,
-        ignore_https_errors=True,  # Abaikan error SSL yang sering kejadian di web pemerintah
-        extra_args=[
-            "--disable-web-security",  # Ini jurus pamungkas buat ngelewatin error CORS
-            "--disable-features=IsolateOrigins,site-per-process",
-            "--disable-site-isolation-trials",
-            "--ignore-certificate-errors",
-        ],
-    )
+    browser_config = get_browser_config(site_name=site_name, headless=False)
 
-    all_results = []
+    extraction_strategy = JsonCssExtractionStrategy(links_config["schema"])
+
+    all_news_items = []
+    consecutive_empty_pages = 0
+    max_pages = SCRAPER_CONFIG["max_pages"]
+    max_empty = SCRAPER_CONFIG["max_consecutive_empty"]
 
     async with AsyncWebCrawler(config=browser_config) as crawler:
-        page_num = 1
-        consecutive_empty = 0
+        session_id = f"session_{site_name.lower()}"
 
-        logger.info(
-            "=== START LINK CRAWL [%s] ===",
-            site_name,
-        )
+        for page_num in range(1, max_pages + 1):
+            logger.info("[%s] Crawling page %s", site_name, page_num)
 
-        while page_num <= SCRAPER_CONFIG["max_pages"]:
+            url = links_config["url"]
+            js_code = None
+            js_only = False
 
             if pagination_type == "url":
-                url = build_url(
-                    base_url,
-                    page_num,
-                )
-            else:
-                url = base_url
-
-            logger.info(
-                "[%s] Crawling page %s => %s",
-                site_name,
-                page_num,
-                url,
-            )
-
-            js_config = {
-                "js_code": None,
-                "js_only": False,
-            }
-
-            if pagination_type == "js_click":
-                js_config = get_js_click_config(
-                    pagination_config,
-                    page_num,
-                )
-
-            js_code = js_config["js_code"]
-            js_only = js_config["js_only"]
+                url = build_url(links_config["url"], page_num)
+            elif pagination_type == "js_click":
+                js_config = get_js_click_config(pagination_config, page_num)
+                js_code = js_config["js_code"]
+                js_only = js_config["js_only"]
 
             run_config = CrawlerRunConfig(
-                extraction_strategy=JsonCssExtractionStrategy(schema),
-                cache_mode=(CacheMode.BYPASS),
-                wait_for=(f"css:{links_config['wait_for']}"),
-                wait_for_timeout=(SCRAPER_CONFIG["wait_timeout"]),
-                session_id=(f"{site_name.lower()}_session"),
+                extraction_strategy=extraction_strategy,
+                cache_mode=CacheMode.BYPASS,
+                wait_for=links_config.get("wait_for"),
+                session_id=session_id,
                 js_code=js_code,
                 js_only=js_only,
+                wait_for_timeout=SCRAPER_CONFIG["wait_timeout"],
             )
 
-            try:
-                result = await crawler.arun(
-                    url=url,
-                    config=run_config,
-                )
+            result = await crawler.arun(url=url, config=run_config)
 
-                if not result.success:
-                    logger.error(
-                        ("[%s] Failed " "page %s => %s"),
-                        site_name,
-                        page_num,
-                        result.error_message,
-                    )
-                    break
-
-                data = parse_crawl4ai_json(result.extracted_content)
-                news_items = _extract_news_items(data)
-
-                if not news_items:
-                    logger.warning(
-                        ("[%s] " "Empty page %s"),
-                        site_name,
-                        page_num,
-                    )
-
-                    consecutive_empty += 1
-
-                    if consecutive_empty >= SCRAPER_CONFIG["max_consecutive_empty"]:
-                        break
-
-                else:
-                    consecutive_empty = 0
-
-                    processed_items = _process_items(
-                        items=news_items,
-                        base_url=url,
-                        source_name=site_name,
-                        page_num=page_num,
-                    )
-
-                    all_results.extend(processed_items)
-
-                    logger.info(
-                        ("[%s] " "Found %s items"),
-                        site_name,
-                        len(processed_items),
-                    )
-
-                if pagination_type == "js_click" and is_last_page(
-                    result.html,
-                    pagination_config,
-                ):
-                    logger.info(
-                        ("[%s] " "Last page detected"),
-                        site_name,
-                    )
-                    break
-
-                page_num += 1
-
-                await asyncio.sleep(SCRAPER_CONFIG["polite_delay"])
-
-            except Exception as exc:
+            if not result.success:
                 logger.error(
-                    ("[%s] Error " "page %s => %s"),
+                    "[%s] Failed page %s => %s",
                     site_name,
                     page_num,
-                    exc,
+                    result.error_message,
                 )
                 break
 
-    return all_results
+            page_data = parse_crawl4ai_json(result.extracted_content)
+            page_items = _extract_news_items(page_data)
+
+            if not page_items:
+                consecutive_empty_pages += 1
+                logger.warning(
+                    "[%s] Empty items on page %s (Consecutive: %s)",
+                    site_name,
+                    page_num,
+                    consecutive_empty_pages,
+                )
+                if consecutive_empty_pages >= max_empty:
+                    logger.info("[%s] Stopping due to empty pages", site_name)
+                    break
+                continue
+
+            consecutive_empty_pages = 0
+            processed = _process_items(
+                page_items, links_config["url"], site_name, page_num
+            )
+            all_news_items.extend(processed)
+
+            if pagination_type == "js_click" and is_last_page(
+                result.html, pagination_config
+            ):
+                logger.info("[%s] Last page marker found via JS", site_name)
+                break
+
+            await asyncio.sleep(SCRAPER_CONFIG["polite_delay"])
+
+    return all_news_items
 
 
-async def crawl_content(
-    site_name,
-    news_items,
-):
-    logger.info(
-        "[%s] Total articles => %s",
-        site_name,
-        len(news_items),
-    )
+async def scrape_article(item, index, total, site_name, errors_list):
+    url = item.get("link")
+    if not url:
+        return None
 
     site_config = GOVERNMENT_SITES_CONFIG[site_name]
-    detail_config = site_config["detail"]
+    detail_config = site_config.get("detail")
 
-    browser_config = BrowserConfig(
-        headless=True,  # Tetep False dulu biar kelihatan kalau udah sukses
-        verbose=True,
-        headers=REALISTIC_HEADERS,
-        ignore_https_errors=True,  # Abaikan error SSL yang sering kejadian di web pemerintah
-        extra_args=[
-            "--disable-web-security",  # Ini jurus pamungkas buat ngelewatin error CORS
-            "--disable-features=IsolateOrigins,site-per-process",
-            "--disable-site-isolation-trials",
-            "--ignore-certificate-errors",
-        ],
+    if not detail_config:
+        # Fallback kalau ga ada config detail (inject metadata dasar)
+        crawled_at = datetime.now(WIB).isoformat()
+        item["document_id"] = (
+            f"{site_name.lower()}-doc-{hashlib.md5(url.encode('utf-8')).hexdigest()[:8]}"
+        )
+        item["content_hash"] = ""
+        item["word_count"] = 0
+        item["crawled_at"] = crawled_at
+        return item
+
+    browser_config = get_browser_config(site_name=site_name, headless=False)
+    extraction_strategy = JsonCssExtractionStrategy(detail_config["schema"])
+
+    run_config = CrawlerRunConfig(
+        extraction_strategy=extraction_strategy,
+        cache_mode=CacheMode.BYPASS,
+        wait_for=detail_config.get("wait_for"),
+        wait_for_timeout=SCRAPER_CONFIG["wait_timeout"],
     )
 
-    async with AsyncWebCrawler(config=browser_config) as crawler:
-        semaphore = asyncio.Semaphore(SCRAPER_CONFIG["concurrency_limit"])
+    try:
+        async with AsyncWebCrawler(config=browser_config) as crawler:
+            result = await crawler.arun(url=url, config=run_config)
 
-        async def scrape_article(
-            item,
-            index,
-            total,
-        ):
+            if not result.success:
+                raise RuntimeError(result.error_message or "Extraction failed")
+
+            detail_data = parse_crawl4ai_json(result.extracted_content)
+            if detail_data and isinstance(detail_data, list):
+                detail_dict = detail_data[0]
+                item.update(detail_dict)
+
+            # -- INJEKSI METADATA ENTERPRISE --
+            text = item.get("text", "")
+            crawled_at = datetime.now(WIB).isoformat()
+            word_count = len(text.split()) if text else 0
+            content_hash = (
+                hashlib.sha256(text.encode("utf-8")).hexdigest() if text else ""
+            )
+            url_hash = hashlib.md5(url.encode("utf-8")).hexdigest()[:8]
+
+            item["document_id"] = f"{site_name.lower()}-doc-{url_hash}"
+            item["content_hash"] = content_hash
+            item["word_count"] = word_count
+            item["source"] = site_name
+            item["crawled_at"] = crawled_at
+
+            logger.info(
+                "[%s] [%s/%s] Success => %s (Words: %s)",
+                site_name,
+                index + 1,
+                total,
+                url,
+                word_count,
+            )
+            return item
+
+    except Exception as exc:
+        logger.warning(
+            "[%s] [%s/%s] Failed => %s: %s", site_name, index + 1, total, url, exc
+        )
+        errors_list.append(
+            {"url": url, "error_type": type(exc).__name__, "message": str(exc)}
+        )
+        return None
+
+
+async def run(site_name):
+    start_time_dt = datetime.now(WIB)
+    logger.info("=== START LINK CRAWL [%s] ===", site_name)
+
+    news_items = await crawl_links(site_name)
+    logger.info("[%s] Found %s total link items", site_name, len(news_items))
+
+    valid_results = []
+    errors = []
+
+    if news_items:
+        limit = SCRAPER_CONFIG["concurrency_limit"]
+        semaphore = asyncio.Semaphore(limit)
+
+        async def bounded_scrape(item, index, total):
             async with semaphore:
-                url = item["link"]
-
-                logger.info(
-                    "[%s] [%s/%s] %s",
-                    site_name,
-                    index + 1,
-                    total,
-                    url,
-                )
-
-                run_config = CrawlerRunConfig(
-                    extraction_strategy=JsonCssExtractionStrategy(
-                        detail_config["schema"]
-                    ),
-                    cache_mode=(CacheMode.BYPASS),
-                    wait_for=("css:" f"{detail_config['wait_for']}"),
-                    wait_for_timeout=(SCRAPER_CONFIG["wait_timeout"]),
-                )
-
-                try:
-                    result = await crawler.arun(
-                        url=url,
-                        config=run_config,
-                    )
-
-                    if not result.success:
-                        logger.error(
-                            ("[%s] " "Failed => %s"),
-                            site_name,
-                            url,
-                        )
-                        return None
-
-                    data = parse_crawl4ai_json(result.extracted_content)
-                    detail = data[0] if data else {}
-
-                    # ========================================================
-                    # LOGIKA BARU PENANGANAN PDF MENGGUNAKAN REGEX (UNIVERSAL)
-                    # ========================================================
-                    import re
-
-                    # Langsung scan HTML mentah buat nyari semua href berakhiran .pdf (Case Insensitive)
-                    # Ini jauh lebih aman dan ga peduli webnya pake slick-carousel atau bukan
-                    raw_pdfs = re.findall(
-                        r'href="([^"]+\.pdf)"', result.html, re.IGNORECASE
-                    )
-
-                    final_pdfs = []
-                    for p_url in raw_pdfs:
-                        p_url = p_url.strip()
-                        if not p_url:
-                            continue
-
-                        # Resolve relative URL (/docs/file.pdf) jadi Full URL
-                        full_pdf_url = (
-                            p_url if p_url.startswith("http") else urljoin(url, p_url)
-                        )
-
-                        # Deduplikasi (buang link PDF kembar efek dari elemen yang di-clone)
-                        if full_pdf_url not in final_pdfs:
-                            final_pdfs.append(full_pdf_url)
-
-                    # Pastikan cuma ada SATU blok return ini di bagian akhir try!
-                    return {
-                        "title": (item["title"]),
-                        "link": (item["link"]),
-                        "source": (site_name),
-                        "date": (str(detail.get("date", "")).strip()),
-                        "text": (" ".join(str(detail.get("text", "")).split())),
-                        # Output berupa list ["url1.pdf", "url2.pdf"] atau None jika kosong
-                        "source_pdf": final_pdfs if final_pdfs else None,
-                    }
-
-                except Exception as exc:
-                    logger.error(
-                        ("[%s] Error " "=> %s | %s"),
-                        site_name,
-                        url,
-                        exc,
-                    )
-                    return None
-
-                finally:
-                    await asyncio.sleep(SCRAPER_CONFIG["polite_delay"])
+                return await scrape_article(item, index, total, site_name, errors)
 
         tasks = [
-            scrape_article(
-                item,
-                index,
-                len(news_items),
-            )
+            bounded_scrape(item, index, len(news_items))
             for index, item in enumerate(news_items)
         ]
 
         results = await asyncio.gather(*tasks)
+        valid_results = [item for item in results if item is not None]
 
-    valid_results = [item for item in results if item is not None]
+    # -- BUNGKUS PAYLOAD AKHIR ENTERPRISE --
+    end_time_dt = datetime.now(WIB)
+    duration_seconds = (end_time_dt - start_time_dt).total_seconds()
+    total_seeds = len(news_items)
+    success_rate = (
+        f"{(len(valid_results) / total_seeds * 100):.1f}%" if total_seeds else "0.0%"
+    )
+
+    final_payload = {
+        "metadata": {
+            "schema_version": "1.0.0",
+            "job_context": {
+                "job_id": f"crawl-{site_name.lower()}-{start_time_dt.strftime('%Y%m%d-%H%M')}",
+                "crawler_name": "indo-llm-engine",
+                "crawler_version": "v1.0.0",
+                "run_mode": "GOVERNMENT_WEBSITE",
+                "target_source": site_name,
+            },
+            "execution_metrics": {
+                "started_at": start_time_dt.isoformat(),
+                "completed_at": end_time_dt.isoformat(),
+                "duration_seconds": round(duration_seconds, 2),
+                "total_seed_urls": total_seeds,
+                "total_extracted": len(valid_results),
+                "total_failed": len(errors),
+                "success_rate": success_rate,
+            },
+            "errors": errors,
+        },
+        "data": valid_results,
+    }
 
     output_file = BASE_DIR / OUTPUT_DIR / f"siaran_pers_{site_name.lower()}.json"
 
-    save_json(
-        output_file,
-        valid_results,
-    )
+    # Save dengan format wrapper baru
+    save_json(output_file, final_payload)
 
     logger.info(
-        "[%s] Content saved => %s",
+        "[%s] Content saved successfully => %s",
         site_name,
         output_file,
     )
+    logger.info("=== FINISHED [%s] ===", site_name)
 
 
 def _extract_news_items(data):
@@ -358,29 +282,11 @@ def _extract_news_items(data):
     return []
 
 
-def _process_items(
-    items,
-    base_url,
-    source_name,
-    page_num,
-):
+def _process_items(items, base_url, source_name, page_num):
     for item in items:
         link = item.get("link", "")
         if link and not link.startswith("http"):
             item["link"] = urljoin(base_url, link)
         item["source"] = source_name
-        item["scraped_at_page"] = page_num
-
+        item["page"] = page_num
     return items
-
-
-async def run_async(site_name):
-    news_items = await crawl_links(site_name)
-    await crawl_content(
-        site_name=site_name,
-        news_items=news_items,
-    )
-
-
-def run(site_name):
-    asyncio.run(run_async(site_name))
