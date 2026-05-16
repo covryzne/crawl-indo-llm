@@ -434,13 +434,9 @@ GOVERNMENT_SITES_CONFIG = {
     },
 }
 
-SCRAPER_CONFIG = {
-    "max_pages": 2,
-    "max_consecutive_empty": 1,
-    "concurrency_limit": 5,
-    "polite_delay": 0.5,
-    "wait_timeout": 30000,
-}
+from config.pagination_config import get_government_pagination
+
+SCRAPER_CONFIG = get_government_pagination()
 
 # OUTPUT_LINKS_FILE = "siaran_pers_pemerintahan_links.json"
 OUTPUT_DIR = "outputs"

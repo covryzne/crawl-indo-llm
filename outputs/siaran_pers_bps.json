@@ -2,18 +2,18 @@
   "metadata": {
     "schema_version": "1.0.0",
     "job_context": {
-      "job_id": "crawl-bps-20260516-1311",
+      "job_id": "crawl-bps-20260516-1327",
       "crawler_name": "indo-llm-engine",
       "crawler_version": "v1.0.0",
       "run_mode": "GOVERNMENT_WEBSITE",
       "target_source": "BPS"
     },
     "execution_metrics": {
-      "started_at": "2026-05-16T13:11:32.199936+07:00",
-      "completed_at": "2026-05-16T13:12:03.198171+07:00",
-      "duration_seconds": 31.0,
-      "total_seed_urls": 20,
-      "total_extracted": 20,
+      "started_at": "2026-05-16T13:27:22.951655+07:00",
+      "completed_at": "2026-05-16T13:27:41.192072+07:00",
+      "duration_seconds": 18.24,
+      "total_seed_urls": 10,
+      "total_extracted": 10,
       "total_failed": 0,
       "success_rate": "100.0%"
     },
@@ -31,7 +31,7 @@
       "document_id": "bps-doc-6dd71d59",
       "content_hash": "b106b426598dbb6a0ef91c0d5c0534e1e303d0f421b98a7d38dce60aef502930",
       "word_count": 215,
-      "crawled_at": "2026-05-16T13:11:45.734296+07:00"
+      "crawled_at": "2026-05-16T13:27:33.879470+07:00"
     },
     {
       "title": "Kepala BPS RI Meraih Women’s Inspiration Award in Public Policy",
@@ -44,7 +44,7 @@
       "document_id": "bps-doc-a91e90f7",
       "content_hash": "5506b302501f1e1078e4ce7a83a99cedac83894414ea9179b76cf3d717dd9b0c",
       "word_count": 102,
-      "crawled_at": "2026-05-16T13:11:45.713552+07:00"
+      "crawled_at": "2026-05-16T13:27:33.838252+07:00"
     },
     {
       "title": "Ekonomi Indonesia Resilien dan Tumbuh Solid  Pada Triwulan 1-2026",
@@ -57,7 +57,7 @@
       "document_id": "bps-doc-c35ae05e",
       "content_hash": "afe1842dfd31fa65ca8f6dd3d00bb98bf74c4b81d1d6b6a7a494e10850f40c4c",
       "word_count": 1349,
-      "crawled_at": "2026-05-16T13:11:45.084620+07:00"
+      "crawled_at": "2026-05-16T13:27:31.293010+07:00"
     },
     {
       "title": "Inflasi Bulanan April 2026 Masih Terjaga",
@@ -70,7 +70,7 @@
       "document_id": "bps-doc-3da9e3c3",
       "content_hash": "74e9c9873127a4ae64915325b8be01e88fb195a1300a3602a39dd11a965b83f7",
       "word_count": 1766,
-      "crawled_at": "2026-05-16T13:11:45.788576+07:00"
+      "crawled_at": "2026-05-16T13:27:33.819272+07:00"
     },
     {
       "title": "Pemerintah Memastikan KBLI 2025 Tidak Memerlukan Perizinan Baru",
@@ -83,7 +83,7 @@
       "document_id": "bps-doc-11a1cf13",
       "content_hash": "28421425856be451dbb6fe5e8324611e7b7ea6015cab79c282cbfb95845a6958",
       "word_count": 122,
-      "crawled_at": "2026-05-16T13:11:43.955309+07:00"
+      "crawled_at": "2026-05-16T13:27:33.858132+07:00"
     },
     {
       "title": "Kolaborasi BPS-BNPP-Kementerian PKP: Percepatan Perbaikan Rumah Tidak Layak Huni di Perbatasan",
@@ -96,7 +96,7 @@
       "document_id": "bps-doc-67fe8242",
       "content_hash": "f0bebdfc526f2e50bbcdb12ab67068192c4d64cb8f1d515856651feb898f02aa",
       "word_count": 148,
-      "crawled_at": "2026-05-16T13:11:50.919317+07:00"
+      "crawled_at": "2026-05-16T13:27:37.767394+07:00"
     },
     {
       "title": "BPS dan HIPMI Ajak Pelaku Usaha Ambil Peran dalam SE2026",
@@ -109,7 +109,7 @@
       "document_id": "bps-doc-a1651cc0",
       "content_hash": "2d5f67f7a9c21c63d194a88cc6e1318ab9236d2094b186bfb906a21a1d38163a",
       "word_count": 105,
-      "crawled_at": "2026-05-16T13:11:47.506515+07:00"
+      "crawled_at": "2026-05-16T13:27:40.573986+07:00"
     },
     {
       "title": "Ground Check dan Integrasi Data, Strategi BPS Tajamkan Penyaluran Bansos",
@@ -122,7 +122,7 @@
       "document_id": "bps-doc-c575ea4c",
       "content_hash": "96536e8cd90d644a0170228a05838ee7cf5b73762997c276b7ebd834ce93328b",
       "word_count": 112,
-      "crawled_at": "2026-05-16T13:11:49.423761+07:00"
+      "crawled_at": "2026-05-16T13:27:37.222131+07:00"
     },
     {
       "title": "Statistik Berbicara untuk Hunian Nyata di Papua",
@@ -135,7 +135,7 @@
       "document_id": "bps-doc-f1d4046a",
       "content_hash": "4f538f40895ef5eca9e9f10718d987c0ff62862fb84702a6b1d143ecb60a57dc",
       "word_count": 222,
-      "crawled_at": "2026-05-16T13:11:48.443745+07:00"
+      "crawled_at": "2026-05-16T13:27:40.974286+07:00"
     },
     {
       "title": "Pastikan BSPS Tepat Sasaran, Kepala BPS RI Tinjau Langsung ke Kabupaten Sitaro",
@@ -148,135 +148,7 @@
       "document_id": "bps-doc-9f337f92",
       "content_hash": "b6e4f8013cb6e2788178201fd230d367b2bf7dcb5ee91d14ddd36bac35e80ee9",
       "word_count": 259,
-      "crawled_at": "2026-05-16T13:11:49.193198+07:00"
-    },
-    {
-      "title": "Pemutakhiran DTSEN Tingkatkan Akurasi Pensasaran",
-      "link": "https://www.bps.go.id/id/news/2026/04/28/902/pemutakhiran-dtsen-tingkatkan-akurasi-pensasaran.html",
-      "date": "28 April 2026 | Kegiatan Statistik Lainnya",
-      "source": "BPS",
-      "page": 2,
-      "text": "Kepala BPS RI, Amalia Adininggar Widyasanti dan Wakil Kepala BPS RI, Sonny Harry Budiutomo Harmadi melakukan koordinasi dengan Menteri Sosial pada Senin (13/4) di Kantor Kementerian Sosial untuk membahas pemutakhiran Data Tunggal Sosial dan Ekonomi Nasional (DTSEN) sebagai dasar penyaluran bantuan sosial triwulan II 2026. Pertemuan ini menegaskan peran DTSEN sebagai basis data statistik dalam memastikan bantuan sosial lebih tepat sasaran serta mendukung berbagai program intervensi pemerintah.Pada DTSEN Volume 2 Tahun 2026, BPS memutakhirkan cakupan data menjadi sekitar 95,3 juta keluarga atau 289,3 juta individu, termasuk pembaruan data demografi dan hasil verifikasi lapangan. Pemutakhiran ini juga menghasilkan penurunan kesalahan inklusi menjadi sekitar 0,06 persen serta penyempurnaan klasifikasi kesejahteraan pada puluhan ribu keluarga.",
-      "source_pdf": [],
-      "document_id": "bps-doc-54e01899",
-      "content_hash": "95656f56ac9924ae8edadb579ac73530ce0480cb10de7b9bc96ce8b02dc76b80",
-      "word_count": 112,
-      "crawled_at": "2026-05-16T13:11:49.788449+07:00"
-    },
-    {
-      "title": "BPS dan Pemprov Sulawesi Barat Perkuat Sinergi",
-      "link": "https://www.bps.go.id/id/news/2026/04/28/900/bps-dan-pemprov-sulawesi-barat-perkuat-sinergi.html",
-      "date": "28 April 2026 | Kegiatan Statistik Lainnya",
-      "source": "BPS",
-      "page": 2,
-      "text": "Badan Pusat Statistik (BPS) memperkuat kerja sama strategis dengan Pemerintah Provinsi Sulawesi Barat sebagai langkah konkret dalam mengoptimalkan pemanfaatan data statistik bagi pembangunan daerah. Kolaborasi ini diharapkan mampu mendukung seluruh tahapan pembangunan, mulai dari perencanaan, pelaksanaan, hingga evaluasi secara lebih terukur dan efektif.Kepala BPS RI, Amalia Adininggar Widyasanti, menegaskan komitmen BPS dalam menyediakan data berkualitas tinggi yang memenuhi standar internasional. Ia menjelaskan bahwa proses pengumpulan dan pengolahan data dilakukan dengan metodologi yang seragam di seluruh Indonesia, sehingga memungkinkan perbandingan data antarwilayah secara akurat dan dapat diandalkan.Amalia juga menekankan pentingnya pemanfaatan data statistik secara optimal untuk mendorong lahirnya kebijakan berbasis bukti (evidence-based policy), sehingga setiap keputusan yang diambil memiliki dasar yang kuat dan terukur.Sementara itu, Gubernur Sulawesi Barat, Suhardi Duka, menyambut baik penguatan kolaborasi ini. Ia menegaskan bahwa data statistik memiliki peran yang sangat penting dalam proses pengambilan keputusan pemerintahan. Menurutnya, tanpa dukungan data yang valid dan akurat, kebijakan yang dihasilkan berisiko tidak tepat sasaran dan kurang efektif.",
-      "source_pdf": [],
-      "document_id": "bps-doc-3bd39a23",
-      "content_hash": "33e12e10ead7fd45dfb2aade15aa76460c15015018c7f811972502c5738f2324",
-      "word_count": 157,
-      "crawled_at": "2026-05-16T13:11:55.458272+07:00"
-    },
-    {
-      "title": "Pemerintah Memastikan KBLI 2025 Tidak Memerlukan Perizinan Baru",
-      "link": "https://www.bps.go.id/id/news/2026/04/27/898/pemerintah-memastikan-kbli-2025-tidak-memerlukan-perizinan-baru.html",
-      "date": "27 April 2026 | Kegiatan Statistik Lainnya",
-      "source": "BPS",
-      "page": 2,
-      "text": "Jakarta, (26/4)- Pemerintah telah menerbitkan Surat Edaran Bersama (SEB) tentang implementasi Klasifikasi Baku Lapangan Usaha Indonesia (KBLI) 2025 dalam perizinan berusaha berbasis risiko. SEB ini ditandatangani oleh Menteri Investasi dan Hilirisasi/Kepala BKPM, Menteri Hukum, dan Kepala Badan Pusat Statistik (BPS). Melalui kebijakan ini, pemerintah menegaskan bahwa penerapan KBLI 2025 tidak mewajibkan pelaku usaha untuk mengurus perizinan baru.”Mekanisme (penyesuaian) ada yang dilakukan secara otomatis dalam sistem OSS, kemudian pelaku usaha juga bisa menyesuaikan terhadap regulasi yang ada,” kata Menteri Koordinator Bidang Perekonomian, Airlangga Hartarto, pada konferensi pers Realisasi Investasi Triwulan I 2026 dan Implementasi KBLI 2025 di Jakarta, Kamis (23/4).Airlangga menambahkan bahwa SEB ini diharapkan dapat mendorong implementasi KBLI yang baru untuk kepentingan dunia usaha.Dalam implementasinya, Menteri Hukum berperan memastikan integrasi penyesuaian KBLI melalui Sistem Direktorat Jenderal Administrasi Hukum Umum (Sistem Ditjen AHU), sehingga proses penyesuaian data badan usaha tetap selaras secara hukum. Sementara itu, Menteri Investasi dan Hilirisasi/Kepala BKPM berperan memastikan implementasi penyesuaian KBLI berjalan melalui sistemOnline Single Submission(OSS), termasuk penyesuaian data perizinan berusaha.Kepala BPS RI, Amalia Adininggar Widyasanti, menyampaikan bahwa BPS telah menyusun tabel konversi sebagai tindak lanjut atas SEB tersebut.”Tabel konversi ini disusun untuk menjaga keterbandingan secara berkelanjutan dan menjadi pedoman dalam menelusuri korespondensi antar struktur, baik dari KBLI 2020 ke KBLI 2025 maupun sebaliknya,” jelas Amalia pada kesempatan yang sama.Ia menegaskan bahwa izin usaha yang telah terbit sebelum implementasi KBLI 2025 masih tetap berlaku. Pelaku usaha tidak perlu khawatir izin yang dimiliki menjadi tidak sah.”Perizinan lama yang terbit sebelum implementasi KBLI 2025 masih tetap berlaku. Pelaku usaha wajib menyesuaikan KBLI 2025 melalui OSS (Online Single Submission)/AHU (Administrasi Hukum Umum) jika ada perubahan substansi, yaitu perubahan maksud dan tujuan serta ruang lingkup kegiatan usaha. Jika tidak ada perubahan substansi, maka pelaku usaha tidak wajib menyesuaikan, dan penyesuaian atau konversi akan dilakukan secara otomatis oleh sistem,” jelasnya.Mengacu pada SEB tersebut, penyesuaian KBLI tidak diperlukan apabila perubahan hanya berupa penyesuaian kode berdasarkan tabel konversi dan tidak mengubah substansi usaha. Dalam kondisi ini, penyesuaian dilakukan secara otomatis melalui sistem AHU dan OSS, tanpa perlu perubahan anggaran dasar.Penyesuaian KBLI 2025 dalam sistem OSS dan AHU akan dilakukan oleh Kementerian Investasi dan Hilirisasi/BKPM serta Kementerian Hukum paling lambat 18 Juni 2026. Selama masa peralihan, KBLI 2020 dan KBLI 2025 digunakan secara paralel hingga seluruh proses penyesuaian selesai.Sistem AHU sendiri selama masa transisi masih memproses pengesahan pelaku usaha menggunakan KBLI 2020 hingga penyesuaian KBLI 2025 diimplementasikan. Hal yang sama berlaku pada sistem OSS yang masih memproses perizinan berusaha berbasis risiko (PBBR) dengan KBLI 2020. Terkait perubahan pengaturan KBLI yang ditetapkan oleh Kepala BPS, sistem OSS akan secara otomatis melakukan penyesuaian dan pemutakhiran data PBBR mengikuti ketentuan KBLI terbaru.Sebelumnya, pada 18 Desember 2025, BPS mengundangkan KBLI 2025 dalam bentuk Peraturan Badan Pusat Statistik Nomor 7 Tahun 2025, dan merilis KBLI 2025 keesokan harinya. Penyempurnaan ini dilakukan untuk memastikan pencatatan aktivitas ekonomi di Indonesia tetap relevan dengan dinamika ekonomi global, terutama terkait transformasi ekonomi digital dan mitigasi perubahan iklim.”Dengan adanya Peraturan BPS Nomor 7 Tahun 2025 dan Surat Edaran Bersama terkait implementasi, maka kita memiliki kepastian hukum sekaligus kelancaran dalam berusaha. Seluruh proses terintegrasi melalui sistem OSS, sehingga lebih efisien dan akuntabel,” tutup Amalia.Narahubung MediaFavten Ari PujiastutiKepala Biro Umum dan Hubungan MasyarakatBadan Pusat Statistikromum@bps.go.idDokumentasiKonferensi Pers Realisasi Investasi Triwulan I 2026 dan Implementasi KBLI 2025 di Jakarta, Kamis (23/4).Link Video Statement Menteri Bidang Perekonomian, Airlangga Hartarto, dan Kepala BPS RI, Amalia Adininggar Widyasanti:https://drive.google.com/drive/folders/11x4raJ-p7sUVWub0Heflzx5ZiiEppe1A?usp=sharing",
-      "source_pdf": [],
-      "document_id": "bps-doc-097d25bd",
-      "content_hash": "8a732937c1af9f3598e7e073364f4b2f086bc2aad345894d0f07fc33b11d0060",
-      "word_count": 556,
-      "crawled_at": "2026-05-16T13:11:56.196026+07:00"
-    },
-    {
-      "title": "BPS Rilis Tabel Konversi Klasifikasi Baku Lapangan Usaha Indonesia (KBLI) 2020-2025",
-      "link": "https://www.bps.go.id/id/news/2026/04/27/897/bps-rilis-tabel-konversi-klasifikasi-baku-lapangan-usaha-indonesia--kbli--2020-2025-.html",
-      "date": "27 April 2026 | Kegiatan Statistik Lainnya",
-      "source": "BPS",
-      "page": 2,
-      "text": "Jakarta, (23/4)- Badan Pusat Statistik (BPS) merilis tabel konversi Klasifikasi Baku Lapangan Usaha Indonesia (KBLI) 2025 sebagai pembaruan atas KBLI 2020. Tabel ini disusun untuk menjaga keterbandingan dan kesesuaian antara KBLI 2020 dengan KBLI 2025, sehingga memudahkan para pengambil kebijakan dan pelaku usaha dalam melakukan transisi sebelum implementasi KBLI 2025 secara nasional.Kepala BPS RI, Amalia Adininggar Widyasanti, menyampaikan bahwa tabel konversi tersebut disusun sebagai tindak lanjut atas Surat Edaran Bersama (SEB) tentang implementasi penyesuaian KBLI 2025 dalam penyelenggaraan perizinan berusaha berbasis risiko. SEB ditandatangani oleh Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal, Menteri Hukum, dan Kepala BPS RI.”Tabel konversi ini disusun untuk menjaga keterbandingan secara berkelanjutan, dan menjadi pedoman dalam menelusuri korespondensi antar struktur, baik dari KBLI 2020 ke KBLI 2025 maupun sebaliknya,” jelas Kepala BPS RI, Amalia Adininggar Widyasanti, dalam konferensi pers di Jakarta, Kamis (23/4).KBLI merupakan standar nasional yang digunakan untuk mengklasifikasikan seluruh aktivitas ekonomi di Indonesia dengan mengacu padaInternational Standard Industrial Classification of All Economic Activities (ISIC) Revision 5.PenerapanISIC Revision 5direkomendasikan oleh Komisi Statistik PBB (UNSC) pada 11 Maret 2024.Sebelumnya, pada 19 Desember 2025, BPS telah merilis Klasifikasi Baku Lapangan Usaha Indonesia (KBLI) 2025 sebagai pembaruan atas KBLI 2020. Sehari sebelumnya (18/12), BPS mengundangkan KBLI 2025 dalam bentuk Peraturan Badan Pusat Statistik No 7 Tahun 2025. Pembaruan ini dilakukan untuk memastikan pencatatan aktivitas ekonomi di Indonesia tetap relevan dengan dinamika ekonomi global, terutama terkait transformasi ekonomi digital dan mitigasi perubahan iklim.”Berbagai aktivitas ekonomi atau kegiatan baru sepertiartifiical intelligence,content creator,hingga aktivitas terkait perubahan iklim seperticarbon capturedancarbon storagetelah tercakup dalam KBLI 2025,” jelas Menteri Koordinator Bidang Perekonomian, Airlangga Hartarto, pada kesempatan yang sama.Untuk mendukung transisi atas pembaruan tersebut, BPS menyediakan tabel konversi sebagai jembatan antara KBLI 2020 dan KBLI 2025. Tabel ini memungkinkan pengguna menelusuri kesesuaian kode, mulai dari kategori, golongan pokok, hingga kelompok usaha yang paling rinci (5 digit).Secara umum, terdapat tiga pola perubahan dalam tabel konversi tersebut. Pertama, perubahan satu-ke-satu (one to one) di mana satu kode pada KBLI 2020 langsung dipetakan ke satu kode pada KBLI 2025. Kedua, pemecahan satu kode pada KBLI 2020 menjadi beberapa kode yang lebih spesifik pada KBLI 2025 (one to many). Ketiga, penggabungan beberapa kode pada KBLI 2020 menjadi satu kode baru pada KBLI 2025 (many to one).Implementasi KBLI 2025 secara nasional dijadwalkan paling lambat 18 Juni 2026. Selama masa transisi, KBLI 2020 dan KBLI 2025 akan digunakan secara paralel hingga seluruh proses penyesuaian selesai.Amalia menegaskan perizinan lama yang terbit sebelum implementasi KBLI 2025 tetap berlaku. Pelaku usaha tidak perlu khawatir bahwa izin yang lama menjadi tidak sah.”Beberapa hal yang perlu diperhatikan adalah bahwa perizinan lama yang terbit sebelum implementasi KBLI 2025 masih tetap berlaku. Pelaku usaha wajib menyesuaikan KBLI 2025 melalui OSS (Online Single Submission)/AHU (Administrasi Hukum Umum) jika ada perubahan substansi, yaitu perubahan maksud dan tujuan serta ruang lingkup kegiatan usaha,” jelasnya.Ia menambahkan bahwa Peraturan Badan Pusat Statistik Nomor 7 Tahun 2025 tentang KBLI dan SEB mengenai implementasi penyesuaian KBLI 2025 hadir untuk memberikan kepastian hukum dan kelancaran berusaha bagi pelaku usaha dan pemangku kepentingan. Semua proses terintegrasi melalui sistem OSS, sehingga lebih efisien dan akuntabel.Narahubung MediaFavten Ari PujiastutiKepala Biro Umum dan Hubungan MasyarakatBadan Pusat Statistikromum@bps.go.idDokumentasiKonferensi Pers Realisasi Investasi Triwulan I 2026 dan Implementasi KBLI 2025 di Jakarta, Kamis (23/4).",
-      "source_pdf": [],
-      "document_id": "bps-doc-8e8ba4a4",
-      "content_hash": "c0fce3ce0b053b10fcf1e3c960c7a88bba466c41fb8699a6b34f95e1b4883ab8",
-      "word_count": 532,
-      "crawled_at": "2026-05-16T13:11:56.334570+07:00"
-    },
-    {
-      "title": "Penguatan NTA sebagai Dasar Kebijakan Pembangunan Antargenerasi",
-      "link": "https://www.bps.go.id/id/news/2026/04/27/896/penguatan-nta-sebagai-dasar-kebijakan-pembangunan-antargenerasi.html",
-      "date": "27 April 2026 | Kegiatan Statistik Lainnya",
-      "source": "BPS",
-      "page": 2,
-      "text": "Wakil Kepala Badan Pusat Statistik (BPS) RI, Sonny Harry Budiutomo Harmadi, menyampaikan paparan dalam kegiatan Dialog Menuju Kesejahteraan Antargenerasi: Arah Baru Kebijakan Indonesia di Akhir Transisi Demografi yang diselenggarakan oleh Kementerian PPN/Bappenas di Jakarta, Senin (6/4). Kegiatan ini menjadi forum strategis untuk memperkuat pemanfaatan National Transfer Accounts (NTA) sebagai dasar perumusan kebijakan pembangunan berbasis bukti.Dalam paparannya, Sonny menegaskan bahwa NTA merupakan instrumen penting untuk memahami dinamika ekonomi antargenerasi, terutama di tengah perubahan struktur penduduk Indonesia yang memasuki fase akhir transisi demografi. Ia menjelaskan bahwa perbedaan pola konsumsi dan pendapatan antarkelompok umur menyebabkan terjadinya life cycle deficit pada usia muda dan lansia, yang ditopang oleh surplus pada kelompok usia produktif.Hasil perhitungan NTA Indonesia tahun 2024 menunjukkan bahwa total konsumsi lebih besar dibandingkan pendapatan tenaga kerja, sehingga terjadi defisit siklus hidup. Defisit tersebut ditutup melalui mekanisme transfer antargenerasi, baik melalui transfer privat dalam rumah tangga maupun transfer publik. Sonny juga menekankan bahwa saat ini penyusunan NTA masih berada pada tahap statistik eksperimental dan terus dikembangkan agar ke depan dapat menjadi statistik resmi yang mendukung perencanaan kebijakan secara lebih terarah, terukur, dan berkelanjutan.Dialog ini turut dihadiri oleh sejumlah pejabat tinggi negara, termasuk Menteri Koordinator Bidang Pembangunan Manusia dan Kebudayaan, Menteri PPN/Kepala Bappenas, Menteri Kependudukan dan Pembangunan Keluarga/Kepala BKKBN, serta Menteri Usaha Mikro, Kecil, dan Menengah. Melalui forum ini, pemerintah mendorong penguatan kebijakan berbasis data untuk memastikan keberlanjutan pembangunan dan kesejahteraan antargenerasi di Indonesia.",
-      "source_pdf": [],
-      "document_id": "bps-doc-f0c23087",
-      "content_hash": "f69d7b296627783ed903b6ba6d9b0341819807661610db5064d04007c87b0068",
-      "word_count": 230,
-      "crawled_at": "2026-05-16T13:11:56.957920+07:00"
-    },
-    {
-      "title": "DTSEN Berdampak Dukung Penyaluran Bantuan Perumahan Tepat Sasaran di Minahasa",
-      "link": "https://www.bps.go.id/id/news/2026/04/27/895/dtsen-berdampak-dukung-penyaluran-bantuan-perumahan-tepat-sasaran-di-minahasa.html",
-      "date": "27 April 2026 | Kegiatan Statistik Lainnya",
-      "source": "BPS",
-      "page": 2,
-      "text": "Kepala BPS RI, Amalia Adininggar Widyasanti, menghadiri kunjungan calon penerima Bantuan Stimulan Perumahan Swadaya (BSPS) bersama Menteri Perumahan dan Kawasan Permukiman (PKP), Maruarar Sirait serta Menteri Dalam Negeri, M. Tito Karnavian di Kabupaten Minahasa (9/4). Kehadiran BPS dalam kegiatan ini menjadi bagian dari peran penyedia statistik resmi untuk memastikan program pemerintah berbasis data statistik yang akurat dan tepat sasaran.Dalam kesempatan tersebut, Amalia melakukan pengecekan melalui Data Tunggal Sosial dan Ekonomi Nasional (DTSEN) guna memastikan bantuan tersalurkan dengan baik. Pemanfaatan data terintegrasi ini membantu mengidentifikasi calon penerima yang memenuhi kriteria, sehingga intervensi program dapat berjalan lebih akurat, transparan, dan tepat sasaran.",
-      "source_pdf": [],
-      "document_id": "bps-doc-c9562975",
-      "content_hash": "0facae3acb8e749f6f85ad3b8fdf8d28223ac6ff8b2ad89e8895a90b5238a701",
-      "word_count": 100,
-      "crawled_at": "2026-05-16T13:11:55.106025+07:00"
-    },
-    {
-      "title": "BPS Tuntaskan Groundcheck PBI Tahap 1 Untuk 105.129 Individu",
-      "link": "https://www.bps.go.id/id/news/2026/04/08/894/bps-tuntaskan-groundcheck-pbi-tahap-1-untuk-105-129-individu.html",
-      "date": "8 April 2026 | Kegiatan Statistik",
-      "source": "BPS",
-      "page": 2,
-      "text": "Melalui komitmen dalam menyediakan statistik yang kredibel, Badan Pusat Statistik (BPS) telah menuntaskan Ground Check Tahap 1 terhadap 106.153 penerima PBI BPJS pengidap penyakit katastropik guna memastikan akurasi data perlindungan sosial nasional. Hasil Ground Check ini disampaikan oleh Kepala BPS RI, Amalia Adininggar Widyasanti bersama Menteri Sosial RI, Saifullah Yusuf, pada Rabu (1/4), di Kementerian Sosial.“Hasil dari Ground Check PBI Tahap 1 itu, kami menemukan bahwa ada 3.934 individu yang sudah meninggal dunia. Kemudian ada 89.559 PBI yang sudah ditemukan dan terkonfirmasi bahwa yang bersangkutan memang pengidap penyakit katastropik,” kata Amalia. Selain dari itu, Amalia mengungkapkan BPS sudah mengidentifikasi 105.129 individu, namun belum menemukan 9.401 individu lainnya. Kemudian, Saifullah menyampaikan bahwa mereka akan bergegas untuk memadankan data dengan BPJS Kesehatan.Sinergi ini tidak hanya mendukung percepatan program bantuan pemerintah, tetapi juga memperkuat standar integritas data yang menjadi landasan bagi kebijakan publik yang lebih transparan, akuntabel, dan humanis bagi seluruh rakyat Indonesia.",
-      "source_pdf": [],
-      "document_id": "bps-doc-9582c034",
-      "content_hash": "5845939c9ccbd1d367803b1dde94c8bbb156f3d54f4ff71a4904fd40c5d3503c",
-      "word_count": 150,
-      "crawled_at": "2026-05-16T13:11:58.172689+07:00"
-    },
-    {
-      "title": "Groundbreaking Penataan Kawasan Kumuh Menteng Tenggulun: Data Statistik Jadi Fondasi Penataan Permukiman",
-      "link": "https://www.bps.go.id/id/news/2026/04/08/893/groundbreaking-penataan-kawasan-kumuh-menteng-tenggulun--data-statistik-jadi-fondasi-penataan-permukiman.html",
-      "date": "Badan Pusat Statistik",
-      "source": "BPS",
-      "page": 2,
-      "source_pdf": [],
-      "document_id": "bps-doc-74e9438d",
-      "content_hash": "",
-      "word_count": 0,
-      "crawled_at": "2026-05-16T13:12:02.339644+07:00"
-    },
-    {
-      "title": "Menyongsong SE2026: BPS Satukan Langkah dan Perkuat Sinergi",
-      "link": "https://www.bps.go.id/id/news/2026/04/08/892/menyongsong-se2026--bps-satukan-langkah-dan-perkuat-sinergi.html",
-      "date": "8 April 2026 | Kegiatan Statistik",
-      "source": "BPS",
-      "page": 2,
-      "text": "Menyongsong Sensus Ekonomi 2026 (SE2026), yang rangkaian pelaksanaannya akan dimulai pada Mei 2026, Badan Pusat Statistik (BPS) semakin menyatukan langkah dan memperkuat sinergi dengan banyak pihak.Dalam kegiatan Briefing Komunikasi, Koordinasi, dan Diplomasi (KKD) yang diikuti oleh seluruh jajaran BPS dari Sabang sampai Merauke secara hybrid, Kepala BPS RI, Amalia Adininggar Widyasanti mengajak seluruh pegawai BPS untuk berperan aktif untuk kesuksesan SE2026.\"Sensus Ekonomi adalah milik bangsa Indonesia dan BPS diberikan amanat besar untuk menjalankan ini. Ini adalah momentum kita untuk memberikan kontribusi yang terbaik untuk bangsa ini,\" ujar Amalia di hadapan seluruh pegawai BPS yang hadir langsung di Auditorium Politeknik Statistika STIS maupun yang mengikuti secara daring (31/3). Amalia kembali menegaskan kepercayaan akan peran BPS merupakan hasil kerja keras bersama sekaligus amanah untuk dijalankan dengan baik.Sejalan dengan itu, Menteri Agama RI, Prof. K.H Nasaruddin Umar pada kesempatan yang sama menyampaikan peran penting statistik sebagai sumber informasi lahirnya sebuah transformasi. \"Fungsi statistik itu melahirkan amanah. Sumber yang valid itu bukan apa kata orang, tapi apa kata angka. Dan sumber data yang paling valid, paling diakui adalah BPS,\" jelasnya.Wakil Menteri Kebudayaan RI, Giring Ganesha juga turut hadir dan menyampaikan dukungan penuhnya terhadap SE2026 agar kebijakan pemerintah untuk perekonomian lebih terarah.",
-      "source_pdf": [],
-      "document_id": "bps-doc-6b85bc41",
-      "content_hash": "7309e7c0aef315aac0d6a687685589744005c92d0666183bac89771643b9c7f9",
-      "word_count": 197,
-      "crawled_at": "2026-05-16T13:11:58.480193+07:00"
-    },
-    {
-      "title": "Pemanfaatan Data Akurat Perkuat Dampak Program Perumahan Nasional",
-      "link": "https://www.bps.go.id/id/news/2026/04/08/891/pemanfaatan-data-akurat-perkuat-dampak-program-perumahan-nasional.html",
-      "date": "Badan Pusat Statistik",
-      "source": "BPS",
-      "page": 2,
-      "source_pdf": [],
-      "document_id": "bps-doc-2594175a",
-      "content_hash": "",
-      "word_count": 0,
-      "crawled_at": "2026-05-16T13:12:03.012836+07:00"
+      "crawled_at": "2026-05-16T13:27:41.022407+07:00"
     }
   ]
 }

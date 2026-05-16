@@ -7,19 +7,23 @@ from pathlib import Path
 from crawl4ai import BrowserConfig
 
 from config.browser_config import GLOBAL_HEADLESS, REALISTIC_HEADERS, SEARCH_USER_AGENT
+from config.pagination_config import get_keyword_pagination
 
 logger = logging.getLogger(__name__)
 
 GOOGLE_SEARCH_BASE = "https://www.google.com/search"
-SEARCH_PAGE_SIZE = 10
-SEARCH_MAX_PAGES = 3
-SEARCH_PRE_REQUEST_DELAY_MIN = 10.0
-SEARCH_PRE_REQUEST_DELAY_MAX = 25.0
-SEARCH_RETRY_BASE_DELAY = 30.0
-SEARCH_MAX_RETRIES = 3
 
-MAX_SEED_RESULTS = 15
-MAX_LINKS_TO_CRAWL = 10
+# load defaults from central pagination config (can pass overrides when needed)
+_KP = get_keyword_pagination()
+SEARCH_PAGE_SIZE = _KP["search_page_size"]
+SEARCH_MAX_PAGES = _KP["search_max_pages"]
+SEARCH_PRE_REQUEST_DELAY_MIN = _KP["search_pre_request_delay_min"]
+SEARCH_PRE_REQUEST_DELAY_MAX = _KP["search_pre_request_delay_max"]
+SEARCH_RETRY_BASE_DELAY = _KP["search_retry_base_delay"]
+SEARCH_MAX_RETRIES = _KP["search_max_retries"]
+
+MAX_SEED_RESULTS = _KP["max_seed_results"]
+MAX_LINKS_TO_CRAWL = _KP["max_links_to_crawl"]
 
 PROFILE_DIR = Path("./playwright_profile_keyword")
 PROFILE_DIR.mkdir(exist_ok=True)

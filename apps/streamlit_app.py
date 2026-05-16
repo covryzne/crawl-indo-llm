@@ -133,22 +133,24 @@ with tab1:
                 st.success(f"Successfully finished crawling {selected_site}!")
 
                 if result_payload and "metadata" in result_payload:
-                    meta = result_payload["metadata"]
+                    meta = result_payload.get("metadata", {})
+                    exec_metrics = meta.get("execution_metrics", {})
+                    total_crawled = exec_metrics.get(
+                        "total_extracted", len(result_payload.get("data", []))
+                    )
+                    success_rate = exec_metrics.get("success_rate", "0.0%")
+                    duration = exec_metrics.get("duration_seconds", 0)
+                    failed_urls = len(meta.get("errors", []))
+
                     m_col1, m_col2, m_col3, m_col4 = st.columns(4)
                     with m_col1:
-                        st.metric("Total Crawled", meta.get("total_crawled", 0))
+                        st.metric("Total Crawled", total_crawled)
                     with m_col2:
-                        st.metric(
-                            "Success Rate",
-                            f"{meta.get('execution_metrics', {}).get('success_rate', 100)}%",
-                        )
+                        st.metric("Success Rate", success_rate)
                     with m_col3:
-                        st.metric(
-                            "Duration",
-                            f"{meta.get('execution_metrics', {}).get('duration_seconds', 0)}s",
-                        )
+                        st.metric("Duration", f"{duration}s")
                     with m_col4:
-                        st.metric("Failed URLs", len(meta.get("errors", [])))
+                        st.metric("Failed URLs", failed_urls)
 
                     with st.expander(
                         "📄 View Extracted Payloads (Data & Rich Metadata)",
