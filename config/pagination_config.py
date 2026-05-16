@@ -29,7 +29,7 @@ GOVERNMENT_PAGINATION = {
     # stop after this many consecutive pages that yield no results
     "max_consecutive_empty": 1,
     # concurrency limit for link/detail fetching
-    "concurrency_limit": 5,
+    "concurrency_limit": 1,
     # polite delay between requests
     "polite_delay": 0.5,
     # default wait timeout (ms) when waiting for selectors

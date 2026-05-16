@@ -1,4 +1,3 @@
-from .link_discovery import classify_link, discover_internal_links, is_internal_link
 from .page_router import classify_page_type
 from .pdf_discovery import (
     discover_attachment_candidates_from_html,

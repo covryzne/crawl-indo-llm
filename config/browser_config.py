@@ -2,7 +2,7 @@
 
 from crawl4ai import BrowserConfig
 
-GLOBAL_HEADLESS = True
+GLOBAL_HEADLESS = False
 
 SEARCH_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -52,8 +52,18 @@ def get_browser_config(
             extra_args=custom_extra_args,
         )
 
-    # Aturan KOMDIGI & BAPPENAS: Butuh headers realistis biar ga dikira bot murahan
-    elif site_name in ["KOMDIGI", "BAPPENAS"]:
+    # Aturan KOMDIGI: Satpamnya galak (Cloudflare/WAF), butuh stealth mode (magic=True)
+    elif site_name == "KOMDIGI":
+        return BrowserConfig(
+            headless=effective_headless,
+            verbose=verbose,
+            # magic=True,  # <<< WAJIB ADA BIAR TEMBUS CLOUDFLARE
+            headers=REALISTIC_HEADERS,
+            ignore_https_errors=True,
+        )
+
+    # Aturan BAPPENAS: Cukup butuh headers realistis
+    elif site_name == "BAPPENAS":
         return BrowserConfig(
             headless=effective_headless,
             verbose=verbose,

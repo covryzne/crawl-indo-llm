@@ -2,16 +2,16 @@
   "metadata": {
     "schema_version": "1.0.0",
     "job_context": {
-      "job_id": "crawl-bps-20260516-1327",
+      "job_id": "crawl-bps-20260516-1915",
       "crawler_name": "indo-llm-engine",
       "crawler_version": "v1.0.0",
       "run_mode": "GOVERNMENT_WEBSITE",
       "target_source": "BPS"
     },
     "execution_metrics": {
-      "started_at": "2026-05-16T13:27:22.951655+07:00",
-      "completed_at": "2026-05-16T13:27:41.192072+07:00",
-      "duration_seconds": 18.24,
+      "started_at": "2026-05-16T19:15:01.993908+07:00",
+      "completed_at": "2026-05-16T19:15:26.188994+07:00",
+      "duration_seconds": 24.2,
       "total_seed_urls": 10,
       "total_extracted": 10,
       "total_failed": 0,
@@ -31,7 +31,7 @@
       "document_id": "bps-doc-6dd71d59",
       "content_hash": "b106b426598dbb6a0ef91c0d5c0534e1e303d0f421b98a7d38dce60aef502930",
       "word_count": 215,
-      "crawled_at": "2026-05-16T13:27:33.879470+07:00"
+      "crawled_at": "2026-05-16T19:15:16.961647+07:00"
     },
     {
       "title": "Kepala BPS RI Meraih Women’s Inspiration Award in Public Policy",
@@ -44,7 +44,7 @@
       "document_id": "bps-doc-a91e90f7",
       "content_hash": "5506b302501f1e1078e4ce7a83a99cedac83894414ea9179b76cf3d717dd9b0c",
       "word_count": 102,
-      "crawled_at": "2026-05-16T13:27:33.838252+07:00"
+      "crawled_at": "2026-05-16T19:15:17.236027+07:00"
     },
     {
       "title": "Ekonomi Indonesia Resilien dan Tumbuh Solid  Pada Triwulan 1-2026",
@@ -57,7 +57,7 @@
       "document_id": "bps-doc-c35ae05e",
       "content_hash": "afe1842dfd31fa65ca8f6dd3d00bb98bf74c4b81d1d6b6a7a494e10850f40c4c",
       "word_count": 1349,
-      "crawled_at": "2026-05-16T13:27:31.293010+07:00"
+      "crawled_at": "2026-05-16T19:15:13.248352+07:00"
     },
     {
       "title": "Inflasi Bulanan April 2026 Masih Terjaga",
@@ -70,7 +70,7 @@
       "document_id": "bps-doc-3da9e3c3",
       "content_hash": "74e9c9873127a4ae64915325b8be01e88fb195a1300a3602a39dd11a965b83f7",
       "word_count": 1766,
-      "crawled_at": "2026-05-16T13:27:33.819272+07:00"
+      "crawled_at": "2026-05-16T19:15:13.012128+07:00"
     },
     {
       "title": "Pemerintah Memastikan KBLI 2025 Tidak Memerlukan Perizinan Baru",
@@ -83,7 +83,7 @@
       "document_id": "bps-doc-11a1cf13",
       "content_hash": "28421425856be451dbb6fe5e8324611e7b7ea6015cab79c282cbfb95845a6958",
       "word_count": 122,
-      "crawled_at": "2026-05-16T13:27:33.858132+07:00"
+      "crawled_at": "2026-05-16T19:15:14.649995+07:00"
     },
     {
       "title": "Kolaborasi BPS-BNPP-Kementerian PKP: Percepatan Perbaikan Rumah Tidak Layak Huni di Perbatasan",
@@ -96,7 +96,7 @@
       "document_id": "bps-doc-67fe8242",
       "content_hash": "f0bebdfc526f2e50bbcdb12ab67068192c4d64cb8f1d515856651feb898f02aa",
       "word_count": 148,
-      "crawled_at": "2026-05-16T13:27:37.767394+07:00"
+      "crawled_at": "2026-05-16T19:15:21.673550+07:00"
     },
     {
       "title": "BPS dan HIPMI Ajak Pelaku Usaha Ambil Peran dalam SE2026",
@@ -109,7 +109,7 @@
       "document_id": "bps-doc-a1651cc0",
       "content_hash": "2d5f67f7a9c21c63d194a88cc6e1318ab9236d2094b186bfb906a21a1d38163a",
       "word_count": 105,
-      "crawled_at": "2026-05-16T13:27:40.573986+07:00"
+      "crawled_at": "2026-05-16T19:15:18.204990+07:00"
     },
     {
       "title": "Ground Check dan Integrasi Data, Strategi BPS Tajamkan Penyaluran Bansos",
@@ -122,7 +122,7 @@
       "document_id": "bps-doc-c575ea4c",
       "content_hash": "96536e8cd90d644a0170228a05838ee7cf5b73762997c276b7ebd834ce93328b",
       "word_count": 112,
-      "crawled_at": "2026-05-16T13:27:37.222131+07:00"
+      "crawled_at": "2026-05-16T19:15:23.894906+07:00"
     },
     {
       "title": "Statistik Berbicara untuk Hunian Nyata di Papua",
@@ -135,7 +135,7 @@
       "document_id": "bps-doc-f1d4046a",
       "content_hash": "4f538f40895ef5eca9e9f10718d987c0ff62862fb84702a6b1d143ecb60a57dc",
       "word_count": 222,
-      "crawled_at": "2026-05-16T13:27:40.974286+07:00"
+      "crawled_at": "2026-05-16T19:15:21.886771+07:00"
     },
     {
       "title": "Pastikan BSPS Tepat Sasaran, Kepala BPS RI Tinjau Langsung ke Kabupaten Sitaro",
@@ -148,7 +148,7 @@
       "document_id": "bps-doc-9f337f92",
       "content_hash": "b6e4f8013cb6e2788178201fd230d367b2bf7dcb5ee91d14ddd36bac35e80ee9",
       "word_count": 259,
-      "crawled_at": "2026-05-16T13:27:41.022407+07:00"
+      "crawled_at": "2026-05-16T19:15:25.932783+07:00"
     }
   ]
 }

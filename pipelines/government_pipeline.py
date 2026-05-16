@@ -74,11 +74,12 @@ async def crawl_links(site_name, headless=None):
             run_config = CrawlerRunConfig(
                 extraction_strategy=extraction_strategy,
                 cache_mode=CacheMode.BYPASS,
-                wait_for=links_config.get("wait_for"),
+                wait_for=(f"css:{links_config['wait_for']}"),
                 session_id=session_id,
                 js_code=js_code,
                 js_only=js_only,
                 wait_for_timeout=SCRAPER_CONFIG["wait_timeout"],
+                magic=(True if site_name == "KOMDIGI" else False),
             )
 
             result = await crawler.arun(url=url, config=run_config)
@@ -153,8 +154,9 @@ async def scrape_article(item, index, total, site_name, errors_list, headless=No
     run_config = CrawlerRunConfig(
         extraction_strategy=extraction_strategy,
         cache_mode=CacheMode.BYPASS,
-        wait_for=detail_config.get("wait_for"),
+        wait_for=("css:" f"{detail_config['wait_for']}"),
         wait_for_timeout=SCRAPER_CONFIG["wait_timeout"],
+        magic=(True if site_name == "KOMDIGI" else False),
     )
 
     try:

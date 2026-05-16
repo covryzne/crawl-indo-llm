@@ -1,19 +1,19 @@
 {
   "metadata": {
-    "schema_version": "1.1.0",
+    "schema_version": "1.0.0",
     "job_context": {
-      "job_id": "crawl-bappenas-20260516-1104",
+      "job_id": "crawl-bappenas-20260516-2020",
       "crawler_name": "indo-llm-engine",
-      "crawler_version": "v2.5.0",
+      "crawler_version": "v1.0.0",
       "run_mode": "GOVERNMENT_WEBSITE",
       "target_source": "BAPPENAS"
     },
     "execution_metrics": {
-      "started_at": "2026-05-16T11:04:31.345532+07:00",
-      "completed_at": "2026-05-16T11:05:19.003118+07:00",
-      "duration_seconds": 47.66,
-      "total_seed_urls": 20,
-      "total_extracted": 20,
+      "started_at": "2026-05-16T20:20:24.865990+07:00",
+      "completed_at": "2026-05-16T20:20:53.338015+07:00",
+      "duration_seconds": 28.47,
+      "total_seed_urls": 10,
+      "total_extracted": 10,
       "total_failed": 0,
       "success_rate": "100.0%"
     },
@@ -31,7 +31,7 @@
       "document_id": "bappenas-doc-feac3b4e",
       "content_hash": "994ea81a723d964a209a40a1c342b172f8da8c265edd4a888db3993b22e6a4bb",
       "word_count": 478,
-      "crawled_at": "2026-05-16T11:05:00.529081+07:00"
+      "crawled_at": "2026-05-16T20:20:29.631755+07:00"
     },
     {
       "title": "Indonesia-UNFPA Percepat Target SDGs Melalui Program Kerja Sama Siklus 11 (2026-2030)",
@@ -44,7 +44,7 @@
       "document_id": "bappenas-doc-46a7cfd0",
       "content_hash": "07cf541438ba5374b3572b19027f28b03ae1ac2ca7b00b1d35d84f5890de0463",
       "word_count": 511,
-      "crawled_at": "2026-05-16T11:05:00.072243+07:00"
+      "crawled_at": "2026-05-16T20:20:32.784619+07:00"
     },
     {
       "title": "CPAP 2026-2030: Komitmen Indonesia-UNICEF Dukung Pemenuhan Hak Anak",
@@ -57,7 +57,7 @@
       "document_id": "bappenas-doc-6cf48a4e",
       "content_hash": "a8193de991b634933a7572d0d9c5af20e90a10486d50b7819f39853ef40b7218",
       "word_count": 610,
-      "crawled_at": "2026-05-16T11:04:59.951339+07:00"
+      "crawled_at": "2026-05-16T20:20:35.352346+07:00"
     },
     {
       "title": "Indonesia–Inggris Akselerasi Pembangunan Rendah Karbon Melalui Pendanaan Inovasi Proyek LCDI-ITF",
@@ -70,7 +70,7 @@
       "document_id": "bappenas-doc-00848f42",
       "content_hash": "ede0b43a7a167e269d3422fb68eddd3dfd1f30d407c369361e650642ae5ff487",
       "word_count": 393,
-      "crawled_at": "2026-05-16T11:05:00.941077+07:00"
+      "crawled_at": "2026-05-16T20:20:37.528709+07:00"
     },
     {
       "title": "Indonesia–PBB Dukung Akses Pembiayaan Dan Teknologi Pertanian Ketahanan Iklim Bagi Petani Kecil",
@@ -83,7 +83,7 @@
       "document_id": "bappenas-doc-4f843c7b",
       "content_hash": "9686bcb62a6811d0c6a0a3361a0293c236d6a0ec81751d7fab7bff42a0c47549",
       "word_count": 553,
-      "crawled_at": "2026-05-16T11:05:01.201107+07:00"
+      "crawled_at": "2026-05-16T20:20:40.258634+07:00"
     },
     {
       "title": "Menuju Akhir Transisi Demografi, Pemerintah Siapkan Arah Baru Kebijakan Kesejahteraan Antargenerasi",
@@ -96,7 +96,7 @@
       "document_id": "bappenas-doc-0209167c",
       "content_hash": "82d9b52d6ec5f85bc4e35d3d7ddea452b215ca2e0fbe53ee302f4c4e785af784",
       "word_count": 444,
-      "crawled_at": "2026-05-16T11:05:05.405722+07:00"
+      "crawled_at": "2026-05-16T20:20:42.697020+07:00"
     },
     {
       "title": "Indonesia–Inggris Dukung Integrasi Pembangunan Rendah Karbon Dalam RPJMD NTB",
@@ -109,7 +109,7 @@
       "document_id": "bappenas-doc-d3b7133d",
       "content_hash": "f21c019e2c8244fb090c5a5074d56d79cca7e27c712fae9755db194ec5cd6c65",
       "word_count": 417,
-      "crawled_at": "2026-05-16T11:05:05.621530+07:00"
+      "crawled_at": "2026-05-16T20:20:44.754356+07:00"
     },
     {
       "title": "BAPPENAS DUKUNG TRANSFORMASI TATA KELOLA DAN LAYANAN PUBLIK BERBASIS DATA MELALUI RENCANA INDUK PEMERINTAH DIGITAL 2025-2045",
@@ -122,7 +122,7 @@
       "document_id": "bappenas-doc-9f1cc384",
       "content_hash": "bc3380aa311cc1c1928a1c5c880f614fe1d947574a02b15e83db43bf520faba1",
       "word_count": 573,
-      "crawled_at": "2026-05-16T11:05:06.662490+07:00"
+      "crawled_at": "2026-05-16T20:20:47.453039+07:00"
     },
     {
       "title": "KOLABORASI INDONESIA-INGGRIS DUKUNG PERCEPATAN IMPLEMENTASI PRKBI DI BENGKULU",
@@ -135,7 +135,7 @@
       "document_id": "bappenas-doc-fe6d1cb2",
       "content_hash": "011934efbe19fdffc85ae5d11f783f49b173265dc141b6bbad0cb57b8a0ddce1",
       "word_count": 441,
-      "crawled_at": "2026-05-16T11:05:06.826711+07:00"
+      "crawled_at": "2026-05-16T20:20:50.734907+07:00"
     },
     {
       "title": "Bappenas Usung Renduk Pascabencana, Pastikan Percepatan Rehabilitasi dan Rekonstruksi Sumatra",
@@ -148,137 +148,7 @@
       "document_id": "bappenas-doc-c5257ff2",
       "content_hash": "9971725f3df863b9b02c67b18a861a79508ac768081f0b75c7c5a035f8696261",
       "word_count": 708,
-      "crawled_at": "2026-05-16T11:05:07.315287+07:00"
-    },
-    {
-      "title": "Menteri Rachmat Pambudy: MBG Serap 1,4 Juta Tenaga Kerja Dan Perkuat Rantai Pasok Lokal",
-      "link": "https://www.bappenas.go.id/berita/menteri-rachmat-pambudy-mbg-serap-14-juta-tenaga-kerja-dan-perkuat-rantai-pasok-lokal-860zK",
-      "source": "BAPPENAS",
-      "page": 2,
-      "date": "Jumat, 30 Januari 2026",
-      "text": "Menteri PPN/Kepala Bappenas Rachmat Pambudy menekankan urgensi pelaksanaan program Makan Bergizi Gratis (MBG) sebagai bagian penting dalam pembangunan nasional dalam sambutannya pada kegiatan Prasasti Center for Policy Studies – Prasasti Economic Forum 2026 yang mengangkat tema “Navigating Indonesia’s Next Chapter”, Kamis (29/1).Pada forum tersebut, Menteri Rachmat Pambudy menegaskan kebutuhan pemenuhan gizi di masyarakat merupakan hal yang perlu untuk segera diselesaikan. \"MBG penting, lapangan kerja penting\" ujar Menteri Rachmat Pambudy. Program MBG merupakan program strategis nasional yang mendukung pencapaian dua Trisula Pembangunan yakni Peningkatan SDM Indonesia yang Berkualitas serta Percepatan Pembangunan Ekonomi yang Berkelanjutan.Program MBG dirancang secara menyeluruh untuk menciptakanmultiplier effectpada perekonomian dan mempercepat proses industrialisasi pangan di pedesaan. MBG menyerap produk desa dan mendorong hilirisasi produk desa dengan memenuhi standar mutu, sehingga mampu menjadi bagian dari rantai pasok modern. Program ini bukan sekadar memberikan “ikan” ke penerima manfaat, melainkan juga memberikan “kail” untuk memutar roda perekonomian. Pemberian “ikan dan kail” mencerminkan bahwa program MBG tidak hanya menyediakan makanan bergizi, tetapi juga menciptakan lapangan kerja baru, hingga memperkuat rantai pasok lokal.Pada akhir Januari 2026, MBG telah menyasar ke lebih dari 60 juta penerima manfaat, melalui 22.091 Satuan Pelayanan Pemenuhan Gizi (SPPG) yang beroperasi di seluruh wilayah Indonesia. Kehadiran SPPG tersebut berhasil menyerap sekitar 1,4 juta tenaga kerja. Sementara dari sisi penyedia,ProgramMBG, juga meningkatkan produktivitas pertanian, seperti padi, sayur, dan buah; peternakan, termasuk ayam, sapi, kambing, dan domba; serta perikanan lokal yang menjadi bahan baku MBG.Menutup sambutannya, Menteri Rachmat Pambudy menegaskan bahwa MBG merupakan bagian dari pembangunan infrastruktur yang harus diselesaikan. “Ketika kita berbicara tentang infrastruktur, mohon tidak dibatasi hanya pada infrastruktur fisik, tetapi juga mencakup infrastruktur sosial. Mohon kita dibantu untuk menyelesaikan persoalan dasar kita,” pungkas Menteri Rachmat Pambudy.",
-      "source_pdf": [],
-      "document_id": "bappenas-doc-82b76051",
-      "content_hash": "c88fc84088c05d7c4eb1f5b244826d463f445305d38660acbc1ca1bd34c787eb",
-      "word_count": 278,
-      "crawled_at": "2026-05-16T11:05:10.804295+07:00"
-    },
-    {
-      "title": "Kolaborasi Satu Data Indonesia, Perkuat Pembangunan Pusat Dan Daerah",
-      "link": "https://www.bappenas.go.id/berita/kolaborasi-satu-data-indonesia-perkuat-pembangunan-pusat-dan-daerah-TBXCc",
-      "source": "BAPPENAS",
-      "page": 2,
-      "date": "Senin, 26 Januari 2026",
-      "text": "JAKARTA— Pemerintah Indonesia meneguhkan komitmen pembangunan nasional berbasis data melalui Kolaborasi Satu Data Indonesia (SDI) untuk Mendukung Pembangunan Pusat dan Daerah. Inisiatif ini menjadi langkah strategis dalam memperkuat tata kelola data pembangunan yang terpercaya, akurat, presisi, dan terintegrasi sebagai fondasi perumusan kebijakan di tingkat pusat hingga daerah.Menteri PPN/Kepala Bappenas Rachmat Pambudy menegaskan bahwa pembangunan nasional ke depan tidak dapat dilepaskan dari kekuatan data yang menyatu dan dapat dipercaya.  Menteri Rachmat Pambudy pun mengimbuhkan, semangat persatuan yang dirajut melalui Sumpah Pemuda 1928 perlu dimaknai kembali dalam bentuk penyatuan data pembangunan nasional.“Pembangunan nasional di pusat dan daerah ke depan harus semakin berbasis data yang terpercaya, akurat, presisi, dan terintegrasi dalam Satu Data Indonesia. Ketika data disatukan dan dikelola dalam satu ekosistem bersama, barulah data memiliki nilai strategis yang sesungguhnya untuk mendukung perencanaan, pengendalian, dan pengambilan keputusan pembangunan,”tegas Menteri Rachmat Pambudy di Jakarta, Senin (26/1).Sejalan dengan hal tersebut, Deputi Bidang Transformasi Digital Kementerian PPN/Bappenas Vivi Yulaswati menegaskan bahwa tantangan utama pembangunan berbasis data di Indonesia bukan terletak pada ketersediaan data, melainkan pada fragmentasi dan lemahnya integrasi lintas sektor.“Melalui kebijakan Satu Data Indonesia, telah dibangun tata kelola data di tingkat pusat dan daerah, termasuk penetapan produsen dan wali data, penyusunan kamus data dan metadata, serta mekanisme pertukaran data melalui Sistem Penghubung Layanan Pemerintah, sehingga data dapat lebih akurat, terpadu, dibagi pakaikan, dan dapat dipertanggungjawabkan untuk mendukung perencanaan dan pengambilan kebijakan pembangunan nasional,”jelas Deputi Vivi.Kegiatan Kolaborasi Satu Data Indonesia ini dihadiri oleh jajaran pimpinan kementerian dan lembaga, pemerintah daerah, akademisi, BUMN strategis, serta perwakilan pemerintah desa, termasuk para kepala desa dari berbagai wilayah. Kehadiran pemerintah daerah dan aparatur desa menegaskan bahwa pembangunan berbasis data merupakan kebutuhan nyata hingga ke tingkat desa sebagai garda terdepan pelayanan publik.Momentum kolaborasi ditandai dengan penandatanganan Surat Edaran Bersama antara Menteri PPN/Kepala Bappenas, Menteri Dalam Negeri, dan Kepala Badan Informasi Geospasial (BIG) terkait pelaksanaan geospasial di daerah, serta sejumlah nota kesepahaman dan perjanjian kerja sama lintas pihak. Kesepakatan ini menjadi pijakan penting dalam memastikan integrasi data pembangunan berjalan konsisten dan berkelanjutan.Penandatanganan berbagai kesepakatan dalam forum ini menjadi langkah strategis untuk memastikan perumusan kebijakan, pemantauan, evaluasi, hingga pengendalian pembangunan ditopang oleh riset dan inovasi. Upaya ini sekaligus mendukung percepatan pencapaian Rencana Pembangunan Jangka Panjang Nasional (RPJPN) 2025–2045, Rencana Pembangunan Jangka Menengah Nasional (RPJMN) 2025–2029, serta Tujuan Pembangunan Berkelanjutan/Sustainable Development Goals(TPB/SDGs), guna mewujudkan pembangunan yang lebih efektif, efisien, inklusif, dan berkelanjutan bagi seluruh masyarakat Indonesia.Penguatan ekosistem Satu Data Indonesia juga diperkuat melalui kolaborasi dengan Tentara Nasional Indonesia Angkatan Udara (TNI AU) dalam pengambilan foto udara sebagai basis penyusunan peta detail agar menghadirkan data spasial beresolusi tinggi yang akurat dan mutakhir untuk mendukung perencanaan pembangunan, pengendalian wilayah, serta mitigasi risiko di berbagai sektor dan daerah.Dukungan lintas sektor turut menguatkan agenda ini, dari Ketua Badan Legislasi DPR RI Bob Hasan, Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi Rini Widyantini, Menteri Koperasi Ferry Juliantono, Wakil Menteri Dalam Negeri Ribka Haluk, Kepala BRIN Arif Satria, Kepala BIG Muhamad Aris Marfai, dan Kepala ANRI Mego Pinandito, serta Duta ANRI Rieke Diah Pitaloka. Komitmen tersebut juga diperkuat oleh dukungan para ketua asosiasi pemerintah daerah tingkat provinsi, kabupaten, kota, hingga desa.",
-      "source_pdf": [],
-      "document_id": "bappenas-doc-8595c070",
-      "content_hash": "c3b30dbed647624eec16a2c9201135383ab4645dcd1ccee56d38b0754a2da062",
-      "word_count": 511,
-      "crawled_at": "2026-05-16T11:05:11.621575+07:00"
-    },
-    {
-      "title": "Bappenas Inisiasi Kemitraan dengan 14 Perguruan Tinggi, Capai Visi Indonesia Emas 2045",
-      "link": "https://www.bappenas.go.id/berita/bappenas-inisiasi-kemitraan-dengan-14-perguruan-tinggi-capai-visi-indonesia-emas-2045-rDlMT",
-      "source": "BAPPENAS",
-      "page": 2,
-      "date": "Jumat, 19 Desember 2025",
-      "text": "JAKARTA– Kementerian PPN/Bappenas bersama 14 perguruan tinggi bersinergi memperkuat peran pendidikan tinggi mewujudkan kualitas sumber daya manusia unggul untuk mencapai Visi Indonesia Emas 2045. Perguruan tinggi yang berpartisipasi yaitu Institut Pertanian Bogor, Institut Teknologi Bandung, Universitas Andalas, Universitas Brawijaya, Universitas Gadjah Mada, Universitas Hasanuddin, Universitas Indonesia, Universitas Negeri Sebelas Maret, Universitas Padjadjaran, Universitas Papua, Universitas Sriwijaya, Universitas Syiah Kuala, Universitas Trilogi, dan Universitas Trunojoyo Madura.Kolaborasi tersebut merupakan kelanjutan dari kemitraan yang telah terjalin dengan sejumlah perguruan tinggi sebelumnya. Penyesuaian ruang lingkup kerja sama juga telah dilakukan berdasarkan Tri Dharma Perguruan Tinggi, keberlanjutan program yang sudah berjalan, kebutuhan strategis Kementerian PPN/Bappenas, serta keunggulan dan arah pengembangan pusat studi di masing-masing perguruan tinggi mitra.Menteri PPN/Kepala Bappenas Rachmat Pambudy menegaskan bahwa pendidikan tinggi harus adaptif, kreatif, kolaboratif, dan berintegritas, sejalan dengan Prioritas Nasional ke-4 dalam RPJMN 2025–2029. “Saya ingin membangun berbasis kampus atau yang bisa disebut “Kompas dari Kampus”. Dimaksudkan kampus sebagai kompas bagi pembangunan nasional. Maka dari itu, kompasnya jangan sampai salah arah karena negara akan turut salah arah,” seru Menteri Rachmat Pambudy dalam Seremonial Penandatanganan Nota Kesepahaman dengan Perguruan Tinggi di Gedung Bappenas, Jakarta, Jumat (19/12).Kompas dari Kampus memperkuat jembatan antara akademik dan kebijakan, mendukung penyediaan kebijakan berbasis ilmu pengetahuan dan bukti nyata, pengembangan talenta, serta riset terapan. Perguruan tinggi merupakan fondasi bagi pembangunan bangsa. Negara dengan tingkat kemajuan tinggi ditopang oleh sistem pendidikan, khususnya pendidikan tinggi, yang kuat dan visioner.Forum ini diharapkan menjadi ruang penyampaian prioritas pembangunan dan kolaborasi akademik ke depan. Sekretaris Kementerian PPN/Sekretaris Utama Bappenas Teni Widuriyanti menjelaskan kesempatan ini sebagai landasan legal dan strategis yang mendorong berbagai inisiatif kerja sama. Mulai dari bidang pengembangan kapasitas sumber daya manusia, penelitian, kajian kebijakan, inovasi pembangunan, hingga program-program yang mendukung agenda prioritas pembangunan nasional, termasuk Tujuan Pembangunan Berkelanjutan/Sustainable Development Goals(TPB/SDGs).",
-      "source_pdf": [],
-      "document_id": "bappenas-doc-46b79d16",
-      "content_hash": "607a42267d3b7295e62ac3d8f56816aa9b8cb7df37d429a4525d9166995822a6",
-      "word_count": 290,
-      "crawled_at": "2026-05-16T11:05:12.093002+07:00"
-    },
-    {
-      "title": "Pemerintah Pastikan Pembangunan Papua Terarah dan Berdampak melalui RAPP Papua 2025–2029",
-      "link": "https://www.bappenas.go.id/berita/pemerintah-pastikan-pembangunan-papua-terarah-dan-berdampak-melalui-rapp-papua-2025-2029-tF2E8",
-      "source": "BAPPENAS",
-      "page": 2,
-      "date": "Selasa, 16 Desember 2025",
-      "text": "JAKARTA –Kementerian PPN/Bappenas berkolaborasi dengan Kementerian Dalam Negeri, Kementerian Keuangan, dan Pemerintah Daerah Provinsi, Kabupaten, dan Kota Papua meluncurkan Rencana Aksi Percepatan Pembangunan Papua (RAPPP) Tahun 2025-2029 di Gedung Bappenas, Jakarta, Selasa (16/12). RAPPP merupakan dokumen operasional lima tahunan yang disusun sebagai tindak lanjut dari Peraturan Presiden Nomor 24 Tahun 2023 Rencana Induk Percepatan Pembangunan Papua (RIPPP) Tahun 2022-2041. Melalui peluncuran RAPPP 2025-2029, Pemerintah berkomitmen untuk memastikan percepatan pembangunan Papua berjalan lebih terarah dan memberikan dampak nyata bagi kesejahteraan masyarakat, khususnya Orang Asli Papua (OAP). ”Saya meyakini yang membuat Papua cerdas, sehat, dan produktif itu bukan hanya infrastruktur, rumah sakit, atau sekolah, tapi niat dan tekad Bapak-Bapak semua, para Gubernur. Jadi kalau nanti ada hal-hal yang perlu kita komunikasikan, bicaralah dengan kami di sini. Kantor ini terbuka untuk Bapak-Bapak sekalian,” urai Menteri PPN/Kepala Bappenas Rachmat Pambudy.Penyusunan RAPPP 2025–2029 dilakukan melalui proses yang inklusif dan partisipatif dengan melibatkan berbagai kementerian/lembaga, pemerintah daerah, Majelis Rakyat Papua, Badan Pengarah Papua, tokoh adat, agama, perempuan, akademisi, serta pemangku kebijakan lainnya. Dalam implementasinya, RAPPP 2025-2029 menekankan pada sinergi antarsumber  pendanaan, baik melalui Belanja K/L, Transfer ke Daerah (termasuk dana otonomi khusus dan dana tambahan infrastruktur), Pendapatan Asli Daerah, maupun sumber pembiayaan alternatif lainnya. Pelaksanaan RAPPP akan dipantau, dievaluasi, dikendalikan, dan diawasi bersama oleh Pemerintah Pusat, Pemerintah Daerah, Komite Eksekutif Percepatan Pembangunan Papua, Badan Pengarah Papua, dan pemangku kebijakan lain. ”Saat ini, RAPPP 2025-2029 telah ditetapkan melalui Peraturan Presiden Nomor 107 Tahun 2025 tentang Rencana Aksi Percepatan Pembangunan Papua 2025-2029. Ada 19 program prioritas yang kita sepakati sebelumnya di dalam RAPPP 2025-2029 untuk mendukung Papua sehat, cerdas, dan produktif. Program-program tersebut telah diselaraskan dengan RPJMN 2025-2029 serta mendukung trisula pembangunan dan program prioritas Bapak Presiden,” tutur Deputi Bidang Pembangunan Kewilayahan Kementerian PPN/Bappenas Medrilzam.RAPPP 2025-2029 akan menjadi acuan dalam penyusunan Rancangan Awal Rencana Kerja Pemerintah dan Rencana Kerja Pemerintah Daerah, yang akan menjadi dasar dalam penyelenggaraan Musyawarah Perencanaan Pembangunan Otonomi Khusus yang menggunakan Sistem Informasi Percepatan Pembangunan Papua. RAPPP 2025-2029 diharapkan menjadi kompas percepatan pembangunan jangka menengah di wilayah Papua sekaligus meningkatkan kesadaran bersama mengenai potensi pembangunan di kawasan Papua. \"Saya berharap betul RAPPP 2025-2029 ini dapat digunakan sebagai referensi dalam proses perencanaan pembangunan di seluruh Papua, baik di provinsi, kabupaten, dan kota. Mudah-mudahan pertemuan ini menjadi awal yang baik untuk kita menyongsong era otonomi khusus yang kedua ini,” pungkas Deputi Medrilzam.",
-      "source_pdf": [],
-      "document_id": "bappenas-doc-b0bd03e2",
-      "content_hash": "6289f1c2186d21418d4340a574a9dba0b87694735e05076b05e7c3a6254b7af0",
-      "word_count": 385,
-      "crawled_at": "2026-05-16T11:05:12.397405+07:00"
-    },
-    {
-      "title": "Bappenas Perkuat Sinergi Perencanaan Pusat–Daerah, Tingkatkan Kinerja Pembangunan Daerah Menuju Indonesia Emas 2045",
-      "link": "https://www.bappenas.go.id/berita/bappenas-perkuat-sinergi-perencanaan-pusat-daerah-tingkatkan-kinerja-pembangunan-daerah-menuju-indonesia-emas-2045-DJtkE",
-      "source": "BAPPENAS",
-      "page": 2,
-      "date": "Senin, 15 Desember 2025",
-      "text": "JAKARTA– Kementerian PPN/Bappenas menggelarKnowledge SharingPembangunan Daerah serta Penyerahan Penghargaan Pembangunan Daerah (PPD) dan Penghargaan Khusus Tahun 2025 di Gedung Bappenas, Jakarta, Senin (15/12).  PPD berupaya memberikan apresiasi kepada pemerintah daerah atas prestasi dalam perencanaan dan kinerja pencapaian pembangunan serta wadah bagi pemerintah daerah untuk menampilkan perencanaan yang konsisten, komprehensif, tersinergi antara perencanaan pusat dan daerah dengan menonjolkan adanya program unggulan masing-masing daerah. Sekretaris Kementerian PPN/Sekretaris Utama Bappenas Teni Widuriyanti menegaskan bahwa kemajuan pembangunan nasional sangat ditentukan oleh kinerja pembangunan di daerah, serta pentingnya inovasi kebijakan di tengah penataan ulang alokasi anggaran. “Sumber pertumbuhan pembangunan nasional ada di daerah. Jika daerah tidak berprogres, maka cita-cita pembangunan secara nasional tidak akan tercapai. Efisiensi anggaran bukan alasan untuk menghentikan program dan kegiatan. Justru diperlukan inovasi kebijakan agar pemerintah pusat dan daerah terus bertransformasi dan bergerak secara kolaboratif,” tegas Sesmen Teni.Penerima PPD Tahun 2025 Kategori Pemerintah Provinsi peringkat pertama hingga kelima secara berurutan diraih oleh Provinsi Jawa Barat, Provinsi DKI Jakarta, Provinsi Lampung, Provinsi Sumatera Selatan, dan Provinsi Sumatera Utara. Daerah terbaik Kategori Pemerintah Kabupaten secara berurutan adalah Kabupaten Temanggung, Kabupaten Bantul, Kabupaten Muara Enim, Kabupaten Bandung, dan Kabupaten Sidoarjo. Sementara itu, Kategori Pemerintah Kota diraih oleh Kota Depok sebagai terbaik pertama, diikuti Kota Magelang, Kota Palu, Kota Malang, dan Kota Yogyakarta. Penghargaan khusus juga diberikan kepada daerah dengan progres perencanaan tertinggi pada Daerah Otonom Baru adalah Provinsi Papua Pegunungan, progres perencanaan tertinggi Kategori Kabupaten yaitu Kabupaten Bone Bolango, serta progres perencanaan tertinggi Kategori Kota yaitu Kota Kupang.Deputi Bidang Pengendalian, Evaluasi, dan Manajemen Risiko Pembangunan Kementerian PPN/Bappenas Erwin Dimas menyampaikan bahwa pelaksanaan PPD 2025 berlangsung di tengah transisi pemerintahan dan efisiensi anggaran. “Meski dihadapkan pada berbagai perubahan, evaluasi, pengendalian, dan kinerja pembangunan daerah tetap harus kita kawal bersama,” ujar Deputi Erwin. Ke depan, PPD akan diperkuat secara lebih komprehensif dan selaras dengan program pemerintah, serta kepala daerah terpilih.Rangkaian kegiatan dilanjutkan denganKnowledge SharingPraktik Baik Pembangunan Daerah yang menghadirkan Provinsi Jawa Barat, Provinsi Papua Pegunungan, Kabupaten Temanggung, dan Kota Depok sebagai narasumber. Forum ini diharapkan dapat mendorong replikasi praktik baik dan penguatan kolaborasi antar aktor pembangunan guna mendukung pencapaian sasaran pembangunan nasional menuju Indonesia Emas 2045.",
-      "source_pdf": [],
-      "document_id": "bappenas-doc-18b2bae8",
-      "content_hash": "c37ec3db417c9a36005e35e198647a7d0d0cbe8d47b53c11ac52c77c7b59d44b",
-      "word_count": 350,
-      "crawled_at": "2026-05-16T11:05:13.327146+07:00"
-    },
-    {
-      "title": "Mengembalikan Kejayaan Mother of Spices: Indonesia Luncurkan Peta Jalan Hilirisasi Rempah",
-      "link": "https://www.bappenas.go.id/berita/mengembalikan-kejayaan-mother-of-spices-indonesia-luncurkan-peta-jalan-hilirisasi-rempah-duFYR",
-      "source": "BAPPENAS",
-      "page": 2,
-      "date": "Kamis, 11 Desember 2025",
-      "text": "JAKARTA– Kementerian PPN/Bappenas meluncurkan Peta Jalan Hilirisasi Rempah 2025–2045 (Pala, Lada, Cengkih, Kayu Manis, Vanili, dan Temulawak) sebagai penjabaran amanat Rencana Pembangunan Jangka Panjang Nasional (RPJPN) 2025–2045 untuk meningkatkan hilirisasi sumber daya alam unggulan. Peluncuran Peta Jalan ini menegaskan kembali jati diri Indonesia sebagai Negara Rempah Sejati dan memulihkan posisinya sebagai pemain utama dalam rantai pasok global (10/12). Peta jalan ini menetapkan arah strategis pengembangan industri rempah melalui penguatan produksi, pemasaran dalam dan luar negeri, serta pembangunan ekosistem pemampu berbasis riset, inovasi, dan tata kelola yang inklusif.Menteri PPN/Kepala Bappenas Rachmat Pambudy menegaskan bahwa peluncuran peta jalan ini merupakan momentum penting bagi masa depan perdagangan rempah Indonesia, “Peluncuran Peta Jalan Hilirisasi Rempah harus menjadi bagian dari perjalanan perdagangan kita. Sesungguhnya peta jalan perdagangan ini sudah ada sejak ratusan tahun lalu, fondasi yang dulu menjadikan negara-negara Eropa berjaya,” ujarnya. Menteri Rachmat Pambudy menekankan bahwa kebangkitan rempah harus berbasis nilai tambah.“Indonesia pernah menjadiMother of Spices, namun kejayaan itu dulu justru menguntungkan negara lain. Kini kita menyiapkan cara baru, bukan hanya menjual rempah, tetapi menjual ekosistem yang memperkuat nilai tambahnya,” jelas Menteri Rachmat Pambudy. Penguatan industri kuliner Indonesia yang telah dilakukan oleh Kementerian Perdagangan dapat menjadi pintu masuk hilirisasi, sebagaimana dilakukan Vietnam, Thailand, dan Jepang melalui ekspansi jejaring restoran global. Nilai tambah inilah yang mendorong rempah Indonesia kembali menembus pasar dunia.Penyusunan peta jalan dilakukan melalui kolaborasi antara Kementerian PPN/Bappenas, kementerian/lembaga terkait, asosiasi industri, pemerhati rempah, petani, pelaku usaha, akademisi, dan mitra pembangunan. “Kolaborasi petani, pedagang, dan industri menjadi kunci optimalisasi potensi rempah. Berbagai inisiatif hilirisasi yang sudah berjalan akan disatukan dalam peta jalan ini sebagai dasar orkestrasi langkah bersama,” ujar Deputi Bidang Pangan, SDA, dan Lingkungan Hidup Leonardo A. A. Teguh Sambodo selaku Ketua Tim Penyusun.Peluncuran Peta Jalan Hilirisasi Rempah yang berlangsung pada 10 Desember sekaligus menjadi forum untuk memperingati Hari Rempah Nasional yang jatuh pada tanggal 11 Desember. Peluncuran Peta Jalan ini diharapkan tidak hanya memperkuat posisi Indonesia sebagai produsen utama rempah dunia, tetapi juga mengembalikan rempah sebagai kekuatan budaya, ekonomi, dan diplomasi bangsa dalam rangka mewujudkan Visi Indonesia Emas 2045.",
-      "source_pdf": [],
-      "document_id": "bappenas-doc-94ad6d48",
-      "content_hash": "1b46558efd45fd0a04455f49ec65133e31fe139144f4e7fa608532135a0bffbe",
-      "word_count": 338,
-      "crawled_at": "2026-05-16T11:05:16.300552+07:00"
-    },
-    {
-      "title": "Indonesia Perkuat Pengelolaan Air, Energi, dan Pangan yang Berkelanjutan melalui Peta Jalan WEF Nexus",
-      "link": "https://www.bappenas.go.id/berita/indonesia-perkuat-pengelolaan-air-energi-dan-pangan-yang-berkelanjutan-melalui-peta-jalan-wef-nexus-c6AAQ",
-      "source": "BAPPENAS",
-      "page": 2,
-      "date": "Rabu, 10 Desember 2025",
-      "text": "JAKARTA– Kementerian PPN/Bappenas, United Nations Development Programme (UNDP) Indonesia, dan UK Foreign, Commonwealth & Development Office (UK FCDO) meluncurkan Peta Jalan Water, Energy, Food (WEF) Nexus Indonesia di Kantor Bappenas, Rabu (10/12). WEF Nexus adalah sebuah pendekatan yang digunakan untuk memahami serta mengelola sumber daya secara terpadu untuk meningkatkan sinergi pemanfaatan air, energi, dan pangan secara berkelanjutan. Peta Jalan ini menjadi sebuah cetak biru strategis untuk memperkuat pengelolaan sumber daya air, energi dan pangan yang terpadu dan berkelanjutan di Indonesia. Peta Jalan ini juga sekaligus menyediakan kerangka pengambilan keputusan pemanfaatan dan pengelolaan sumber daya air-energi dan pangan  yang terpadu untuk mendorong pertumbuhan ekonomi, memperkuat ketahanan iklim, serta memajukan Tujuan Pembangunan Berkelanjutan/Sustainable Development Goals.Dalam sambutannya, Menteri PPN/Kepala Bappenas Rachmat Pambudy menegaskan  bahwa WEF Nexus sangat penting bagi kehidupan manusia, dan keterkaitan di antara ketiganya sebenarnya bukanlah hal yang baru. Menteri Rachmat Pambudy menegaskan bahwa “Sepanjang sejarah, kemampuan mengelola air, energi, dan pangan telah menentukan kebangkitan dan kejatuhan peradaban. Kita diingatkan bahwa dengan industrialisasi dan peningkatan penduduk yang telah menciptakan tekanan terhadap sumber daya kita yang terbatas, kita perlu bertransformasi dengan mengubah pengelolaan air-energi-pangan yang silo-silo menjadi  tata kelola yang terintegrasi.” Asta Cita 2 dalam RPJMN 2025–2029 menegaskan bahwa swasembada pangan, energi, dan air merupakan pilar penting kemandirian nasional. Peluncuran Peta Jalan WEF Nexus Indonesia diharapkan memperkuat komitmen serta implementasi lintas pemangku kepentingan.Minister-Counsellor (Pembangunan) UK FCDO Peter Rajadiston juga menyambut peluncuran Peta Jalan WEF Nexus. “Peluncuran Peta Jalan WEF Nexus bukan sekadar pencapaian teknis tetapi juga menandakan komitmen Indonesia untuk menempatkan pemikiran sistem di pusat perencanaan nasional. Dengan mengintegrasikan sistem air, energi, dan pangan dengan tujuan iklim, Indonesia menunjukkan bahwa ketahanan dan pertumbuhan dapat berjalan beriringan,” jelas Peter Rajadiston.Pendapat yang sama dan memperkuat juga disampaikan Perwakilan Tetap UNDP di Indonesia Sara Ferrer Olivella. “Sektor-sektor air-energi-pangan saling berkaitan erat, dan kita harus memastikan bahwa kemajuan di satu bidang tidak mengorbankan bidang lainnya. Peta Jalan WEF Nexus secara langsung menanggapi hal ini dengan menawarkan kerangka kerja holistik untuk meminimalkan konflik, memaksimalkan sinergi, memperkuat ketahanan terhadap perubahan iklim, serta memastikan tidak ada seorang pun tertinggal dalam upaya menuju swasembada dan net-zero pada tahun 2060,” ujar Sara Ferrer Olivella.Lebih dari sekadar dokumen perencanaan, Peta Jalan  ini menjadi panduan operasional yang nyata bagi instansi pemerintah, komunitas lokal, dan mitra pembangunan untuk secara kolaboratif membangun sistem yang tangguh serta rendah karbon di seluruh negeri.  Hasil pelaksanaannya diharapkan dapat memperkuat langkah bersama menuju pencapaian Indonesia Emas 2045.",
-      "source_pdf": [],
-      "document_id": "bappenas-doc-98dd3e3a",
-      "content_hash": "bcb743598ad2597436914fe018283c37a20d3817a680e414855eccd5d0fa2f7f",
-      "word_count": 398,
-      "crawled_at": "2026-05-16T11:05:17.113578+07:00"
-    },
-    {
-      "title": "Dukung Transformasi Ekonomi, Bappenas Mutakhirkan Konsep Bioekonomi Berkelanjutan di Indonesia",
-      "link": "https://www.bappenas.go.id/berita/dukung-transformasi-ekonomi-bappenas-mutakhirkan-konsep-bioekonomi-berkelanjutan-di-indonesia-wCZ1q",
-      "source": "BAPPENAS",
-      "page": 2,
-      "date": "Kamis, 04 Desember 2025",
-      "text": "JAKARTA– Kementerian PPN/Bappenas berkomitmen untuk mengarusutamakan bioekonomi, memutakhirkan perkembangan nasional, serta memperkuat jejaring antar penggiat bioekonomi sebagai tindak lanjut agenda Indonesia Bioeconomy Initiative 2024. “Bioekonomi kini menjadi agenda penting di tingkat global, termasuk dalam forum internasional seperti G20. Setiap negara mengembangkan bioekonominya secara berbeda, namun semuanya menekankan keseimbangan ekonomi, sosial, dan lingkungan. Karena itu, Indonesia perlu mengambil peran yang lebih aktif dalam arus perkembangan global tersebut,” ujar Deputi Bidang Pangan, Sumber Daya Alam, dan Lingkungan Hidup Kementerian PPN/Bappenas Leonardo A. A. Teguh Sambodo dalam Workshop Bioekonomi Indonesia 2025 di Jakarta, Kamis (4/12).Forum yang dihadiri oleh berbagai pemangku kepentingan, mulai dari kementerian/lembaga, pemerintah daerah, sektor swasta, akademisi, lembaga riset, mitra pembangunan, hingga komunitas usaha berbasis sumber daya hayati ini, menjadi wadah untuk menyatukan persepsi, memperkuat kolaborasi lintas sektor, dan merumuskan langkah implementatif bagi pengembangan bioekonomi yang berkelanjutan. Masukan yang terkumpul dari dialog strategis ini akan menjadi dasar penting dalam perumusan kebijakan bioekonomi yang inklusif, aplikatif, dan berdampak nyata bagi pelaku usaha dan masyarakat.Deputi Teguh juga menyoroti peran kritikal agregator sebagai jembatan transfer teknologi dan inovasi kepada pelaku usaha di tingkat tapak. “Peran agregator sangat penting sebagai penghubung antara riset dan pelaku usaha. Mereka dapat menjembatani transfer teknologi, mulai dari keragaman spesies dan varietas, pengembangan bibit unggul, hingga peningkatan proses produksi yang menciptakan nilai tambah lebih tinggi. Agregator juga berperan memastikan integrasi pelaku usaha kecil dengan mitra industri sehingga ekosistem bioekonomi dapat berkembang secara berkelanjutan,” imbuh Deputi Teguh.Selaras dengan Rencana Pembangunan Jangka Panjang Nasional (RPJPN) 2025-2045, pengembangan bioekonomi nasional dipersiapkan sebagai landasan transformasi ekonomi yang adaptif dan fokus pada peningkatan kesejahteraan masyarakat melalui pengelolaan sumber daya hayati yang berkelanjutan dan bernilai tambah. “Unsur yang paling penting dalam bioekonomi adalah bagaimana masyarakat menjadi sejahtera. Bioekonomi bukan hanya transformasi ekonomi, tetapi juga transformasi sosial. Kami berharap masyarakat dapat berperan sebagai produsen berbasis komunitas, mitra industri, sekaligus penjaga ekosistem,” tegas Direktur Kehutanan dan Konservasi Sumber Daya Air Kementerian PPN/Bappenas Dadang Jainal Mutaqin. Sebagai langkah strategis, pemerintah akan menyusun Strategi Nasional Bioekonomi Indonesia di 2026. “Pada 2026, kami akan mulai menyusun Strategi Nasional Bioekonomi, yang dapat berbentuk roadmap lengkap dengan rencana aksi dan indikator sebagai panduan bagi seluruh pemangku kepentingan,” ungkap Direktur Dadang.",
-      "source_pdf": [],
-      "document_id": "bappenas-doc-7a5f4e6c",
-      "content_hash": "9a7a5d48e5d2630822a219107b0cff7d42e76e4a409e43383fdf83c3ecbb85ac",
-      "word_count": 357,
-      "crawled_at": "2026-05-16T11:05:17.303215+07:00"
-    },
-    {
-      "title": "Bappenas–GGGI Inisiasi Kebijakan Investasi di Sektor Industri Daur Ulang, Perkuat Rantai Nilai Plastik Berkelanjutan",
-      "link": "https://www.bappenas.go.id/berita/bappenas-gggi-inisiasi-kebijakan-investasi-di-sektor-industri-daur-ulang-perkuat-rantai-nilai-plastik-berkelanjutan-TzZXa",
-      "source": "BAPPENAS",
-      "page": 2,
-      "date": "Rabu, 03 Desember 2025",
-      "text": "JAKARTA– Kementerian PPN/Bappenas bersama Global Green Growth Institute (GGGI) bekerja sama mempercepat pengembangan rantai nilai plastik berkelanjutan sebagai bagian dari implementasi Peta Jalan Ekonomi Sirkular yang dimuat dalam Rencana Pembangunan Jangka Menengah Nasional (RPJMN) 2025-2029, serta mendukung agenda transformasi ekonomi hijau dan berketahanan iklim. Sekretaris Kementerian PPN/Sekretaris Utama Bappenas Teni Widuriyanti menguraikan, Indonesia menghasilkan 5,5 juta ton sampah plastik per tahun, namun baru 22 persen yang berhasil dikumpulkan untuk didaur ulang. “Tingkat utilisasi industri daur ulang pun masih jauh dari optimal, hanya sekitar 40 persen kapasitas yang beroperasi sehingga dibutuhkan investasi lebih kuat pada infrastruktur, teknologi, riset bioplastik, serta insentif fiskal dan nonfiskal,” urai Sesmen Teni dalam Business Matchmaking Program: Policy Dialogue dan Peluncuran Call for Proposal (CfP) Plastics Circular Investment Initiative di Jakarta, Rabu (3/12).Kemitraan strategis antara Kementerian PPN/Bappenas dan GGGI selama lebih dari satu dekade dalam pertumbuhan hijau, turut memperluas jalur pembangunan hijau dan mendukung kepemimpinan Indonesia menuju ekonomi yang lebih sederhana dan berkelanjutan. Deputy Country Representative GGGI Vidya Fauzianti menegaskan bahwa PCII dirancang untuk mengatasi tantangan struktural dalam rantai nilai plastik, mulai dari ketidakstabilan bahan baku hingga fragmentasi pasar. Kolaborasi seluruh pemangku kepentingan diperlukan untuk mempercepat upaya transisi tersebut melaluiCall for Proposalyang dapat diikuti oleh seluruh pelaku sektor plastik daur ulang dan bioplastik.Inisiatif tersebut bertujuan untuk memperkuat segmen penting dalam rantai nilai yang dapat membuka peluang investasi yang konkret, sehingga mampu membangun proyek-proyek yang siap dibiayai. PCII memiliki tiga komponen utama untuk memperkuat jalur investasi, yakni analisis lanskap,business matchmaking, dan asesmen teknis. “Proyek ini dirancang untuk mengatasi berbagai kesenjangan sekaligus mengidentifikasi peluang, memastikan keahlian internasional dapat benar-benar mendukung prioritas lokal Indonesia,” jelas Vidya.Melalui forum dialog kebijakan ini, Kementerian PPN/Bappenas dan GGGI menegaskan komitmen bersama untuk mempercepat transformasi sektor plastik Indonesia melalui regulasi yang lebih kuat, teknologi yang lebih bersih, dan kolaborasi internasional yang lebih erat. Sinergi lintas pemangku kepentingan merupakan kunci untuk membangun industri plastik berkelanjutan yang berdaya saing dan mendukung komitmen iklim global. “Kita berharap agar dialog kebijakan danbusiness matchmakingpada hari ini bisa menjadi bagian dari upaya untuk memperkuat komunikasi kita bersama, dan menghadirkan kebijakan atau proyek-proyek yang nyata, yang bisa menjadi bagian dari ekonomi sirkular Indonesia,” tutup Sesmen Teni.",
-      "source_pdf": [],
-      "document_id": "bappenas-doc-fd842e20",
-      "content_hash": "bcda9b69d1b3f79de66b932ad4638186e8ca325f966324214d6a5e6327074252",
-      "word_count": 354,
-      "crawled_at": "2026-05-16T11:05:17.582217+07:00"
-    },
-    {
-      "title": "Bappenas Pertemukan Para Pemangku Kepentingan, Sepakati Komitmen Pengembangan Geopark Berkelanjutan",
-      "link": "https://www.bappenas.go.id/berita/bappenas-pertemukan-para-pemangku-kepentingan-sepakati-komitmen-pengembangan-geopark-berkelanjutan-m94i2",
-      "source": "BAPPENAS",
-      "page": 2,
-      "date": "Rabu, 03 Desember 2025",
-      "text": "JAKARTA– Di 2025, Indonesia menempati peringkat ketiga dunia sebagai negara dengan jumlah geopark terbanyak, setara Italia, setelah ditetapkannya Geopark Kebumen dan Geopark Meratus sebagai UNESCO Global Geopark (UGGp) di April 2025, yang sekaligus mencatatkan 12 geopark Indonesia ke dalam UGGp. Rencana Pembangunan Jangka Menengah Nasional (RPJMN) 2025-2029 menargetkan Indonesia memiliki 17 UGGp di 2029. “Geopark harus dikembangkan sebagai laboratorium alam terbuka yang menumbuhkan literasi lingkungan dan budaya bagi generasi penerus,” ujar Menteri PPN/Kepala Bappenas Rachmat Pambudy dalam Indonesia’s Geopark Leader Forum dengan tema Building Knowledge for Indonesia’s Geopark Development di Jakarta, Rabu (3/12).Keberhasilan pengelolaan dan pengembangan geopark yang berkelanjutan, tidak hanya didukung aspek teknis, tetapi juga komitmen kolektif dari kepala daerah dan Badan Pengelola Geopark untuk mendukung transformasi yang berdampak bagi masyarakat dan lingkungan. Kepala daerah berperan sebagaichampiondanfocal pointdalam mendorong inovasi serta membangun jejaring, kolaborator yang menjembatani kepentingan berbagai pihak, serta sebagai pengarah kebijakan untuk memastikan tata kelola dan pendanaan yang efektif.Dalam forum yang mempertemukan para perumus arah kebijakan pengembangan geopark ini, telah disepakati deklarasi komitmen oleh pimpinan daerah di kawasan geopark, yakni sinergitas kebijakan geopark dalam perencanaan dan penganggaran daerah; perlindungan dan pelestarian warisan geologi, ekologi, dan budaya; dukungan terhadap peningkatan edukasi, serta pengembangan riset dan teknologi; mendorong keekonomian yang inklusif dan berkelanjutan di wilayah geopark; serta mendorong kemitraan dan kolaborasi.Seluruh pemangku kepentingan diharapkan dapat memperkuat komitmen dalam membangun pengetahuan dan meningkatkan kualitas pengelolaan geopark sebagai fondasi pembangunan Indonesia sekarang dan di masa yang akan datang. Menteri Rachmat Pambudy menegaskan peran pemangku kepentingan untuk mendukung penerapanquality tourism, penguatan sumber daya manusia dan inovasi melaluiGeopark Center of Excellence(CoE), serta peningkatan nilai tambah geopark lokal. \"Kami kembali mengajak para kepala daerah dan seluruhgeoparkiansuntuk memperkuat komitmen dalam membangun pengetahuan untuk pengembangan geopark. Semoga forum ini memberi manfaat bagi perluasan wawasan geopark dan kolaborasi untuk pengembangan geopark,\" pungkas Menteri Rachmat Pambudy.",
-      "source_pdf": [],
-      "document_id": "bappenas-doc-2cc9a439",
-      "content_hash": "8cdae7091886e803cc21da33257922170a60c617ad6f0402f3906aa34c5fe128",
-      "word_count": 298,
-      "crawled_at": "2026-05-16T11:05:18.757077+07:00"
+      "crawled_at": "2026-05-16T20:20:53.219713+07:00"
     }
   ]
 }
