@@ -200,8 +200,9 @@ def _build_search_url(keyword, start=0, require_go_id=False):
     )
 
 
-def _build_browser_config():
-    return get_keyword_browser_config()
+def _build_browser_config(headless=None):
+    effective_headless = False if headless is None else headless
+    return get_keyword_browser_config(headless=effective_headless)
 
 
 def _fetch_google_html(search_url):
@@ -210,8 +211,8 @@ def _fetch_google_html(search_url):
         return response.read().decode("utf-8", errors="ignore")
 
 
-async def _fetch_google_html_with_browser(search_url):
-    browser_config = _build_browser_config()
+async def _fetch_google_html_with_browser(search_url, headless=None):
+    browser_config = _build_browser_config(headless=headless)
 
     run_config = CrawlerRunConfig(
         cache_mode=CacheMode.BYPASS,
@@ -256,9 +257,9 @@ def _looks_blocked(html):
     return any(signal in lower for signal in signals)
 
 
-async def _get_google_search_html(search_url):
+async def _get_google_search_html(search_url, headless=None):
     try:
-        html = await _fetch_google_html_with_browser(search_url)
+        html = await _fetch_google_html_with_browser(search_url, headless=headless)
         if html and not _looks_blocked(html):
             return html
         logger.warning("Google browser fetch looks blocked, switching to requests mode")
@@ -300,7 +301,7 @@ def _extract_google_result_urls(html, require_go_id=False):
 
 
 async def discover_seed_urls_by_keyword(
-    keyword, max_seed_results=10, require_go_id=False
+    keyword, max_seed_results=10, require_go_id=False, headless=None
 ):
     keyword = _normalize_whitespace(keyword)
     if not keyword:
@@ -335,7 +336,7 @@ async def discover_seed_urls_by_keyword(
                     )
                 )
 
-                html = await _get_google_search_html(search_url)
+                html = await _get_google_search_html(search_url, headless=headless)
 
                 if _looks_blocked(html):
                     discovery_error = "Google returned a blocked or captcha page."
@@ -501,8 +502,8 @@ def _extract_page_record(url, html):
     }
 
 
-async def crawl_url(url):
-    browser_config = _build_browser_config()
+async def crawl_url(url, headless=None):
+    browser_config = _build_browser_config(headless=headless)
     run_config = CrawlerRunConfig(
         cache_mode=CacheMode.BYPASS,
         simulate_user=True,
@@ -527,6 +528,7 @@ async def run_by_keyword_async(
     max_links=20,
     output_prefix="dynamic_keyword",
     require_go_id=False,
+    headless=None,
 ):
     keyword = _normalize_whitespace(keyword)
     start_time_dt = datetime.now(WIB)
@@ -546,6 +548,7 @@ async def run_by_keyword_async(
         keyword,
         max_seed_results=max_seed_results,
         require_go_id=require_go_id,
+        headless=headless,
     )
 
     if max_links is not None:
@@ -566,7 +569,7 @@ async def run_by_keyword_async(
         logger.info("[%s/%s] Crawling %s", index, len(seed_urls), url)
 
         try:
-            html = await crawl_url(url)
+            html = await crawl_url(url, headless=headless)
             record = _extract_page_record(url, html)
             results.append(record)
 
@@ -635,6 +638,7 @@ def run_by_keyword(
     max_links=20,
     output_prefix="dynamic_keyword",
     require_go_id=False,
+    headless=None,
 ):
     return asyncio.run(
         run_by_keyword_async(
@@ -643,5 +647,6 @@ def run_by_keyword(
             max_links=max_links,
             output_prefix=output_prefix,
             require_go_id=require_go_id,
+            headless=headless,
         )
     )

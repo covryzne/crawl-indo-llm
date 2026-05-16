@@ -15,7 +15,7 @@ from crawl4ai import AsyncWebCrawler, CacheMode, CrawlerRunConfig
 from crawl4ai.extraction_strategy import JsonCssExtractionStrategy
 
 # Import config baru kita di sini
-from config.browser_config import get_browser_config
+from config.browser_config import GLOBAL_HEADLESS, get_browser_config
 from config.government_config import GOVERNMENT_SITES_CONFIG, OUTPUT_DIR, SCRAPER_CONFIG
 from crawler.pagination.js_click_pagination import get_js_click_config, is_last_page
 from crawler.pagination.url_pagination import build_url
@@ -36,13 +36,16 @@ logger = logging.getLogger(__name__)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-async def crawl_links(site_name):
+async def crawl_links(site_name, headless=None):
     site_config = GOVERNMENT_SITES_CONFIG[site_name]
     pagination_config = site_config["pagination"]
     pagination_type = pagination_config["type"]
     links_config = site_config["links"]
 
-    browser_config = get_browser_config(site_name=site_name, headless=False)
+    effective_headless = GLOBAL_HEADLESS if headless is None else headless
+    browser_config = get_browser_config(
+        site_name=site_name, headless=effective_headless
+    )
 
     extraction_strategy = JsonCssExtractionStrategy(links_config["schema"])
 
@@ -122,7 +125,7 @@ async def crawl_links(site_name):
     return all_news_items
 
 
-async def scrape_article(item, index, total, site_name, errors_list):
+async def scrape_article(item, index, total, site_name, errors_list, headless=None):
     url = item.get("link")
     if not url:
         return None
@@ -141,7 +144,10 @@ async def scrape_article(item, index, total, site_name, errors_list):
         item["crawled_at"] = crawled_at
         return item
 
-    browser_config = get_browser_config(site_name=site_name, headless=False)
+    effective_headless = GLOBAL_HEADLESS if headless is None else headless
+    browser_config = get_browser_config(
+        site_name=site_name, headless=effective_headless
+    )
     extraction_strategy = JsonCssExtractionStrategy(detail_config["schema"])
 
     run_config = CrawlerRunConfig(
@@ -198,11 +204,11 @@ async def scrape_article(item, index, total, site_name, errors_list):
         return None
 
 
-async def run(site_name):
+async def run(site_name, headless=None):
     start_time_dt = datetime.now(WIB)
     logger.info("=== START LINK CRAWL [%s] ===", site_name)
 
-    news_items = await crawl_links(site_name)
+    news_items = await crawl_links(site_name, headless=headless)
     logger.info("[%s] Found %s total link items", site_name, len(news_items))
 
     valid_results = []
@@ -214,7 +220,14 @@ async def run(site_name):
 
         async def bounded_scrape(item, index, total):
             async with semaphore:
-                return await scrape_article(item, index, total, site_name, errors)
+                return await scrape_article(
+                    item,
+                    index,
+                    total,
+                    site_name,
+                    errors,
+                    headless=headless,
+                )
 
         tasks = [
             bounded_scrape(item, index, len(news_items))
@@ -267,6 +280,8 @@ async def run(site_name):
         output_file,
     )
     logger.info("=== FINISHED [%s] ===", site_name)
+
+    return final_payload
 
 
 def _extract_news_items(data):

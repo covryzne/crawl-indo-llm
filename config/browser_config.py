@@ -2,6 +2,8 @@
 
 from crawl4ai import BrowserConfig
 
+GLOBAL_HEADLESS = True
+
 SEARCH_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
@@ -26,11 +28,12 @@ REALISTIC_HEADERS = {
 
 
 def get_browser_config(
-    site_name: str, headless: bool = True, verbose: bool = False
+    site_name: str, headless: bool | None = None, verbose: bool = False
 ) -> BrowserConfig:
     """
     Generate BrowserConfig secara dinamis berdasarkan site_name.
     """
+    effective_headless = GLOBAL_HEADLESS if headless is None else headless
     custom_extra_args = []
 
     # Aturan KEMENKEU: Butuh bypass CORS yang hardcore
@@ -42,7 +45,7 @@ def get_browser_config(
             "--ignore-certificate-errors",
         ]
         return BrowserConfig(
-            headless=headless,
+            headless=effective_headless,
             verbose=verbose,
             headers=REALISTIC_HEADERS,
             ignore_https_errors=True,
@@ -52,7 +55,7 @@ def get_browser_config(
     # Aturan KOMDIGI & BAPPENAS: Butuh headers realistis biar ga dikira bot murahan
     elif site_name in ["KOMDIGI", "BAPPENAS"]:
         return BrowserConfig(
-            headless=headless,
+            headless=effective_headless,
             verbose=verbose,
             headers=REALISTIC_HEADERS,
             ignore_https_errors=True,
@@ -61,7 +64,7 @@ def get_browser_config(
     # Aturan DEFAULT (BPS, BGN, ESDM dll): Polosan aja, satpamnya lebih santuy
     else:
         return BrowserConfig(
-            headless=headless,
+            headless=effective_headless,
             verbose=verbose,
             # BPS sering nge-block kalau kita over-engineering headers-nya
         )

@@ -325,15 +325,14 @@ GOVERNMENT_SITES_CONFIG = {
                         "selector": "div[class*='abstract'], div[class*='Abstract']",
                         "type": "text",
                     },
-                    # Ganti blok source_pdf lama dengan yang ini
                     {
                         "name": "source_pdf",
                         "selector": "a[href$='.pdf']",
-                        "type": "list",  # Ubah jadi list biar dia nge-loop semua tag a
+                        "type": "list",
                         "fields": [
                             {
                                 "name": "url",
-                                "selector": "",  # Targetin elemen itu sendiri
+                                "selector": "",
                                 "type": "attribute",
                                 "attribute": "href",
                             }
@@ -341,7 +340,15 @@ GOVERNMENT_SITES_CONFIG = {
                     },
                 ],
             },
-            "wait_for": "h1",
+            # ==================================================================
+            # FIX BIANG KEROK: Longgarkan wait_for & Tambah Anti-Bot Protection
+            # ==================================================================
+            "wait_for": "body",  # Pindah ke body agar tidak nge-hang nunggu h1
+            "wait_for_timeout": 5000,  # Maksimal nunggu 5 detik aja, ga usah sampai 30 detik
+            "delay_before_scrape": 2.0,  # Kasih jeda human-like 2 detik sebelum ngeruk data detail
+            "sleep_on_page_close": 1.5,  # Jeda napas browser sebelum menutup page
+            "magic_context": True,  # Aktifkan auto-stealth browser fingerprinting
+            # ==================================================================
         },
     },
     "KEMENKEU": {

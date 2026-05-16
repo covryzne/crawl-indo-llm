@@ -6,7 +6,7 @@ from pathlib import Path
 
 from crawl4ai import BrowserConfig
 
-from config.browser_config import REALISTIC_HEADERS, SEARCH_USER_AGENT
+from config.browser_config import GLOBAL_HEADLESS, REALISTIC_HEADERS, SEARCH_USER_AGENT
 
 logger = logging.getLogger(__name__)
 
@@ -55,7 +55,8 @@ def resolve_google_ipv4():
     return ""
 
 
-def get_keyword_browser_config():
+def get_keyword_browser_config(headless: bool | None = None):
+    effective_headless = GLOBAL_HEADLESS if headless is None else headless
     resolver_rules = resolve_google_ipv4()
 
     extra_args = [
@@ -70,7 +71,7 @@ def get_keyword_browser_config():
         extra_args.append(f"--host-resolver-rules={resolver_rules}")
 
     return BrowserConfig(
-        headless=False,
+        headless=effective_headless,
         verbose=False,
         use_persistent_context=True,
         user_data_dir=str(PROFILE_DIR),
