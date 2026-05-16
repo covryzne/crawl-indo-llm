@@ -1,3 +1,5 @@
+# pipelines/keyword_pipeline.py
+
 import asyncio
 import hashlib
 import logging
@@ -5,9 +7,6 @@ import random
 import re
 import sys
 from datetime import datetime, timedelta, timezone
-
-WIB = timezone(timedelta(hours=7))
-
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import parse_qs, quote_plus, unquote, urlparse
@@ -27,6 +26,7 @@ from config.keyword_config import (
     SEARCH_RETRY_BASE_DELAY,
     get_keyword_browser_config,
 )
+from extractor.page_router import classify_page_type  # <--- IMPORT BARU
 from extractor.pdf_discovery import extract_pdf_urls_from_html
 from storage.json_storage import save_json
 
@@ -42,6 +42,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Set zona waktu ke WIB (GMT+7)
+WIB = timezone(timedelta(hours=7))
 
 
 class _GoogleLinkCollector(HTMLParser):
@@ -471,9 +474,12 @@ def _extract_page_record(url, html):
     text = _extract_text_from_html(html)
     pdfs = extract_pdf_urls_from_html(html, base_url=url)
 
-    # -- METADATA ENTERPRISE --
+    # -- METADATA ENTERPRISE & SCORING INJECTION --
     crawled_at = datetime.now(WIB).isoformat()
     word_count = len(text.split()) if text else 0
+
+    # Menentukan klasifikasi tipe halaman pakai router pintar yang baru
+    page_type = classify_page_type(url, title=title, text=text, attachments=pdfs)
 
     content_hash = hashlib.sha256(text.encode("utf-8")).hexdigest() if text else ""
     source_name = _source_from_url(url)
@@ -483,6 +489,7 @@ def _extract_page_record(url, html):
     return {
         "document_id": document_id,
         "content_hash": content_hash,
+        "page_type": page_type,  # <-- Posisi page_type
         "title": title,
         "link": url,
         "source": source_name,
@@ -611,14 +618,14 @@ async def run_by_keyword_async(
 
     logger.info("Keyword crawl saved => %s", output_file)
 
-    # Return kombinasi untuk jaga kompatibilitas sama cli_pipeline.py lu
+    # Return kombinasi untuk jaga kompatibilitas sama cli_pipeline.py
     return {
         "keyword": keyword,
         "seed_discovery_source": discovery_info.get("seed_discovery_source", "google"),
         "seed_discovery_error": discovery_info.get("seed_discovery_error"),
         "seed_urls": seed_urls,
         "combined_output_path": str(output_file),
-        **final_payload,  # Expand hasil metadata dan data ke root biar CLI gak error
+        **final_payload,
     }
 
 

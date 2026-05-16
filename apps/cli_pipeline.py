@@ -7,6 +7,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(ROOT_DIR))
 
 from config.government_config import GOVERNMENT_SITES_CONFIG
+from config.keyword_config import MAX_LINKS_TO_CRAWL, MAX_SEED_RESULTS
 from pipelines.government_pipeline import run as run_government_pipeline
 from pipelines.keyword_pipeline import run_by_keyword
 
@@ -86,8 +87,8 @@ def main():
 
                 result = run_by_keyword(
                     keyword,
-                    max_seed_results=10,
-                    max_links=20,
+                    max_seed_results=MAX_SEED_RESULTS,
+                    max_links=MAX_LINKS_TO_CRAWL,
                     output_prefix="dynamic_keyword",
                     require_go_id=require_go_id,
                 )
