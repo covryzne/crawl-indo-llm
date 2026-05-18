@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "schema_version": "1.0.0",
+    "job_context": {
+      "job_id": "crawl-site_bgn_go_id_pdf-20260518-1132",
+      "crawler_name": "indo-llm-engine",
+      "crawler_version": "v1.0.0",
+      "run_mode": "KEYWORD_CRAWL",
+      "target_keyword": "site:bgn.go.id .pdf"
+    },
+    "execution_metrics": {
+      "started_at": "2026-05-18T11:32:14.532055+07:00",
+      "completed_at": "2026-05-18T11:36:01.120883+07:00",
+      "duration_seconds": 226.59,
+      "total_seed_urls": 7,
+      "total_extracted": 6,
+      "total_failed": 1,
+      "success_rate": "85.7%"
+    },
+    "errors": [
+      {
+        "url": "https://cdn-web.bgn.go.id/juknis/01KFZQGR85YKY1HRMNDK4RRM1P.pdf",
+        "error_type": "RuntimeError",
+        "message": "Blocked by anti-bot protection: Structural: minimal_text, no_content_elements (237 bytes, 0 chars visible)"
+      }
+    ]
+  },
+  "data": [
+    {
+      "document_id": "bgn-doc-353cbfd8",
+      "content_hash": "892b917001513e77df06752e4b0a6d85783a184a26ad3a1c2f1ce5ef6494bd9a",
+      "page_type": "document",
+      "title": "Petunjuk Teknis Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis",
+      "link": "https://www.bgn.go.id/juknis/lB1PKg-petunjuk-teknis-tata-kelola-penyelenggaraan-program-makan-bergizi-gratis%5D",
+      "source": "BGN",
+      "published_date": "",
+      "text": "Juknis / Petunjuk Teknis Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis Petunjuk Teknis Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis Terakhir Diperbarui :16 September 2025 pukul 10.39 Nomor Juknis : Keputusan Kepala Badan Gizi Nasional Republik Indonesia Nomor 401.1 Tahun 2025 Tahun Penetapan: 2025 │ Jenis Dokumen: JUKNIS │ Status: Berlaku Unduh Dokumen Unduh Dokumen Juknis Unduh Dokumen Petunjuk Teknis Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis.pdf Penjelasan : Belum ada deskripsi penjelasan dokumen",
+      "word_count": 74,
+      "source_pdf": null,
+      "crawled_at": "2026-05-18T11:34:55.382579+07:00"
+    },
+    {
+      "document_id": "bgn-doc-d77900d9",
+      "content_hash": "9ebf6760fb0e12ea0ac6c4d12ed651676d009ecc345053ba19e9478dce27a3f4",
+      "page_type": "document",
+      "title": "Dokumen Juknis",
+      "link": "https://www.bgn.go.id/juknis",
+      "source": "BGN",
+      "published_date": "",
+      "text": "Dokumen Petunjuk Teknis (Juknis) BGN Seluruh juknis yang pernah diterbitkan, tersimpan untuk akses penuh. Kumpulan dokumen resmi Petunjuk Teknis (Juknis) yang dapat digunakan sebagai acuan dalam pelaksanaan program, kegiatan, maupun kebijakan terkait gizi nasional. Pilih Jenis Dokumen Semua JUKNIS Peraturan Badan Gizi Nasional Pedoman Cari Lihat Detail Pedoman Teknis Tata Kelola Program Makan Bergizi Gratis di Wilayah Terpencil 2026 Pedoman Surat Keputusan Kepala Badan Gizi Nasional Republik Indonesia Nomor 31679 Tahun 2026 Berlaku Unduh Dokumen Unduh Dokumen Juknis Unduh Dokumen Lihat Detail Petunjuk Teknis Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis 2025 JUKNIS Keputusan Kepala Badan Gizi Nasional Republik Indonesia Nomor 401.1 Tahun 2025 Berlaku Unduh Dokumen Unduh Dokumen Juknis Unduh Dokumen Lihat Detail Pedoman Umum Sistem dan Tata Kelola badan Gizi Nasional Untuk Program Makan Bergizi Gratis 2025 Pedoman -- Berlaku Unduh Dokumen Unduh Dokumen Juknis - Unduh Dokumen Lihat Detail Pedoman Sertifikasi Keamanan Pangan Pada Satuan Pelayanan Pemenuhan Gizi 2025 Pedoman - Berlaku Unduh Dokumen Unduh Dokumen Juknis Unduh Dokumen Lihat Detail Pedoman Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis Selama Libur Sekolah 2025 Pedoman Keputusan Kepala Badan Gizi Nasional Republik Indonesia Nomor 52.1 Tahun 2025 Berlaku Unduh Dokumen Unduh Dokumen Juknis Keputusan tentang Pedoman Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis Selama Libur Sekolah ini menjadi acuan bagi SPPG diseluruh Indonesia dalam mendistribusikan paket Makan Bergizi Gratis selama Libur Sekolah. Keputusan ini diharapkan dapat mendukung kelancaran distribusi dan manfaat yang dirasakan oleh seluruh penerima manfaat MBG, termasuk mendukung asupan gizi seimbang seluruh penerima manfaat, khususnya selama libur sekolah Unduh Dokumen Lihat Detail Pedoman Teknis Distribusi Makanan dan Edukasi Gizi pada Program Makan Bergizi Gratis Bagi Ibu Hamil, Ibu Menyusui, dan Anak Balita Non-PAUD 2025 Pedoman 005/05/02/SK.05/05/2025 Berlaku Unduh Dokumen Unduh Dokumen Juknis Program MBG bagi ibu Hamil, Ibu Menyusui, dan Anak Balita Non-PAUD merupakan bagian dari komitmen nasional dalam mendukung percepatan penurungan stunting serta perbaikan status gizi masyarakat. Keberhasilan pelaksanaan program ini sangat bergantung pada kolaborasi erat antara Badan Gizi Nasional, BKKBN, Kementerian Kesehatan, dan Kementerian/Lembaga terkait di Tingkat Pusat, Pemerintah Daerah, Kader Pendamping serta seluruh pemangku kepentingan di tingkat komunitas. Keakuratan data penerima manfaat yang diperoleh dari BKKBN dan diperbaharui secara berkala merupakan dasar dari ketepatan sasaran program. Oleh karena itu, pemutakhiran data harus menjadi perhatian utama bagi seluruh pelaksana. Monitoring dan Evaluasi pelaksanaan program dilakukan secara berkala, dengan tindak lanjut hasil temuan untuk perbaikan selanjutnya. pelaksanaan program juga harus terbuka terhadap Umpan balik dari penerima manfaat dan pelaksana di lapangan, guna memastikan ketercapaian tujuan program secara optimal. Unduh Dokumen Lihat Detail Petunjuk Teknis Pembuatan Rekening SPPG dan Pengunaan Dana Makan Bergizi Gratis 2025 JUKNIS 010/05/01/SK.10/08/2025 Berlaku Unduh Dokumen Unduh Dokumen Juknis Juknis ini disusun untuk menjadi panduan teknis dalam program MBG dalam tata kelola penggunaan dana secara sistematis dalam rangka memastikan penggunaan dana serta pelaporan keuangan yang efektif, transparan dan akuntabel. Juknis ini akan digunakan sebagai pedoman bagi Satuan Pelayanan Pemenuhan Gizi di Seluruh Indonesia. Juknis ini bersifat adaptif terhadap perubahan kondisi di lapangan serta perkembangan regulasi keuangan yang berlaku, dan akan direvisi sesuai kebutuhan guna menjamin relevansi kesesuaiannya dengan kebijakan terkini Unduh Dokumen Lihat Detail Petunjuk Teknis Pemlihan Yayasan dan Mitra Yayasan Dalam pengelolaan SPPG Pada Program Makan Bergizi Gratis 2025 JUKNIS 009/05/01/SK.09/08/2025 Berlaku Unduh Dokumen Unduh Dokumen Juknis Keputusan Deputi Bidang Sistem dan Tata Kelola tentang Petunjuk Teknis Pemlihan Yayasan dan Mitra Yayasan Dalam pengelolaan SPPG Pada Program Makan Bergizi Gratis Petunjuk Teknis ini disusun untuk menjadi panduan operasional bagi BGN, Yayasan, dan Mitra BGN, serta Kepala SPPG dalam menjalankan peran tugas dan tanggung jawab masing-masing dalam pengelolaan SPPG yang terkoordinasi. Diharapkan Petunjuk Teknis ini dapat memastikan setiap pihak menjalankan peran dan tanggung jawabnnya secara optimal, menjaga kualitas layanan, dan menghadirkan manfaat nyata bagi masyarakat. Disusun Oleh: Kedeputian Sistem dan Tata Kelola Badan Gizi Nasional Agustus 2025 Unduh Dokumen Lihat Detail Petunjuk Teknis Standar, Penyediaan dan Distribusi Susu Pada Program MBG 2025 JUKNIS 004/05/03/SK.04/02/2025 Berlaku Unduh Dokumen Unduh Dokumen Juknis Keputusan Deputi Bidang Sistem dan Tata Kelola tentang Petunjuk Teknis Standar, Penyediaan dan Distribusi Susu Pada Program MBG Disusun Oleh: Kedeputian Sistem dan Tata Kelola Badan Gizi Nasional Februari 2025 Unduh Dokumen 1",
+      "word_count": 680,
+      "source_pdf": null,
+      "crawled_at": "2026-05-18T11:35:05.410652+07:00"
+    },
+    {
+      "document_id": "bgn-doc-f718c19c",
+      "content_hash": "feeed6675b1ea28dbd91e7b489b45990b93c0b186874dfa94bca1577fa9ed7ab",
+      "page_type": "document",
+      "title": "Pedoman Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis Selama Libur Sekolah",
+      "link": "https://www.bgn.go.id/juknis/zB4ZE4-pedoman-tata-kelola-penyelenggaraan-program-makan-bergizi-gratis-selama-libur-sekolah",
+      "source": "BGN",
+      "published_date": "",
+      "text": "Juknis / Pedoman Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis Selama Libur Sekolah Pedoman Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis Selama Libur Sekolah Terakhir Diperbarui :11 November 2025 pukul 10.53 Nomor Juknis : Keputusan Kepala Badan Gizi Nasional Republik Indonesia Nomor 52.1 Tahun 2025 Tahun Penetapan: 2025 │ Jenis Dokumen: Pedoman │ Status: Berlaku Unduh Dokumen Unduh Dokumen Juknis Unduh Dokumen Pedoman Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis Selama Libur Sekolah .pdf Loading... Penjelasan : Keputusan tentang Pedoman Tata Kelola Penyelenggaraan Program Makan Bergizi Gratis Selama Libur Sekolah ini menjadi acuan bagi SPPG diseluruh Indonesia dalam mendistribusikan paket Makan Bergizi Gratis selama Libur Sekolah. Keputusan ini diharapkan dapat mendukung kelancaran distribusi dan manfaat yang dirasakan oleh seluruh penerima manfaat MBG, termasuk mendukung asupan gizi seimbang seluruh penerima manfaat, khususnya selama libur sekolah",
+      "word_count": 134,
+      "source_pdf": null,
+      "crawled_at": "2026-05-18T11:35:14.916318+07:00"
+    },
+    {
+      "document_id": "bgn-doc-2fc2f488",
+      "content_hash": "ff8665010edeb1388548e59241d4745a92c900865ef51fbdcc4510ac4bccf12b",
+      "page_type": "document",
+      "title": "Petunjuk Teknis Standar, Penyediaan dan Distribusi Susu Pada Program MBG",
+      "link": "https://www.bgn.go.id/juknis/6Be6J3-petunjuk-teknis-standar-penyediaan-dan-distribusi-susu-pada-program-mbg",
+      "source": "BGN",
+      "published_date": "",
+      "text": "Juknis / Petunjuk Teknis Standar, Penyediaan dan Distribusi Susu Pada Program MBG Petunjuk Teknis Standar, Penyediaan dan Distribusi Susu Pada Program MBG Terakhir Diperbarui :16 September 2025 pukul 10.39 Nomor Juknis : 004/05/03/SK.04/02/2025 Tahun Penetapan: 2025 │ Jenis Dokumen: JUKNIS │ Status: Berlaku Unduh Dokumen Unduh Dokumen Juknis Unduh Dokumen Petunjuk Teknis Standar, Penyediaan dan Distribusi Susu Pada Program MBG.pdf Loading... Penjelasan : Keputusan Deputi Bidang Sistem dan Tata Kelola tentang Petunjuk Teknis Standar, Penyediaan dan Distribusi Susu Pada Program MBG Disusun Oleh: Kedeputian Sistem dan Tata Kelola Badan Gizi Nasional Februari 2025",
+      "word_count": 93,
+      "source_pdf": null,
+      "crawled_at": "2026-05-18T11:35:35.391552+07:00"
+    },
+    {
+      "document_id": "bgn-doc-229f29cc",
+      "content_hash": "4409679d3940c53e1ecdbd2882b7a6a2b1455998e68189a0b72cff7454d72a2a",
+      "page_type": "news",
+      "title": "Pendaftaran Sarjana Penggerak Pembangunan Indonesia (SPPI) Batch 3 Resmi Dibuka!",
+      "link": "https://www.bgn.go.id/news/pengumuman/pendaftaran-sarjana-penggerak-pembangunan-indonesia-sppi-batch-3-resmi-dibuka",
+      "source": "BGN",
+      "published_date": "",
+      "text": "Berita / Pengumuman / Pendaftaran Sarjana Penggerak Pembangunan Indonesia (SPPI) Batch 3 Resmi Dibuka! Pendaftaran Sarjana Penggerak Pembangunan Indonesia (SPPI) Batch 3 Resmi Dibuka! Nomor: - Pengumuman • 27 Januari 2025 Sumber: https://unsplash.com/photos/shallow-focus-photography-of-red-and-white-for-hire-signage-fY8Jr4iuPQM?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash PENGUMUMAN-01/BGN/01/2025 Kesempatan emas bagi putra-putri terbaik bangsa kini hadir melalui Program Sarjana Penggerak Pembangunan Indonesia (SPPI) Batch 3 . Program ini dirancang untuk memberikan kontribusi nyata dalam pembangunan Indonesia, khususnya di bidang pemenuhan gizi nasional. Pendaftaran program ini sepenuhnya GRATIS tanpa dipungut biaya . Manfaat Bergabung dengan SPPI: Program ini memberikan kesempatan kepada peserta untuk: 1. Mengemban amanah sebagai Kepala Satuan Pelayanan Pemenuhan Gizi (SPPG) di berbagai wilayah Indonesia. 2. Mengikuti pelatihan komprehensif , mencakup pelatihan dasar kemiliteran dan pengembangan keterampilan manajerial. 3. Berkontribusi langsung pada program strategis nasional di bawah koordinasi Badan Gizi Nasional. Persyaratan Umum: 1. Warga Negara Indonesia dengan usia maksimal 30 tahun. 2. Lulusan D4/S1/S2 dari berbagai bidang keilmuan. 3. Bersedia untuk ditempatkan di seluruh wilayah Indonesia. 4. Memiliki kondisi kesehatan jasmani dan rohani yang prima, bebas dari penyalahgunaan narkoba, serta bagi pelamar wanita, tidak sedang dalam kondisi hamil.• Tidak memiliki ikatan dinas atau perjanjian kerja dengan pihak lain. 5. Pendaftaran wajib dilakukan secara daring dengan cara klik disini . Jadwal Penting: 1. Pendaftaran Online : 27 Desember 2024 – 15 Maret 2025 2. Tes Seleksi Offline : 6 April – 3 Mei 2025 (termasuk Psikotes, Tes Kesehatan, Wawancara, dan Tes Ideologi). 3. Pelatihan Dasar Kemiliteran : 5 Mei – 3 Juli 2025 4. Pelatihan Manajerial : 4 Juli – 4 Agustus 2025 Dokumen yang Harus Dipersiapkan: 1. Surat Lamaran 2. Scan KTP, Kartu Keluarga, dan Ijazah 3. SKCK, Surat Keterangan Sehat, dan Surat Bebas Narkoba 4. Dokumen pendukung lainnya sesuai ketentuan Catatan Penting: 1. Proses seleksi ini tidak dipungut biaya apapun. 2. Jadwal dapat berubah sewaktu-waktu mengikuti perkembangan situasi. Kami mengundang Anda untuk menjadi bagian dari program ini dan berkontribusi dalam menciptakan masa depan Indonesia yang lebih baik. 💻 Daftar segera di: idu.ac.id . 📅 Batas akhir pendaftaran: 15 Maret 2025 Mari bergabung dan wujudkan perubahan besar bersama kami. Untuk informasi lebih lanjut, silakan kunjungi situs resmi idu.ac.id .",
+      "word_count": 347,
+      "source_pdf": null,
+      "crawled_at": "2026-05-18T11:35:47.862895+07:00"
+    },
+    {
+      "document_id": "bgn-doc-9f6f19c0",
+      "content_hash": "08afdcc03ddc10d09fbb90c26b966da1d5a7edbe285bf4674670b710459499b1",
+      "page_type": "news",
+      "title": "Seleksi Terbuka Pengisian Jabatan Kepala Biro Pengelolaan Barang Milik Negara Dan Pengadaan Barang Dan Jasa Di Lingkungan Badan Gizi Nasional",
+      "link": "https://www.bgn.go.id/news/pengumuman/seleksi-terbuka-pengisian-jabatan-kepala-biro-pengelolaan-barang-milik-negara-dan-pengadaan-barang-dan-jasa-di-lingkungan-badan-gizi-nasional",
+      "source": "BGN",
+      "published_date": "",
+      "text": "Berita / Pengumuman / Seleksi Terbuka Pengisian Jabatan Kepala Biro Pengelolaan Barang Milik Negara Dan Pengadaan Barang Dan Jasa Di Lingkungan Badan Gizi Nasional Seleksi Terbuka Pengisian Jabatan Kepala Biro Pengelolaan Barang Milik Negara Dan Pengadaan Barang Dan Jasa Di Lingkungan Badan Gizi Nasional Nomor: - Pengumuman • 13 Oktober 2025 Sumber: Biro SDMO PENGUMUMAN Nomor: B/01/PANSEL/10/2025 Dalam rangka pengisian Jabatan Pimpinan Tinggi Pratama Kepala Biro Pengelolaan Barang Milik Negara dan Pengadaan Barang dan Jasa di Lingkungan Badan Gizi Nasional, dengan ini mengundang dan memberikan kesempatan kepada Pegawai Negeri Sipil yang telah memenuhi persyaratan untuk mengikuti Seleksi Terbuka Jabatan Pimpinan Tinggi Pratama Kepala Biro Pengelolaan Barang Milik Negara dan Pengadaan Barang dan Jasa Tahun 2025, dengan ketentuan sebagai berikut: Download pengumuman : Klik Disini A. Persyaratan Administrasi Berstatus sebagai Pegawai Negeri Sipil; Memiliki pangkat/golongan ruang paling kurang Pembina Tingkat I (IV/b); Sedang atau pernah menduduki Jabatan Administrator (Eselon III) paling singkat 2 (dua) tahun atau Jabatan Fungsional Ahli Madya yang setingkat dengan Jabatan Administrator sesuai dengan bidang tugas yang akan diduduki; Pendidikan minimal Diploma IV (D IV)/Sarjana (S1); Semua unsur penilaian prestasi kerja sekurang-kurangnya bernilai baik dalam 2 (dua) tahun terakhir; Tidak pernah atau tidak sedang menjalani hukuman disiplin tingkat sedang atau berat dan tidak sedang dalam proses peradilan pidana; Memiliki kompetensi teknis, kompetensi manajerial, dan kompetensi sosio kultural sesuai standar kompetensi; Sehat jasmani dan bebas narkoba; Berintegritas, yang dibuktikan dengan penandatanganan Pakta Integritas; Mendapatkan Rekomendasi dari Pejabat Pembina Kepegawaian untuk mengikuti Seleksi Terbuka; Berusia paling tinggi 56 (lima puluh enam) tahun pada tanggal 1 Desember 2025; Telah menyerahkan SPT Pajak Tahunan Tahun 2024; Tidak pernah dijatuhi hukuman pidana korupsi oleh pengadilan. B. Tata Cara Pendaftaran Pendaftaran secara online melalui website https://asnkarier.bkn.go.id/ selama 15 (lima) hari kalender mulai tanggal 13 Oktober 2025 s.d 27 Oktober 2025 dan ditutup pada tanggal 27 Oktober 2025 paling lambat pukul 16.00 WIB; Pelamar mengunggah dokumen kelengkapan administrasi dalam bentuk softcopy (scan) dengan format .pdf melalui website https://asnkarier.bkn.go.id/ sebagai berikut: Scan asli Surat lamaran bermaterai Rp. 10.000,- (Form I); Scan asli Daftar Riwayat Hidup bermeterai Rp. 10.000,- (Form II); Self Assesment (Form III); Scan asli Surat Persetujuan/ Rekomendasi dari Pejabat Pembina Kepegawaian (PPK) instansi pelamar bermeterai Rp. 10.000,- (Form IV); Scan asli Surat Pernyataan tidak sedang dalam proses pemeriksaan pelanggaran disiplin dan tidak pernah menjalani hukuman disiplin sedang dan berat sesuai dengan ketentuan peraturan perundang-undangan yang berlaku selama 5 (lima) tahun terakhir bermeterai Rp. 10.000,- yang dikeluarkan oleh pimpinan instansi yang bersangkutan (Form V); Surat Pernyataan Tidak Pernah Dijatuhi Hukuman Pidana Korupsi (Form VI); Scan asli ljazah pendidikan formal Terakhir Scan asli Surat Keputusan Pangkat terakhir; Scan asli Surat Keputusan Jabatan pertama kali diangkat sebagai Pejabat Administrator atau Pejabat Fungsional jenjang Ahli Madya; Scan asli Surat Keputusan Jabatan terakhir; Scan asli Penilaian Prestasi Kerja 2 (dua) tahun terakhir minimal Baik; Scan asli Bukti pelaporan LHKPN bagi Pejabat Administrator dan bagi Pejabat Fungsional memasukkan Surat Pajak Tahunan (SPT) tahun 2024; Soft file Pas Foto berwarna terbaru, dengan latar belakang berwarna biru dan berpakaian sipil lengkap ukuran 4x6 (format.jpg); Surat Keterangan Sehat Jasmani, Rohani, bebas narkoba dan zat adiktif lainnya dari Rumah Sakit Pemerintah. Format dokumen seleksi disampaikan melalui website https://asnkarier.bkn.go.id/ dan www.bgn.go.id C. Tahapan Seleksi Pengumuman dan Pendaftaran | 13 Oktober 2025 s.d 27 Oktober 2025 Seleksi Administrasi | 28 Oktober 2025 Pengumuman Hasil Administrasi | 29 Oktober 2025 Penulisan Makalah | 31 Oktober – 1 November 2025 Pengumuman Hasil Seleksi Makalah | 5 November 2025 Pelaksanaan Seleksi Assesment | 7 -8 November 2025 Pengumuman Assesment | 13 November 2025 Presentasi dan Wawancara | 17 - 18 November 2025 Pengumuman Akhir Hasil Seleksi Terbuka | 21 November 2025 D. Ketentuan Lain Seluruh pengumuman terkait dengan seluruh tahapan seleksi termasuk Pengumuman hasil akhir seleksi ini akan disampaikan melalui website www.bgn.go.id ; Pelamar wajib memantau seluruh proses tahapan seleksi melalui portal www.bgn.go.id ; Terhadap pelamar yang tidak hadir dan/atau tidak mampu mengikuti tahapan seleksi dikarenakan kelalaian mengikuti jadwal pelaksanaan seleksi yang telah ditentukan, dinyatakan gugur. Seluruh proses seleksi terbuka pengisian Jabatan ini tidak dikenakan biaya atau pungutan dalam bentuk apapun; Selama proses seleksi, apabila diketahui peserta memberikan keterangan/data yang tidak benar, Panitia Seleksi berhak menggugurkan keikutsertaan/kelulusan sebagai peserta Seleksi Terbuka Pengisian Jabatan Kepala Biro Pengelolaan Barang Milik Negara dan Pengadaan Barang dan Jasa di Lingkungan Badan Gizi Nasional; Setiap dokumen yang diserahkan kepada Panitia Seleksi, menjadi milik Panitia Seleksi; Seluruh Keputusan Panitia Seleksi bersifat mutlak dan tidak dapat diganggu gugat; Adapun kelengkapan berkas yang sudah diupload di https://asnkarier.bkn.go.id/ silahkan di upload kembali ke dalam link Berikut: Upload Dokumen Registrasi Dalam hal membutuhkan penjelasan teknis administratif berkenaan dengan dokumen lamaran dapat menghubungi Sekretariat Panitia Seleksi melalui email biro.sdmo@bgn.go.id Jakarta, 13 Oktober 2025 Ketua Panitia Seleksi, Tigor Pangaribuan",
+      "word_count": 778,
+      "source_pdf": null,
+      "crawled_at": "2026-05-18T11:35:59.686685+07:00"
+    }
+  ]
+}

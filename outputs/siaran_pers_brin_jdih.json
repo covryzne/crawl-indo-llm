@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "schema_version": "1.0.0",
+    "job_context": {
+      "job_id": "crawl-brin_jdih-20260518-0954",
+      "crawler_name": "indo-llm-engine",
+      "crawler_version": "v1.0.0",
+      "run_mode": "GOVERNMENT_WEBSITE",
+      "target_source": "BRIN_JDIH"
+    },
+    "execution_metrics": {
+      "started_at": "2026-05-18T09:54:23.593754+07:00",
+      "completed_at": "2026-05-18T09:55:04.655351+07:00",
+      "duration_seconds": 41.06,
+      "total_seed_urls": 11,
+      "total_extracted": 10,
+      "total_failed": 0,
+      "success_rate": "90.9%"
+    },
+    "errors": []
+  },
+  "data": [
+    {
+      "title": "Peraturan BRIN Nomor 3",
+      "link": "https://jdih.brin.go.id/dokumen-hukum/peraturan/view/a1b257c6-a5bd-4ff4-b4df-23aa73143530",
+      "date": "15 April 2026",
+      "source": "BRIN_JDIH",
+      "page": 1,
+      "text": "Peraturan Badan Riset dan Inovasi Nasional Nomor 3 Tahun 2026 tentang Rencana Strategis Badan Riset dan Inovasi Nasional Tahun 2025-2029",
+      "source_pdf": [
+        "https://e-regulasi.brin.go.id/api/v1/file/download/a1b257c6-a5bd-4ff4-b4df-23aa73143530"
+      ],
+      "document_id": "brin_jdih-doc-ea2cfa76",
+      "content_hash": "2b59f6270ebfffb710a3391050ae1f761c172ff785a7a6a319a557b8af844509",
+      "word_count": 20,
+      "crawled_at": "2026-05-18T09:54:30.088567+07:00"
+    },
+    {
+      "title": "Keputusan Kepala BRIN Nomor 72/II/HK/2026",
+      "link": "https://jdih.brin.go.id/dokumen-hukum/peraturan/view/a18a42e5-1b70-475f-9d83-95c13bcb5313",
+      "date": "02 Februari 2026",
+      "source": "BRIN_JDIH",
+      "page": 1,
+      "text": "Keputusan Kepala Badan Riset dan Inovasi Nasional Nomor 72/II/HK/2026 tentang Pedoman Pencantuman Label Produk Inovasi Pada Katalog Elektronik Pengadaan Barang/Jasa Pemerintah",
+      "source_pdf": [
+        "https://e-regulasi.brin.go.id/api/v1/file/download/a18a42e5-1b70-475f-9d83-95c13bcb5313"
+      ],
+      "document_id": "brin_jdih-doc-729a9e31",
+      "content_hash": "34e4cfc58fcf9a5271d54513406c11eaaecdb596f5370a3f2af7039b137dfc6b",
+      "word_count": 21,
+      "crawled_at": "2026-05-18T09:54:33.913932+07:00"
+    },
+    {
+      "title": "Keputusan Kepala BRIN Nomor 68/II/HK/2026",
+      "link": "https://jdih.brin.go.id/dokumen-hukum/peraturan/view/a18a49e5-e9d4-4ef5-9d7e-b6df1c1460f8",
+      "date": "02 Februari 2026",
+      "source": "BRIN_JDIH",
+      "page": 1,
+      "text": "Keputusan Kepala Badan Riset dan Inovasi Nasional Nomor 68/II/HK/2026 tentang Pedoman Pembelian Lisensi Penyebarluasan Akses Terbuka Buku dan Audiovisual Program Akuisisi Pengetahuan Lokal",
+      "source_pdf": [
+        "https://e-regulasi.brin.go.id/api/v1/file/download/a18a49e5-e9d4-4ef5-9d7e-b6df1c1460f8"
+      ],
+      "document_id": "brin_jdih-doc-a45754cc",
+      "content_hash": "577176656df25784214815c526029890e6ab6386fa27e5973c62f020ea2415e2",
+      "word_count": 23,
+      "crawled_at": "2026-05-18T09:54:37.848510+07:00"
+    },
+    {
+      "title": "Peraturan BRIN Nomor 1",
+      "link": "https://jdih.brin.go.id/dokumen-hukum/peraturan/view/a0ecee71-48d7-4618-b8a7-72c47f73a14f",
+      "date": "09 Januari 2026",
+      "source": "BRIN_JDIH",
+      "page": 1,
+      "text": "Peraturan Badan Riset dan Inovasi Nasional Nomor 1 Tahun 2026 tentang Pedoman Teknis Tenaga Ahli pada Badan Riset dan Inovasi Nasional",
+      "source_pdf": [
+        "https://e-regulasi.brin.go.id/api/v1/file/download/a0ecee71-48d7-4618-b8a7-72c47f73a14f"
+      ],
+      "document_id": "brin_jdih-doc-3560e58b",
+      "content_hash": "b88231594d1aac8fa235a48074b69084a5bc6321265abae63c76a1694476f528",
+      "word_count": 21,
+      "crawled_at": "2026-05-18T09:54:41.345272+07:00"
+    },
+    {
+      "title": "Peraturan BRIN Nomor 2",
+      "link": "https://jdih.brin.go.id/dokumen-hukum/peraturan/view/a0e7512d-4c98-4fd0-bf7c-5ed4302d84d8",
+      "date": "09 Januari 2026",
+      "source": "BRIN_JDIH",
+      "page": 1,
+      "text": "Peraturan Badan Riset dan Inovasi Nasional Nomor 2 Tahun 2026 tentang Jaringan Dokumentasi dan Informasi Hukum Badan Riset dan Inovasi Nasional",
+      "source_pdf": [
+        "https://e-regulasi.brin.go.id/api/v1/file/download/a0e7512d-4c98-4fd0-bf7c-5ed4302d84d8"
+      ],
+      "document_id": "brin_jdih-doc-5d68ee5e",
+      "content_hash": "3fbcdee33b6a47c86a2a9eff7105ca013c9c0c524ce0028add744a7c3e2bcc85",
+      "word_count": 21,
+      "crawled_at": "2026-05-18T09:54:45.159865+07:00"
+    },
+    {
+      "title": "Keputusan Kepala BRIN Nomor 16/I/HK/2026",
+      "link": "https://jdih.brin.go.id/dokumen-hukum/peraturan/view/a19e0487-29be-4824-8221-ea5eced379c8",
+      "date": "02 Januari 2026",
+      "source": "BRIN_JDIH",
+      "page": 1,
+      "text": "Keputusan Kepala Badan Riset dan Inovasi Nasional Nomor 16/I/HK/2026 tentang Perubahan atas Keputusan Keapla Badan Riset dan Inovasi Nasional Nomor 19/I/HK/2025 tentang Visi, Misi, Sasaran Strategis, dan Indikator Kinerja Utama Badan Riset dan Inovasi Nasional Tahun 2025-2029",
+      "source_pdf": [
+        "https://e-regulasi.brin.go.id/api/v1/file/download/a19e0487-29be-4824-8221-ea5eced379c8"
+      ],
+      "document_id": "brin_jdih-doc-3f86ad92",
+      "content_hash": "2dcf111212bde955dfa6dc3bf1ddf536d73b98b8f9b82815c443b52ae41406b9",
+      "word_count": 37,
+      "crawled_at": "2026-05-18T09:54:49.425484+07:00"
+    },
+    {
+      "title": "Keputusan Kepala BRIN Nomor 15/I/HK/2026",
+      "link": "https://jdih.brin.go.id/dokumen-hukum/peraturan/view/a19e030c-2ab3-4cc6-9c0e-744e8c2049c2",
+      "date": "02 Januari 2026",
+      "source": "BRIN_JDIH",
+      "page": 1,
+      "text": "Keputusan Kepala Badan Riset dan Inovasi Nasional Nomor 15/I/HK/2026 tentang Standar Sasaran Kinerja Pegawai Bagi Sumber Daya Manusia Ilmu Pengetahuan dan Teknologi di Lingkungan Badan Riset dan Inovasi Nasional",
+      "source_pdf": [
+        "https://e-regulasi.brin.go.id/api/v1/file/download/a19e030c-2ab3-4cc6-9c0e-744e8c2049c2"
+      ],
+      "document_id": "brin_jdih-doc-58ce6b1e",
+      "content_hash": "1e2cc6e2369376d538164a4014f8ba7253d77d4934dbc680e90b4a4d0e7a4606",
+      "word_count": 29,
+      "crawled_at": "2026-05-18T09:54:53.302929+07:00"
+    },
+    {
+      "title": "Keputusan Kepala BRIN Nomor 6/I/HK/2026",
+      "link": "https://jdih.brin.go.id/dokumen-hukum/peraturan/view/a1b4402a-0986-494f-af03-5f623172a8fb",
+      "date": "02 Januari 2026",
+      "source": "BRIN_JDIH",
+      "page": 1,
+      "text": "Keputusan Kepala Badan Riset dan Inovasi Nasional Nomor 6/I/HK/2026 tentang Pedoman Penetapan Lokasi Kerja Eksternal",
+      "source_pdf": [
+        "https://e-regulasi.brin.go.id/api/v1/file/download/a1b4402a-0986-494f-af03-5f623172a8fb"
+      ],
+      "document_id": "brin_jdih-doc-119cefa3",
+      "content_hash": "f5c528811816ab53557775e0ee8b43573e091bbd96450827a8f61707978c670e",
+      "word_count": 15,
+      "crawled_at": "2026-05-18T09:54:56.517858+07:00"
+    },
+    {
+      "title": "Keputusan Kepala BRIN Nomor 5/I/HK/2026",
+      "link": "https://jdih.brin.go.id/dokumen-hukum/peraturan/view/a18a46e0-ed2a-48c1-83c6-b50fcf82ef75",
+      "date": "02 Januari 2026",
+      "source": "BRIN_JDIH",
+      "page": 1,
+      "text": "Keputusan Kepala Badan Riset dan Inovasi Nasional Nomor 5/I/HK/2026 tentang Pedoman Perencanaan, Implementasi, dan Evaluasi Kebijakan di Lingkungan Badan Riset dan Inovasi Nasional",
+      "source_pdf": [
+        "https://e-regulasi.brin.go.id/api/v1/file/download/a18a46e0-ed2a-48c1-83c6-b50fcf82ef75"
+      ],
+      "document_id": "brin_jdih-doc-3a945312",
+      "content_hash": "c53f8263cc485ba55299426c222fe6f9ad4d8e2c4f05d444fd3510eaa2a16988",
+      "word_count": 23,
+      "crawled_at": "2026-05-18T09:54:59.434325+07:00"
+    },
+    {
+      "title": "Keputusan Kepala BRIN Nomor 2/I/HK/2026",
+      "link": "https://jdih.brin.go.id/dokumen-hukum/peraturan/view/a0e6e553-3955-434a-a87d-f87863549893",
+      "date": "02 Januari 2026",
+      "source": "BRIN_JDIH",
+      "page": 1,
+      "text": "Keputusan Kepala Badan Riset dan Inovasi Nasional Nomor 2/I/HK/2026 tentang Sistem Kerja di Lingkungan Badan Riset dan Inovasi Nasional",
+      "source_pdf": [
+        "https://e-regulasi.brin.go.id/api/v1/file/download/a0e6e553-3955-434a-a87d-f87863549893"
+      ],
+      "document_id": "brin_jdih-doc-490d70d7",
+      "content_hash": "9b13c5dfe60899e595f5e828db827803a7b0e98419c326de20dfa0a6a33968c0",
+      "word_count": 19,
+      "crawled_at": "2026-05-18T09:55:02.436128+07:00"
+    }
+  ]
+}

@@ -432,6 +432,131 @@ GOVERNMENT_SITES_CONFIG = {
             "wait_for": "div[class*='detail__content__description']",
         },
     },
+    "BRIN": {
+        "pagination": {
+            "type": "js_click",
+            # JS ini bakal nyari tombol yang ada tulisan "Next" atau icon "»" terus di-click
+            "js_code": "Array.from(document.querySelectorAll('a.page-link')).find(el => el.textContent.includes('Next') || el.textContent.includes('»')).click();",
+        },
+        "links": {
+            "url": "https://brin.go.id/press-release",
+            "schema": {
+                "name": "BRIN_LINKS",
+                "baseSelector": "body",
+                "fields": [
+                    {
+                        "name": "news_items",
+                        "selector": "div.media-body",  # Langsung tembak ke bungkus tiap berita
+                        "type": "list",
+                        "fields": [
+                            {
+                                "name": "title",
+                                "selector": "h5 a",
+                                "type": "text",
+                            },
+                            {
+                                "name": "link",
+                                "selector": "h5 a",
+                                "type": "attribute",
+                                "attribute": "href",
+                            },
+                            {
+                                "name": "date",
+                                "selector": "div.date",
+                                "type": "text",
+                            },
+                        ],
+                    },
+                ],
+            },
+            "wait_for": "div.media-body",
+        },
+        "detail": {
+            "schema": {
+                "name": "BRIN_DETAIL",
+                "baseSelector": "body",
+                "fields": [
+                    {
+                        "name": "date",
+                        "selector": "div.press-conference-content p:nth-child(2) b",  # Tanggal biasanya ada di paragraf 2 dlm tag B
+                        "type": "text",
+                    },
+                    {
+                        "name": "text",
+                        "selector": "div.press-conference-content",
+                        "type": "text",
+                    },
+                    {
+                        "name": "source_pdf",
+                        "selector": "a[href$='.pdf']",
+                        "type": "list",
+                        "fields": [
+                            {
+                                "name": "url",
+                                "selector": "",
+                                "type": "attribute",
+                                "attribute": "href",
+                            }
+                        ],
+                    },
+                ],
+            },
+            "wait_for": "div.press-conference-content",
+        },
+    },
+    "BRIN_JDIH": {
+        "pagination": {
+            "type": "url",  # Karena JDIH pakai ?page=2 dst
+        },
+        "links": {
+            "url": "https://jdih.brin.go.id/dokumen-hukum/peraturan?page={page}",
+            "schema": {
+                "name": "BRIN_JDIH_LINKS",
+                "baseSelector": "body",
+                "fields": [
+                    {
+                        "name": "news_items",
+                        "selector": "div[data-testid='flowbite-card']",  # Card bawaan flowbite/tailwind
+                        "type": "list",
+                        "fields": [
+                            {
+                                "name": "title",
+                                "selector": "h5",
+                                "type": "text",
+                            },
+                            {
+                                "name": "link",
+                                "selector": "a[href*='/dokumen-hukum/peraturan/view/']",
+                                "type": "attribute",
+                                "attribute": "href",
+                            },
+                            {
+                                "name": "date",
+                                "selector": "p",  # Ngambil deskripsi singkat aja karena tgl rilis ga ada di list
+                                "type": "text",
+                            },
+                        ],
+                    },
+                ],
+            },
+            "wait_for": "div[data-testid='flowbite-card']",
+        },
+        "detail": {
+            "schema": {
+                "name": "BRIN_JDIH_DETAIL",
+                "baseSelector": "body",
+                "fields": [
+                    {
+                        "name": "table_data",
+                        "selector": "table",
+                        "type": "text",
+                    }
+                ],
+            },
+            # Cukup tunggu tabelnya muncul
+            "wait_for": "table",
+        },
+    },
 }
 
 from config.pagination_config import get_government_pagination

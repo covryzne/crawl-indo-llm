@@ -11,6 +11,9 @@ from config.keyword_config import MAX_LINKS_TO_CRAWL, MAX_SEED_RESULTS
 from pipelines.government_pipeline import run as run_government_pipeline
 from pipelines.keyword_pipeline import run_by_keyword
 
+# IMPORT BARU BUAT SITEMAP PIPELINE
+from pipelines.sitemap_pipeline import run_sitemap_pipeline
+
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
@@ -24,6 +27,7 @@ def show_main_menu():
     print("\n=== CRAWLER MENU ===")
     print("1. Crawl Government Website")
     print("2. Keyword Crawl")
+    print("3. Sitemap Crawl (Fast Extraction)")
     print("0. Exit")
 
 
@@ -113,6 +117,40 @@ def main():
                     print("No results found.")
 
                 print(f"\n=== FINISHED KEYWORD CRAWL [{keyword}] ===\n")
+
+            # ============================================================
+            # 🔥 BLOK OPSI 3: SITEMAP CRAWL
+            # ============================================================
+            elif choice == 3:
+                print("\n=== SITEMAP CRAWLER ===")
+                sitemap_url = input(
+                    "Masukkan URL Sitemap (contoh: https://brin.go.id/sitemap.xml): "
+                ).strip()
+                if not sitemap_url:
+                    print("URL Sitemap tidak boleh kosong.")
+                    continue
+
+                source_name = input(
+                    "Masukkan Nama Source (contoh: BRIN_SITEMAP): "
+                ).strip()
+                if not source_name:
+                    print("Nama Source tidak boleh kosong.")
+                    continue
+
+                try:
+                    limit_input = input(
+                        "Berapa maksimal artikel yang mau ditarik? (Kosongkan jika ingin tarik SEMUA): "
+                    )
+                    limit_urls = int(limit_input) if limit_input.strip() else None
+                except ValueError:
+                    limit_urls = None
+
+                print(f"\n=== START SITEMAP CRAWL [{source_name}] ===\n")
+
+                asyncio.run(run_sitemap_pipeline(sitemap_url, source_name, limit_urls))
+
+                print(f"\n=== FINISHED SITEMAP CRAWL [{source_name}] ===\n")
+            # ============================================================
 
             elif choice == 0:
                 print("\nExit crawler.")

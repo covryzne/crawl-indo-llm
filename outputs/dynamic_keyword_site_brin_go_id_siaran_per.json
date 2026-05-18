@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "schema_version": "1.0.0",
+    "job_context": {
+      "job_id": "crawl-site_brin_go_id_siaran_per-20260518-1122",
+      "crawler_name": "indo-llm-engine",
+      "crawler_version": "v1.0.0",
+      "run_mode": "KEYWORD_CRAWL",
+      "target_keyword": "site:brin.go.id siaran per"
+    },
+    "execution_metrics": {
+      "started_at": "2026-05-18T11:22:30.761586+07:00",
+      "completed_at": "2026-05-18T11:25:29.257217+07:00",
+      "duration_seconds": 178.5,
+      "total_seed_urls": 10,
+      "total_extracted": 10,
+      "total_failed": 0,
+      "success_rate": "100.0%"
+    },
+    "errors": []
+  },
+  "data": [
+    {
+      "document_id": "brin-doc-a6e1b58b",
+      "content_hash": "260e43afbc377d505e6b6e52070a525603b82b91dbc2435f902874f3e3902639",
+      "page_type": "document",
+      "title": "BRIN - Badan Riset dan Inovasi Nasional",
+      "link": "https://brin.go.id/press-release",
+      "source": "BRIN",
+      "published_date": "",
+      "text": "CTRL+F2 acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox Application error: a client-side exception has occurred (see the browser console for more information).",
+      "word_count": 180,
+      "source_pdf": [
+        "http://your-website.com/accessibility-declaration.pdf"
+      ],
+      "crawled_at": "2026-05-18T11:24:00.910534+07:00"
+    },
+    {
+      "document_id": "brin-doc-96d6dfbb",
+      "content_hash": "c4d5e7cfcebf6f4bde15c6d590c5d45ef0560284aa164fda436f64e202e5f362",
+      "page_type": "news",
+      "title": "BRIN - Badan Riset dan Inovasi Nasional",
+      "link": "https://brin.go.id/press-release/127786/genap-5-tahun-brin-tegaskan-inovasi-untuk-negeri-dan-dampak-nyata-bagi-masyarakat",
+      "source": "BRIN",
+      "published_date": "",
+      "text": "acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox BRIN Badan Riset dan Inovasi Nasional Alamat: Gedung B.J. Habibie, Jl. M.H. Thamrin No. 8, Jakarta Pusat 10340 Whatsapp: +62811-1933-3639 Email: ppid@brin.go.id Pengaduan Layanan: LAPOR! Copyright © 2026 BRIN",
+      "word_count": 139,
+      "source_pdf": [
+        "http://your-website.com/accessibility-declaration.pdf"
+      ],
+      "crawled_at": "2026-05-18T11:24:11.376680+07:00"
+    },
+    {
+      "document_id": "brin-doc-40ce2ebe",
+      "content_hash": "c4d5e7cfcebf6f4bde15c6d590c5d45ef0560284aa164fda436f64e202e5f362",
+      "page_type": "news",
+      "title": "BRIN - Badan Riset dan Inovasi Nasional",
+      "link": "https://brin.go.id/press-release/128048/brin-dan-mitra-dokumentasikan-sepuluh-rekaman-baru-anggrek-indonesia",
+      "source": "BRIN",
+      "published_date": "",
+      "text": "acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox BRIN Badan Riset dan Inovasi Nasional Alamat: Gedung B.J. Habibie, Jl. M.H. Thamrin No. 8, Jakarta Pusat 10340 Whatsapp: +62811-1933-3639 Email: ppid@brin.go.id Pengaduan Layanan: LAPOR! Copyright © 2026 BRIN",
+      "word_count": 139,
+      "source_pdf": [
+        "http://your-website.com/accessibility-declaration.pdf"
+      ],
+      "crawled_at": "2026-05-18T11:24:19.287755+07:00"
+    },
+    {
+      "document_id": "brin-doc-0acd6236",
+      "content_hash": "c4d5e7cfcebf6f4bde15c6d590c5d45ef0560284aa164fda436f64e202e5f362",
+      "page_type": "news",
+      "title": "BRIN - Badan Riset dan Inovasi Nasional",
+      "link": "https://brin.go.id/press-release/127949/teknologi-nlp-berpotensi-jembatani-keragaman-bahasa-di-era-digital",
+      "source": "BRIN",
+      "published_date": "",
+      "text": "acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox BRIN Badan Riset dan Inovasi Nasional Alamat: Gedung B.J. Habibie, Jl. M.H. Thamrin No. 8, Jakarta Pusat 10340 Whatsapp: +62811-1933-3639 Email: ppid@brin.go.id Pengaduan Layanan: LAPOR! Copyright © 2026 BRIN",
+      "word_count": 139,
+      "source_pdf": [
+        "http://your-website.com/accessibility-declaration.pdf"
+      ],
+      "crawled_at": "2026-05-18T11:24:29.979846+07:00"
+    },
+    {
+      "document_id": "brin-doc-41009fdc",
+      "content_hash": "c4d5e7cfcebf6f4bde15c6d590c5d45ef0560284aa164fda436f64e202e5f362",
+      "page_type": "news",
+      "title": "BRIN - Badan Riset dan Inovasi Nasional",
+      "link": "https://brin.go.id/press-release/127583/dari-eksplorasi-hingga-konservasi-brin-dorong-pengelolaan-sumber-daya-bumi-berkelanjutan",
+      "source": "BRIN",
+      "published_date": "",
+      "text": "acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox BRIN Badan Riset dan Inovasi Nasional Alamat: Gedung B.J. Habibie, Jl. M.H. Thamrin No. 8, Jakarta Pusat 10340 Whatsapp: +62811-1933-3639 Email: ppid@brin.go.id Pengaduan Layanan: LAPOR! Copyright © 2026 BRIN",
+      "word_count": 139,
+      "source_pdf": [
+        "http://your-website.com/accessibility-declaration.pdf"
+      ],
+      "crawled_at": "2026-05-18T11:24:38.386170+07:00"
+    },
+    {
+      "document_id": "brin-doc-b1e7f888",
+      "content_hash": "c4d5e7cfcebf6f4bde15c6d590c5d45ef0560284aa164fda436f64e202e5f362",
+      "page_type": "news",
+      "title": "BRIN - Badan Riset dan Inovasi Nasional",
+      "link": "https://brin.go.id/press-release/121663/dorong-pertumbuhan-ekonomi-berkelanjutan-brin-rancang-strategi-pencapaian-swasembada-pangan",
+      "source": "BRIN",
+      "published_date": "",
+      "text": "acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox BRIN Badan Riset dan Inovasi Nasional Alamat: Gedung B.J. Habibie, Jl. M.H. Thamrin No. 8, Jakarta Pusat 10340 Whatsapp: +62811-1933-3639 Email: ppid@brin.go.id Pengaduan Layanan: LAPOR! Copyright © 2026 BRIN",
+      "word_count": 139,
+      "source_pdf": [
+        "http://your-website.com/accessibility-declaration.pdf"
+      ],
+      "crawled_at": "2026-05-18T11:24:47.367745+07:00"
+    },
+    {
+      "document_id": "brin-doc-1b937824",
+      "content_hash": "c4d5e7cfcebf6f4bde15c6d590c5d45ef0560284aa164fda436f64e202e5f362",
+      "page_type": "news",
+      "title": "BRIN - Badan Riset dan Inovasi Nasional",
+      "link": "https://brin.go.id/press-release/112603/perkembangan-kasus-aph-tentang-ancaman-terhadap-kelompok-keagamaan",
+      "source": "BRIN",
+      "published_date": "",
+      "text": "acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox BRIN Badan Riset dan Inovasi Nasional Alamat: Gedung B.J. Habibie, Jl. M.H. Thamrin No. 8, Jakarta Pusat 10340 Whatsapp: +62811-1933-3639 Email: ppid@brin.go.id Pengaduan Layanan: LAPOR! Copyright © 2026 BRIN",
+      "word_count": 139,
+      "source_pdf": [
+        "http://your-website.com/accessibility-declaration.pdf"
+      ],
+      "crawled_at": "2026-05-18T11:24:56.651243+07:00"
+    },
+    {
+      "document_id": "brin-doc-d66b9903",
+      "content_hash": "c4d5e7cfcebf6f4bde15c6d590c5d45ef0560284aa164fda436f64e202e5f362",
+      "page_type": "news",
+      "title": "BRIN - Badan Riset dan Inovasi Nasional",
+      "link": "https://brin.go.id/press-release/127544/brin-goes-to-global-recognition-and-nobel-prize-jemput-talenta-riset-dari-sekolah-hingga-panggung-dunia",
+      "source": "BRIN",
+      "published_date": "",
+      "text": "acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox BRIN Badan Riset dan Inovasi Nasional Alamat: Gedung B.J. Habibie, Jl. M.H. Thamrin No. 8, Jakarta Pusat 10340 Whatsapp: +62811-1933-3639 Email: ppid@brin.go.id Pengaduan Layanan: LAPOR! Copyright © 2026 BRIN",
+      "word_count": 139,
+      "source_pdf": [
+        "http://your-website.com/accessibility-declaration.pdf"
+      ],
+      "crawled_at": "2026-05-18T11:25:08.276070+07:00"
+    },
+    {
+      "document_id": "brin-doc-750ca07b",
+      "content_hash": "c4d5e7cfcebf6f4bde15c6d590c5d45ef0560284aa164fda436f64e202e5f362",
+      "page_type": "news",
+      "title": "BRIN - Badan Riset dan Inovasi Nasional",
+      "link": "https://brin.go.id/press-release/103160/wakil-presiden-ri-",
+      "source": "BRIN",
+      "published_date": "",
+      "text": "acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox BRIN Badan Riset dan Inovasi Nasional Alamat: Gedung B.J. Habibie, Jl. M.H. Thamrin No. 8, Jakarta Pusat 10340 Whatsapp: +62811-1933-3639 Email: ppid@brin.go.id Pengaduan Layanan: LAPOR! Copyright © 2026 BRIN",
+      "word_count": 139,
+      "source_pdf": [
+        "http://your-website.com/accessibility-declaration.pdf"
+      ],
+      "crawled_at": "2026-05-18T11:25:16.882037+07:00"
+    },
+    {
+      "document_id": "brin-doc-e65aee47",
+      "content_hash": "c4d5e7cfcebf6f4bde15c6d590c5d45ef0560284aa164fda436f64e202e5f362",
+      "page_type": "news",
+      "title": "BRIN - Badan Riset dan Inovasi Nasional",
+      "link": "https://www.brin.go.id/press-release/95167/kepala-brin-terima-surat-keputusan-kepala-bkn-tentang-pengalihan-pegawai-di-lingkungan-brin",
+      "source": "BRIN",
+      "published_date": "",
+      "text": "acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox acc toolbox ✗ - close keyboard navigation block animations color contrast uncolored display bright contrast reverse contrast text size increase text decrease text readable text highlighting content underline links underline headers images titles zoom in big white cursor big black cursor zoom screen accessibility statement report an accessibility problem reset settings learn more about toolbox BRIN Badan Riset dan Inovasi Nasional Alamat: Gedung B.J. Habibie, Jl. M.H. Thamrin No. 8, Jakarta Pusat 10340 Whatsapp: +62811-1933-3639 Email: ppid@brin.go.id Pengaduan Layanan: LAPOR! Copyright © 2026 BRIN",
+      "word_count": 139,
+      "source_pdf": [
+        "http://your-website.com/accessibility-declaration.pdf"
+      ],
+      "crawled_at": "2026-05-18T11:25:27.936683+07:00"
+    }
+  ]
+}
