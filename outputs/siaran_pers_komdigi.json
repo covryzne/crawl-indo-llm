@@ -2,38 +2,22 @@
   "metadata": {
     "schema_version": "1.0.0",
     "job_context": {
-      "job_id": "crawl-komdigi-20260516-2012",
+      "job_id": "crawl-komdigi-20260518-1304",
       "crawler_name": "indo-llm-engine",
       "crawler_version": "v1.0.0",
       "run_mode": "GOVERNMENT_WEBSITE",
       "target_source": "KOMDIGI"
     },
     "execution_metrics": {
-      "started_at": "2026-05-16T20:12:05.556102+07:00",
-      "completed_at": "2026-05-16T20:14:01.518514+07:00",
-      "duration_seconds": 115.96,
+      "started_at": "2026-05-18T13:04:50.400914+07:00",
+      "completed_at": "2026-05-18T13:05:38.256282+07:00",
+      "duration_seconds": 47.86,
       "total_seed_urls": 12,
-      "total_extracted": 9,
-      "total_failed": 3,
-      "success_rate": "75.0%"
+      "total_extracted": 12,
+      "total_failed": 0,
+      "success_rate": "100.0%"
     },
-    "errors": [
-      {
-        "url": "https://www.komdigi.go.id/berita/siaran-pers/detail/uji-publik-rpm-tentang-otk-dan-kriteria-klasifikasi-upt-bidang-monitor-spektrum-frekuensi-radio-dan-infrastruktur-digital",
-        "error_type": "RuntimeError",
-        "message": "Unexpected error in _crawl_web at line 994 in _crawl_web (..\\..\\..\\..\\..\\Coolyeah\\Dicoding\\Submission_Dicoding\\ml_ops\\envs\\prd-nsfw\\Lib\\site-packages\\crawl4ai\\async_crawler_strategy.py):\nError: Wait condition failed: Timeout after 30000ms waiting for selector 'section#section_text_body'\n\nCode context:\n 989                       timeout = config.wait_for_timeout if config.wait_for_timeout is not None else config.page_timeout\n 990                       await self.smart_wait(\n 991                           page, config.wait_for, timeout=timeout\n 992                       )\n 993                   except Exception as e:\n 994 →                     raise RuntimeError(f\"Wait condition failed: {str(e)}\")\n 995   \n 996               # Handle virtual scroll if configured (after wait_for so container exists)\n 997               if config.virtual_scroll_config:\n 998                   await self._handle_virtual_scroll(page, config.virtual_scroll_config)\n 999   "
-      },
-      {
-        "url": "https://www.komdigi.go.id/berita/siaran-pers/detail/jaga-kedaulatan-negara-wamen-angga-tegaskan-peran-vital-balmon-jayapura",
-        "error_type": "RuntimeError",
-        "message": "Unexpected error in _crawl_web at line 994 in _crawl_web (..\\..\\..\\..\\..\\Coolyeah\\Dicoding\\Submission_Dicoding\\ml_ops\\envs\\prd-nsfw\\Lib\\site-packages\\crawl4ai\\async_crawler_strategy.py):\nError: Wait condition failed: Timeout after 30000ms waiting for selector 'section#section_text_body'\n\nCode context:\n 989                       timeout = config.wait_for_timeout if config.wait_for_timeout is not None else config.page_timeout\n 990                       await self.smart_wait(\n 991                           page, config.wait_for, timeout=timeout\n 992                       )\n 993                   except Exception as e:\n 994 →                     raise RuntimeError(f\"Wait condition failed: {str(e)}\")\n 995   \n 996               # Handle virtual scroll if configured (after wait_for so container exists)\n 997               if config.virtual_scroll_config:\n 998                   await self._handle_virtual_scroll(page, config.virtual_scroll_config)\n 999   "
-      },
-      {
-        "url": "https://www.komdigi.go.id/berita/siaran-pers/detail/menkomdigi-meutya-hafid-pp-tunas-lindungi-anak-indonesia-dari-ancaman-digital-ciptakan-generasi-unggul-di-era-digital",
-        "error_type": "RuntimeError",
-        "message": "Unexpected error in _crawl_web at line 994 in _crawl_web (..\\..\\..\\..\\..\\Coolyeah\\Dicoding\\Submission_Dicoding\\ml_ops\\envs\\prd-nsfw\\Lib\\site-packages\\crawl4ai\\async_crawler_strategy.py):\nError: Wait condition failed: Timeout after 30000ms waiting for selector 'section#section_text_body'\n\nCode context:\n 989                       timeout = config.wait_for_timeout if config.wait_for_timeout is not None else config.page_timeout\n 990                       await self.smart_wait(\n 991                           page, config.wait_for, timeout=timeout\n 992                       )\n 993                   except Exception as e:\n 994 →                     raise RuntimeError(f\"Wait condition failed: {str(e)}\")\n 995   \n 996               # Handle virtual scroll if configured (after wait_for so container exists)\n 997               if config.virtual_scroll_config:\n 998                   await self._handle_virtual_scroll(page, config.virtual_scroll_config)\n 999   "
-      }
-    ]
+    "errors": []
   },
   "data": [
     {
@@ -47,7 +31,7 @@
       "document_id": "komdigi-doc-07c2db01",
       "content_hash": "3f7ebd59bed2728ac8bb0606e4af277280e9d3eff2c897c7456d58d730b52934",
       "word_count": 208,
-      "crawled_at": "2026-05-16T20:12:10.426066+07:00"
+      "crawled_at": "2026-05-18T13:04:58.686000+07:00"
     },
     {
       "title": "Etika AI Harus Naik Kelas dari Seruan Moral Menjadi Regulasi Negara",
@@ -60,7 +44,7 @@
       "document_id": "komdigi-doc-5958fc72",
       "content_hash": "83c672ef337f05a634881ffa07d7ec8f9cbb659cc1fd40ce62a3468a5f8bd86a",
       "word_count": 327,
-      "crawled_at": "2026-05-16T20:12:12.389571+07:00"
+      "crawled_at": "2026-05-18T13:05:03.069141+07:00"
     },
     {
       "title": "Wamen Nezar: Krisis Media Bukan Lagi Soal Bisnis, Tapi Ancaman bagi Kualitas Informasi Publik",
@@ -73,7 +57,7 @@
       "document_id": "komdigi-doc-c0e8c4c5",
       "content_hash": "bac7e335853c79b174de93215f16fb4b8f2fb1da422f43a3c1578cacd7a1ba3c",
       "word_count": 440,
-      "crawled_at": "2026-05-16T20:12:14.282383+07:00"
+      "crawled_at": "2026-05-18T13:05:06.329750+07:00"
     },
     {
       "title": "Apresiasi Pewarta Foto Indonesia, Wamen Nezar Tegaskan Nilai Sejarah Foto Jurnalistik Tak Bisa Digantikan AI",
@@ -86,7 +70,7 @@
       "document_id": "komdigi-doc-0cd66402",
       "content_hash": "550dff60a59e750ed7a5a3ff9f800f36482d5a34131ff668176a7bc545258afd",
       "word_count": 469,
-      "crawled_at": "2026-05-16T20:12:16.337887+07:00"
+      "crawled_at": "2026-05-18T13:05:09.568683+07:00"
     },
     {
       "title": "200 Ribu Anak Terpapar Judi Online, Menkomdigi Meutya Hafid: Masyarakat Harus Jadi Benteng Utama Pencegahan",
@@ -99,7 +83,20 @@
       "document_id": "komdigi-doc-c1569258",
       "content_hash": "4f07eca3aa112baf7aa1f5849c3a5dba8f465d109c99b257448cd6ae91a79cf5",
       "word_count": 367,
-      "crawled_at": "2026-05-16T20:12:18.376625+07:00"
+      "crawled_at": "2026-05-18T13:05:14.160369+07:00"
+    },
+    {
+      "title": "Uji Publik RPM tentang OTK dan Kriteria Klasifikasi UPT Bidang Monitor Spektrum Frekuensi Radio dan Infrastruktur Digital",
+      "link": "https://www.komdigi.go.id/berita/siaran-pers/detail/uji-publik-rpm-tentang-otk-dan-kriteria-klasifikasi-upt-bidang-monitor-spektrum-frekuensi-radio-dan-infrastruktur-digital",
+      "source": "KOMDIGI",
+      "page": 1,
+      "date": "12 Mei 2026",
+      "text": "Dalam rangka melaksanakan ketentuan Peraturan Menteri Komunikasi dan Digital No 1 Tahun 2025 tentang Organisasi dan Tata Kerja Kementerian Komunikasi dan Digital terkait penataan organisasi di lingkungan Unit Pelaksana Teknis, masyarakat perlu dilibatkan dalam penyusunan peraturan perundang-undangan.Berdasarkan hal di atas, perlu dilakukan konsultasi publik atas Rancangan Peraturan Menteri Komunikasi dan Digital tentang Organisasi dan Tata Kerja Unit Pelaksana Teknis Bidang Monitor Spektrum Frekuensi Radio dan Infrastruktur Digital dan Rancangan Peraturan Menteri Komunikasi dan Digital tentang Kriteria Klasifikasi Unit Pelaksana Teknis Bidang Monitor Spektrum Frekuensi Radio dan Infrastruktur Digital.Unit Pelaksana Teknis Bidang Monitor Spektrum Frekuensi Radio dan Infrastruktur Digital merupakan Unit Pelaksana Teknis (UPT) Kemkomdigi yang berada di bawah dan bertanggung jawab kepada Direktur Jenderal Infrastruktur Digital Kemkomdigi.Unit Pelaksana Teknis Bidang Monitor Spektrum Frekuensi Radio dan Infrastruktur Digital mempunyai tugas melaksanakan melaksanakan pengawasan dan pengendalian di bidang penggunaan spektrum frekuensi radio, dan infrastruktur digital.Dalam melaksanakan tugas tersebut, Unit Pelaksana Teknis Bidang Monitor Spektrum Frekuensi Radio dan Kualitas Layanan menyelenggarakan fungsi:penyusunan rencana, program, dan anggaran;pelaksanaan observasi, identifikasi, dan deteksi penggunaan spektrum frekuensi radio;pelaksanaan pengukuran parameter teknis stasiun radio, dan inspeksi stasiun radio;pelaksanaan penanganan gangguan spektrum frekuensi radio dan kualitas layanan telekomunikasi;pelaksanaan monitor tingkat kepatuhan pemenuhan standar teknis alat telekomunikasi dan/atau perangkat telekomunikasi dan perangkat digital lainnya;pelaksanaan penertiban, pengenaan sanksi administratif dan penindakan hukum terhadap pelanggaran penggunaan spektrum frekuensi radio, kepatuhan pemenuhan standar teknis alat telekomunikasi dan/atau perangkat telekomunikasi;pelaksanaan pemeliharaan, perbaikan, dan pemanfaatan perangkat monitor spektrum frekuensi radio dan kualitas layanan telekomunikasi;pelaksanaan asistensi layanan spektrum frekuensi radio, kualitas layanan telekomunikasi, dan pemenuhan standar teknis alat telekomunikasi dan/atau perangkat telekomunikasi dan perangkat digital lainnya;pelaksanaan penanganan penyelesaian piutang biaya hak penggunaan spektrum frekuensi radio;pelaksanaan verifikasi penyelenggaraan telekomunikasi khusus untuk keperluan sendiri;pelaksanaan pemantauan dan pengukuran kualitas layanan telekomunikasi;pelaksanaan urusan keuangan, sumber daya manusia, persuratan, tata usaha, kearsipan, organisasi dan tata laksana, rumah tangga, perlengkapan, barang milik negara, hubungan masyarakat, kerja sama, sistem dan data informasi, manajemen risiko dan kepatuhan internal, serta penyusunan evaluasi dan pelaporan kinerja.Unit Pelaksana Teknis Bidang Monitor Spektrum Frekuensi Radio dan Infrastruktur Digital memiliki peran strategis dalam menjaga ketertiban pemanfaatan spektrum frekuensi radio di Indonesia. Sebagai garda terdepan dalam pengawasan spektrum, UPT ini bertanggung jawab untuk melakukan pengawasan dan pengendalian terhadap penggunaan frekuensi radio yang tidak sesuai dengan ketentuan perizinan, serta memastikan kualitas layanan yang diberikan terjamin sesuai dengan penerapan Quality of Service (QoS) dan Quality Assurance (QA).Melalui sistem monitoring yang terintegrasi dan berbasis teknologi, Unit Pelaksana Teknis Bidang Monitor Spektrum Frekuensi Radio dan Infrastruktur Digital memastikan bahwa setiap entitas dan stakeholder yang terlibat menggunakan spektrum secara legal, aman, dan tidak saling mengganggu. Hal ini sangat krusial dalam mendukung kelancaran komunikasi publik, penyiaran, telekomunikasi, serta layanan darurat dan pertahanan negara.Rancangan Peraturan Menteri Komunikasi dan Digital dimaksud disusun sebagai upaya mendukung percepatan transformasi digital melalui fasilitator dalam penegakan regulasi dan penyelesaian gangguan frekuensi. Keberadaan Unit Pelaksana Teknis Bidang Monitor Spektrum Frekuensi Radio dan Infrastruktur Digital di berbagai wilayah Indonesia memungkinkan respons cepat terhadap insiden gangguan bahkan di daerah terpencil. Dalam era digital yang semakin kompleks, peran UPT bidang Monitor Spektrum Frekuensi Radio dan Infrastruktur Digital menjadi semakin vital dalam menjaga integritas spektrum sebagai sumber daya terbatas yang bernilai strategis bagi pembangunan nasional.Untuk penyempurnaan dan memberikan kesempatan kepada masyarakat dalam menyampaikan tanggapan atas Rancangan Peraturan Menteri Komunikasi dan Digital tentang Organisasi dan Tata Kerja Unit Pelaksana Teknis Bidang Monitor Spektrum Frekuensi Radio dan Infrastruktur Digital, Kemkomdigi membuka konsultasi publik selama 3 (tiga) hari sampai dengan tanggal 18 Mei 2026.Masukan/tanggapan dapat disampaikan kepada Biro Sumber Daya Manusia dan Organisasi melalui surat elektronik yang ditujukan ke alamat emailtu.rowai@komdigi.go.idDraft RPM Organisasi dan Tata Kerja Unit Pelaksana Teknis Bidang Monitor Spektrum Frekuensi Radio dan Kualitas Layanan dapat diunduh pada tautan berikut:https://s.komdigi.go.id/NaskahUjiPublikdanRPMOTKBalmon",
+      "source_pdf": [],
+      "document_id": "komdigi-doc-937cc221",
+      "content_hash": "053d41c5e6e3eb3776153d414c1ee94f207b6508e6a51e1e28d793d688e913a3",
+      "word_count": 602,
+      "crawled_at": "2026-05-18T13:05:17.100590+07:00"
     },
     {
       "title": "Menkomdigi Meutya Hafid: Satelit Nusantara Lima Bukti Nyata Kedaulatan Digital Indonesia",
@@ -112,7 +109,7 @@
       "document_id": "komdigi-doc-adecc52c",
       "content_hash": "0257e53206e9eb4b284a7a0f39f2b4c4006b9517518a76c8c36ab1e84482b540",
       "word_count": 248,
-      "crawled_at": "2026-05-16T20:12:51.913273+07:00"
+      "crawled_at": "2026-05-18T13:05:20.447016+07:00"
     },
     {
       "title": "Wamen Nezar: Egrang Jadi “Tombol Jeda” Anak dari Ruang Digital",
@@ -125,7 +122,7 @@
       "document_id": "komdigi-doc-7054d2e9",
       "content_hash": "284f79ea653e7ebc7f4c0678656ed132e9e2896a70f446ff568b16cf42167eb7",
       "word_count": 387,
-      "crawled_at": "2026-05-16T20:12:53.789851+07:00"
+      "crawled_at": "2026-05-18T13:05:23.684337+07:00"
     },
     {
       "title": "Menkomdigi Dampingi Presiden di Miangas, Bagikan Konektivitas Internet dan HP ke Seluruh KK",
@@ -138,7 +135,33 @@
       "document_id": "komdigi-doc-81490084",
       "content_hash": "27b340f2d1a5d2c76d6a086a5af6f6b4c539584d7db0aee80247ee6de323ffd3",
       "word_count": 259,
-      "crawled_at": "2026-05-16T20:12:55.761429+07:00"
+      "crawled_at": "2026-05-18T13:05:27.433081+07:00"
+    },
+    {
+      "title": "Jaga Kedaulatan Negara, Wamen Angga Tegaskan Peran Vital Balmon Jayapura",
+      "link": "https://www.komdigi.go.id/berita/siaran-pers/detail/jaga-kedaulatan-negara-wamen-angga-tegaskan-peran-vital-balmon-jayapura",
+      "source": "KOMDIGI",
+      "page": 1,
+      "date": "9 Mei 2026",
+      "text": "Wakil Menteri Komunikasi dan Digital Angga Raka Prabowo meminta para pegawai Balai Monitor Spektrum Frekuensi Radio (Balmon SFR) Kelas II Jayapura untuk memaksimalkan pelayanan di tengah kondisi geografis dan keamanan di wilayah Papua yang menantang.Menurutnya, spektrum frekuensi radio berperan vital bagi kedaulatan dan keamanan negara, meskipun wujudnya tidak kasat mata.\"Frekuensi ini kan tidak kelihatan tapi mengatur banyak hal, mulai dari komunikasi sampai hal-hal yang strategis,\" kata Wamen Angga saat berkunjung ke Balmon SFR Kelas II Jayapura, Papua, Jumat (08/05/2026).Wamen Angga menyebut bahwa pengawasan frekuensi menjadi salah satu fokus utama pemerintah pusat.\"Itu juga menjadi concern dari Bapak Presiden bahwa frekuensi kita perlu diperhatikan. Dan kehadiran teman-teman Balmon ini adalah ujung tombak sebenarnya di daerah,\" tambah Angga.Wamen Angga meminta Balmon SFR Kelas II Jayapura memaksimalkan pemanfaatan teknologi agar pelayanan publik tetap dapat berjalan tanpa mengorbankan keselamatan petugas.\"Keselamatan itu nomor satu, nyawa itu nomor satu. Tapi kita juga harus cari cara dengan teknologi agar pelayanan di sana tetap berjalan,\" ujarnya.Wamen Angga menyampaikan apresiasi mendalam kepada seluruh jajaran Balmon SFR Kelas II Jayapura yang terus mengawal kelancaran frekuensi di timur Indonesia.\"Saya ucapkan terima kasih teman-teman semua atas pengorbanannya selama ini, atas dedikasinya. Tetap semangat, kita berbuat yang terbaik buat bangsa dan negara. Kita semua punya tanggung jawab yang sama untuk masyarakat, untuk masa depan anak-anak kita ke depan,\" ungkap Wamenkomdigi.Menutup arahannya, Wamen Angga berpesan kepada para pegawai agar selalu meningkatkan kapasitas diri untuk meraih masa depan yang lebih baik.\"Kalau ada kesempatan untuk meraih pendidikan, ambil. Dan serius untuk menjalaninnya. Karena itu ujungnya jadi bekal, bukan sekadar ijazah. Ketika kita dapet ilmu, yakin lah bahwa itu akan berguna buat kita nanti, di saat kita menjalani hidup ke depan,\" pungkasnya.Siaran Pers No. 69/HM-KKD/5/2026Sabtu, 9 Mei 2026",
+      "source_pdf": [],
+      "document_id": "komdigi-doc-457628fe",
+      "content_hash": "70c2f759ae2e94625683fa1f2680098f0ad45ca974a3f0a7468862bc3b7a7ffe",
+      "word_count": 280,
+      "crawled_at": "2026-05-18T13:05:31.236162+07:00"
+    },
+    {
+      "title": "Menkomdigi Meutya Hafid: PP TUNAS Lindungi Anak Indonesia dari Ancaman Digital, Ciptakan Generasi Unggul di Era Digital",
+      "link": "https://www.komdigi.go.id/berita/siaran-pers/detail/menkomdigi-meutya-hafid-pp-tunas-lindungi-anak-indonesia-dari-ancaman-digital-ciptakan-generasi-unggul-di-era-digital",
+      "source": "KOMDIGI",
+      "page": 1,
+      "date": "8 Mei 2026",
+      "text": "Menteri Komunikasi dan Digital Meutya Hafid menegaskan bahwa Peraturan Pemerintah Nomor 17 Tahun 2025 tentang Tata Kelola Penyelenggaraan Sistem Elektronik dalam Pelindungan Anak (PP TUNAS) merupakan komitmen nyata pemerintah untuk melindungi anak-anak Indonesia di ruang digital.Kebijakan ini hadir agar anak-anak tidak hanya aman, tetapi juga mampu memanfaatkan teknologi secara bijak untuk mendukung masa depan mereka.“Dengan penetrasi internet yang telah melampaui 80 persen, kita harus memastikan keterhubungan ini disertai perlindungan yang kuat. PP TUNAS hadir sebagai payung hukum yang melindungi anak dari berbagai risiko sekaligus membekali mereka dengan literasi digital,” tegas Menkomdigi Meutya Hafid.Pernyataan tersebut disampaikannya secara daring saat memberikan sambutan pada kegiatan Fasilitasi Implementasi PP TUNAS di SMP Muhammadiyah 3 Depok, Sleman, Yogyakarta, Jumat (08/05/2026).Meutya menyebut empat ancaman utama yang dihadapi anak dan remaja di dunia digital, yang dikenal sebagai “4K”:Kontaktidak diinginkan dari orang asing,Kontennegatif yang tidak sesuai usia,Kecanduangawai dan media sosial, serta gangguanKesehatanfisik dan mental.“Kita ingin anak-anak bisa menjelajah dunia digital dengan aman. Kontak dari orang tak dikenal harus dicegah, konten berbahaya tidak boleh mudah muncul, kecanduan harus diatasi agar prestasi belajar tetap terjaga, dan kesehatan mereka — mulai dari mata hingga postur tubuh — harus terlindungi,” jelasnya.Menurut Menkomdigi, tanpa pengawasan yang tepat, dampak jangka panjang kecanduan digital dapat mengancam kualitas sumber daya manusia Indonesia di masa depan.Oleh karena itu, literasi digital menjadi elemen kunci dalam implementasi PP TUNAS.“Teknologi adalah keniscayaan. Anak-anak kita akan hidup bersama kemajuan ini setiap hari. Tugas kita adalah membekali mereka agar bisa mengambil manfaat maksimal dan menghindari mudaratnya,” tegas Meutya Hafid.Ia juga mengapresiasi peran sekolah dan guru sebagai garda terdepan pendampingan anak.“Saya percaya Bapak dan Ibu Guru dapat menjadi teladan dan pahlawan literasi digital bagi anak-anak didiknya. Bersama kita wujudkan generasi TUNAS yang cerdas, kreatif, tangguh, dan siap bersaing di era digital,” pungkasnya.Kegiatan ini diselenggarakan oleh Badan Pengembangan Sumber Daya Manusia (BPSDM) Kementerian Komunikasi dan Digital sebagai bagian dari upaya masif memperkuat literasi digital di lingkungan pendidikan.",
+      "source_pdf": [],
+      "document_id": "komdigi-doc-12d17825",
+      "content_hash": "61a63e18e94d4ed156839b4006635332da7aa23ad33df81bbf6f341f76b8a2e8",
+      "word_count": 313,
+      "crawled_at": "2026-05-18T13:05:34.346456+07:00"
     },
     {
       "title": "Wamen Angga Resmikan Community Gateway Wamena, Perkuat Pemerataan Konektivitas di Papua",
@@ -151,7 +174,7 @@
       "document_id": "komdigi-doc-2a627cdf",
       "content_hash": "b858e0862bcdd2b6520c330fcc4bfda1363df0e1c1ca15ef22eb5a39c947f2c8",
       "word_count": 390,
-      "crawled_at": "2026-05-16T20:14:01.390111+07:00"
+      "crawled_at": "2026-05-18T13:05:38.128666+07:00"
     }
   ]
 }

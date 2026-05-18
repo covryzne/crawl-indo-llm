@@ -3,13 +3,16 @@
 import asyncio
 import hashlib
 import logging
+import random
+import re
 import sys
 from datetime import datetime, timedelta, timezone
-
-WIB = timezone(timedelta(hours=7))
-
 from pathlib import Path
 from urllib.parse import urljoin
+
+from bs4 import BeautifulSoup
+
+WIB = timezone(timedelta(hours=7))
 
 from crawl4ai import AsyncWebCrawler, CacheMode, CrawlerRunConfig
 from crawl4ai.extraction_strategy import JsonCssExtractionStrategy
@@ -121,7 +124,9 @@ async def crawl_links(site_name, headless=None):
                 logger.info("[%s] Last page marker found via JS", site_name)
                 break
 
-            await asyncio.sleep(SCRAPER_CONFIG["polite_delay"])
+            # Jeda polite sebelum lanjut narik halaman link (Randomize dikit biar aman)
+            delay = SCRAPER_CONFIG["polite_delay"] + random.uniform(0.5, 1.5)
+            await asyncio.sleep(delay)
 
     return all_news_items
 
@@ -170,6 +175,135 @@ async def scrape_article(item, index, total, site_name, errors_list, headless=No
             if detail_data and isinstance(detail_data, list):
                 detail_dict = detail_data[0]
                 item.update(detail_dict)
+
+            # ==========================================
+            # --- LOGIKA KUSTOM, TABEL & REGEX PDF ---
+            # ==========================================
+            soup = BeautifulSoup(result.html, "html.parser")
+
+            # 1. KHUSUS BRIN JDIH: Bedah tabel manual buat nyari Tanggal & Judul
+            if site_name == "BRIN_JDIH":
+                tds = soup.find_all("td")
+                for i, td in enumerate(tds):
+                    label = td.get_text(strip=True).lower()
+                    if label == "tanggal penetapan" and i + 1 < len(tds):
+                        item["date"] = tds[i + 1].get_text(strip=True)
+                    elif label == "judul" and i + 1 < len(tds):
+                        item["text"] = tds[i + 1].get_text(strip=True)
+
+            # --- JURUS PAMUNGKAS NANGKEP PDF (ANTI ACCESS-DENIED) ---
+            bs4_pdfs = []
+            doc_id = url.split("/")[-1] if "/" in url else ""
+
+            # Cari SEMUA tag <a> di halaman
+            for a in soup.find_all("a", href=True):
+                href = a["href"]
+                href_lower = href.lower()
+                text_lower = a.get_text(strip=True).lower()
+
+                # JANGAN nangkep miniox karena itu private S3 bucket!
+                if "miniox.brin.go.id" in href_lower:
+                    continue
+
+                # Nangkep URL Proxy/Download resmi JDIH
+                if any(
+                    kw in href_lower for kw in [".pdf", "/download", "/unduh", "api/"]
+                ):
+                    bs4_pdfs.append(href)
+                # Nangkep dari teks tombolnya
+                elif any(
+                    kw in text_lower
+                    for kw in ["salinan", "lampiran", "unduh", "download"]
+                ):
+                    bs4_pdfs.append(href)
+                # Nangkep URL yang bawa ID dokumen, tapi bukan halaman 'view' saat ini
+                elif doc_id and doc_id in href_lower and "view" not in href_lower:
+                    bs4_pdfs.append(href)
+
+            # Cari dari iframe / embed (Biasanya tab "Preview Dokumen" naruh PDF di sini)
+            for iframe in soup.find_all(["iframe", "embed", "object"]):
+                src = iframe.get("src") or iframe.get("data") or ""
+                if src and "miniox" not in src.lower() and len(src) > 5:
+                    bs4_pdfs.append(src)
+
+            # Cari via Regex (Filter ketat, skip miniox)
+            all_hrefs = re.findall(r'href="([^"]+)"', result.html, re.IGNORECASE)
+            valid_regex_pdfs = []
+            for h in all_hrefs:
+                hl = h.lower()
+                if "miniox.brin.go.id" in hl:
+                    continue
+                if any(kw in hl for kw in [".pdf", "download", "unduh"]) or (
+                    doc_id and doc_id in hl and "view" not in hl
+                ):
+                    valid_regex_pdfs.append(h)
+
+            # Tangkapan dari Schema Config
+            schema_pdfs = item.get("source_pdf", [])
+            if isinstance(schema_pdfs, str):
+                schema_pdfs = [schema_pdfs]
+            elif isinstance(schema_pdfs, list):
+                schema_pdfs = [
+                    p.get("url", "") if isinstance(p, dict) else str(p)
+                    for p in schema_pdfs
+                ]
+            else:
+                schema_pdfs = []
+
+            # Gabungin semua hasil tangkapan, hapus duplikat (GUA UDAH BUANG miniox_urls DARI SINI BIAR GA ERROR)
+            raw_pdfs = list(set(bs4_pdfs + valid_regex_pdfs + schema_pdfs))
+
+            final_pdfs = []
+            for p_url in raw_pdfs:
+                p_url = p_url.strip()
+                if (
+                    not p_url
+                    or p_url == "None"
+                    or len(p_url) < 5
+                    or p_url.startswith("#")
+                    or "miniox.brin.go.id" in p_url.lower()
+                ):
+                    continue
+                if "{" in p_url or "<" in p_url or ">" in p_url or " " in p_url:
+                    continue
+
+                full_pdf_url = (
+                    p_url if p_url.startswith("http") else urljoin(url, p_url)
+                )
+
+                if full_pdf_url not in final_pdfs:
+                    final_pdfs.append(full_pdf_url)
+
+            # ============================================================
+            # 🔥 INJEKSI PAKSA API DOWNLOAD BRIN JDIH (SALINAN & LAMPIRAN)
+            # ============================================================
+            if site_name == "BRIN_JDIH":
+                # Cari SEMUA wujud UUID di seluruh kode HTML tanpa ampun!
+                all_uuids = re.findall(
+                    r"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}",
+                    result.html,
+                )
+
+                for file_uuid in set(all_uuids):
+                    api_link = f"https://e-regulasi.brin.go.id/api/v1/file/download/{file_uuid}"
+                    if api_link not in final_pdfs:
+                        final_pdfs.append(api_link)
+            # ============================================================
+
+            item["source_pdf"] = final_pdfs if final_pdfs else []
+            item["date"] = str(item.get("date", "")).strip()
+
+            # BUANG TABLE DATA BIAR JSON RAPI
+            item.pop("table_data", None)
+            # ==========================================
+
+            # -- INJEKSI METADATA ENTERPRISE --
+            text = item.get("text", "")
+            # ============================================================
+
+            item["source_pdf"] = final_pdfs if final_pdfs else []
+            item["date"] = str(item.get("date", "")).strip()
+            # ==========================================
 
             # -- INJEKSI METADATA ENTERPRISE --
             text = item.get("text", "")
@@ -222,6 +356,9 @@ async def run(site_name, headless=None):
 
         async def bounded_scrape(item, index, total):
             async with semaphore:
+                # Tambahin Random Jitter Biar Bot Kelihatan Natural pas narik Detail
+                delay = SCRAPER_CONFIG["polite_delay"] + random.uniform(0.5, 2.0)
+                await asyncio.sleep(delay)
                 return await scrape_article(
                     item,
                     index,
